@@ -7,36 +7,48 @@ P GP FX
 
 RN
 RV NO_DIRECT_BOOLEAN_OPERATORS
+RV NO_IMPLEMENTATION_ASPECT_SPECIFICATIONS
 RV NO_IMPLEMENTATION_PRAGMAS
 RV NO_ELABORATION_CODE
 RV SPARK_05
 
-U pigeonholes%b		pigeonholes.adb		d5d06d42 OO PK
+U pigeonholes%b		pigeonholes.adb		7d7a2486 OO PK
 
-U pigeonholes%s		pigeonholes.ads		6885917f OO PK
+U pigeonholes%s		pigeonholes.ads		3e51cdad OO PK
 
-D pigeonholes.ads	20200416111952 6885917f pigeonholes%s
-D pigeonholes.adb	20200416112020 bd55fc3d pigeonholes%b
+D pigeonholes.ads	20200416145242 3e51cdad pigeonholes%s
+D pigeonholes.adb	20200416142348 432be92b pigeonholes%b
 D system.ads		20190518041256 32a08138 system%s
 G a Z
 X 1 pigeonholes.ads
-1K9*PigeonHoles 24l5 24e16 2|1b14 46l5 46t16
-3E9*Box 3e30 7r43 12r46 16r72 2|17r44 28r68
+1K9*PigeonHoles 36l5 36e16 2|1b14 60l5 60t16
+3E9*Box 3e30 7r43 12r46 16r72 19r44 22r44 2|17r44 28r68 34r45
 3n17*Pigeon{3E9} 10r47 2|11r73
 3n25*Dove{3E9} 2|9r20 14r20
-5I9*PH_Index<short_short_integer> 7r30 16r58 2|5r13 19r13 20r11 28r55
-7A9*PigeonHole(3E9)<5I9> 9r39 12r29 16r42 2|4r39 17r28 28r40
+5I9*PH_Index<short_short_integer> 7r30 16r58 22r56 2|5r13 19r13 20r11 28r55
+. 34r57 36r13
+7A9*PigeonHole(3E9)<5I9> 9r39 12r29 16r42 19r28 22r28 2|4r39 17r28 28r40
+. 34r28
 9U14*PigeonBeGone 9=28 2|4b14 15l8 15t20
 9a28 d{7A9} 10r28 10r39 2|4b28 5r25 8r19 9m10 11r45 11r65 14m7 14r9
 10i23 J<short_short_integer> 10r41
 12V13*CountBirds{integer} 12>25 12>42 14r16 14r43 2|17b13 26l8 26t18
 12a25 d{7A9} 14r64 2|17b25 19r25 20r23 23r13
 12e42 b{3E9} 2|17b40 23r20
-16U14*SubstituteBirds 16=31 16>54 16>69 2|28b14 33l8 33t23
-16a31 d{7A9} 17r14 17r41 17r68 17r75 2|28b30 31m7 32m7 32r9
+16U14*SubstituteBirds 16=31 16>54 16>69 2|28b14 32l8 32t23
+16a31 d{7A9} 17r14 17r41 17r68 17r75 2|28b30 31m7
 16i54 n{5I9} 17r16 17r61 2|28b52 31r9
-16e69 b{3E9} 17r21 2|28b65 31r15 32r21
+16e69 b{3E9} 17r21 2|28b65 31r15
 17i36 I<short_short_integer> 17r56 17r70 17r81
+19V13*birdExist{boolean} 19>24 19>40 23s13
+19a24 d{7A9} 20r21 20r32
+19e40 b{3E9} 20r39
+20i16 I<short_short_integer> 20r34
+22V13*birdIndex{5I9} 22>24 22>40 24r16 26r68 27r21 2|34b13 47l8 47t17
+22a24 d{7A9} 23r23 24r14 26r9 26r45 26r55 27r8 2|34b24 36r25 38r19 39r13
+. 43r26 43r42
+22e40 b{3E9} 23r25 24r36 26r16 26r62 27r16 2|34b41 39r22 43r50
+26i37 J<short_short_integer> 26r57
 X 2 pigeonholes.adb
 5i7 Pos{1|5I9} 8r13 9r12 10m10 10r17 11r55 12r44
 11i40 J<short_short_integer> 11r67
@@ -44,6 +56,8 @@ X 2 pigeonholes.adb
 19i9 n{1|5I9} 22r16
 20i7 m{1|5I9} 22r19
 22i11 I<short_short_integer> 23r15
+36i7 pos{1|5I9} 38r13 39r15 40r20 43r35 44m10 44r17 46r14
+43i21 I<short_short_integer> 43r44
 
 QQ SPARKVERSION 2019 (20190517)
 GG EK_DIRECT_CALLS pigeonholes__pigeonbegone 0
@@ -52,10 +66,16 @@ GG EK_DIRECT_CALLS pigeonholes__countbirds 0
 GG EK_GLOBALS pigeonholes__countbirds local FALSE E_FUNCTION FALSE ORIGIN_FLOW proper_proof_in 0 proper_input 0 proper_output 0 refined_proof_in 0 refined_input 0 refined_output 0 calls_proof 0 calls 0 calls_conditional 0 FALSE FALSE TRUE ENTRY_CALLS 0 SUSPENDS_ON 0 UNSYNCH_ACCESSES 0 LOCKS 0
 GG EK_DIRECT_CALLS pigeonholes__substitutebirds 0
 GG EK_GLOBALS pigeonholes__substitutebirds local FALSE E_PROCEDURE FALSE ORIGIN_FLOW proper_proof_in 0 proper_input 0 proper_output 0 refined_proof_in 0 refined_input 0 refined_output 0 calls_proof 0 calls 0 calls_conditional 0 FALSE FALSE TRUE ENTRY_CALLS 0 SUSPENDS_ON 0 UNSYNCH_ACCESSES 0 LOCKS 0
+GG EK_DIRECT_CALLS pigeonholes__birdexist 0
+GG EK_GLOBALS pigeonholes__birdexist local FALSE E_FUNCTION FALSE ORIGIN_FLOW proper_proof_in 0 proper_input 0 proper_output 0 refined_proof_in 0 refined_input 0 refined_output 0 calls_proof 0 calls 0 calls_conditional 0 FALSE FALSE TRUE ENTRY_CALLS 0 SUSPENDS_ON 0 UNSYNCH_ACCESSES 0 LOCKS 0
+GG EK_DIRECT_CALLS pigeonholes__birdindex 1 pigeonholes__birdexist
+GG EK_GLOBALS pigeonholes__birdindex local FALSE E_FUNCTION FALSE ORIGIN_FLOW proper_proof_in 0 proper_input 0 proper_output 0 refined_proof_in 0 refined_input 0 refined_output 0 calls_proof 0 calls 0 calls_conditional 0 FALSE TRUE TRUE ENTRY_CALLS 0 SUSPENDS_ON 0 UNSYNCH_ACCESSES 0 LOCKS 0
 GG EK_DIRECT_CALLS pigeonholes 0
 GG EK_GLOBALS pigeonholes local FALSE E_PACKAGE TRUE ORIGIN_FLOW proper_proof_in 0 proper_input 0 proper_output 0 refined_proof_in 0 refined_input 0 refined_output 0 initializes 0 calls_proof 0 calls 0 calls_conditional 0 local_var 0 FALSE FALSE FALSE ENTRY_CALLS 0 SUSPENDS_ON 0 UNSYNCH_ACCESSES 0 LOCKS 0
 GG EK_FLOW_SCOPE pigeonholes__substitutebirds FALSE FALSE FALSE FALSE TRUE pigeonholes VISIBLE_PART
+GG EK_FLOW_SCOPE pigeonholes__birdindex FALSE FALSE FALSE FALSE TRUE pigeonholes VISIBLE_PART
 GG EK_FLOW_SCOPE pigeonholes__countbirds FALSE FALSE FALSE FALSE TRUE pigeonholes VISIBLE_PART
+GG EK_FLOW_SCOPE pigeonholes__birdexist FALSE FALSE FALSE FALSE TRUE pigeonholes VISIBLE_PART
 GG EK_FLOW_SCOPE pigeonholes TRUE FALSE FALSE FALSE FALSE __standard
 GG EK_FLOW_SCOPE pigeonholes__pigeonbegone FALSE FALSE FALSE FALSE TRUE pigeonholes VISIBLE_PART
 GG EK_END_MARKER

@@ -2175,8 +2175,366 @@ module Pigeonholes__pigeonhole
 
 end
 
-(* Module for axiomatizing type "T7s" defined at pigeonholes.ads:10, created in Gnat2Why.Types.Translate_Type *)
-module Pigeonholes__pigeonbegone__L6s__T7s
+(* Module for axiomatizing type "T14s" defined at pigeonholes.ads:10, created in Gnat2Why.Types.Translate_Type *)
+module Pigeonholes__pigeonbegone__L13s__T14s
+ use        "_gnatprove_standard".Main
+ use        "int".Int
+ use        "int".Int
+
+ type t14s =
+  < range 1 5 >
+ 
+ val constant first 
+   : int
+  ensures { result =  (1 : int) }
+ 
+ val constant last 
+   : int
+  ensures { result =  (5 : int) }
+ 
+ predicate in_range 
+   (x : int) =
+  ( (first <= x) /\ (x <= last) )
+ val in_range 
+   (x : int) : bool
+  ensures { result <-> in_range (x : int) }
+ 
+ clone export "ada__model".Static_Discrete with axiom .,
+ type t = t14s, 
+ function first = first, 
+ function last = last, 
+ predicate in_range = in_range
+ 
+ type t14s__ref =
+  { mutable t14s__content : t14s }
+ 
+ function t14s__ref_t14s__content__projection 
+   (a : t14s__ref) : t14s =
+  a.t14s__content
+ 
+ meta "model_projection" function t14s__ref_t14s__content__projection
+ 
+ meta "inline:no" function t14s__ref_t14s__content__projection
+ 
+ val t14s__havoc 
+   (x : t14s__ref) : unit
+  writes {x}
+
+end
+
+(* Module defining to_rep/of_rep for type "T14s" defined at pigeonholes.ads:10, created in Gnat2Why.Types.Translate_Type *)
+module Pigeonholes__pigeonbegone__L13s__T14s__rep
+ use        Pigeonholes__pigeonbegone__L13s__T14s as Pigeonholes__pigeonbegone__L13s__T14s
+ use        "_gnatprove_standard".Main
+ use        "int".Int
+
+ function to_rep 
+   (x : Pigeonholes__pigeonbegone__L13s__T14s.t14s) : int =
+  (Pigeonholes__pigeonbegone__L13s__T14s.t14s'int x)
+ 
+ clone export "ada__model".Rep_Proj_Int with axiom .,
+ type t = Pigeonholes__pigeonbegone__L13s__T14s.t14s, 
+ predicate in_range = Pigeonholes__pigeonbegone__L13s__T14s.in_range, 
+ function to_rep = to_rep
+ 
+ meta "model_projection" function to_rep
+ 
+ meta "inline:no" function to_rep
+
+end
+
+(* Module for defining the constant "d" defined at pigeonholes.ads:12, created in Gnat2Why.Decls.Translate_Constant *)
+module Pigeonholes__countbirds__d
+ use        "_gnatprove_standard".Main
+ use        "int".Int
+ use        Array__Int__Pigeonholes__box as Array__Int__Pigeonholes__box
+
+ val constant d [#"pigeonholes.ads" 12 0 0][@name:d] [@model_projected] [@model_trace:2775] 
+   : Array__Int__Pigeonholes__box.map
+
+ 
+ val constant attr__ATTRIBUTE_ADDRESS 
+   : int
+
+
+end
+
+(* Module giving an empty axiom for the entity "d" defined at pigeonholes.ads:12, created in Gnat2Why.Driver.Translate_Entity.Generate_Empty_Axiom_Theory *)
+module Pigeonholes__countbirds__d___axiom
+ use        "_gnatprove_standard".Main
+ use        "int".Int
+
+
+end
+
+(* Module for defining the constant "b" defined at pigeonholes.ads:12, created in Gnat2Why.Decls.Translate_Constant *)
+module Pigeonholes__countbirds__b
+ use        "_gnatprove_standard".Main
+ use        "int".Int
+
+ val constant b [#"pigeonholes.ads" 12 0 0][@name:b] [@model_trace:2784] 
+   : int
+
+ 
+ val constant attr__ATTRIBUTE_ADDRESS 
+   : int
+
+
+end
+
+(* Module giving an empty axiom for the entity "b" defined at pigeonholes.ads:12, created in Gnat2Why.Driver.Translate_Entity.Generate_Empty_Axiom_Theory *)
+module Pigeonholes__countbirds__b___axiom
+ use        "_gnatprove_standard".Main
+ use        "int".Int
+
+
+end
+
+(* Module for possibly declaring a logic function for "countbirds" defined at pigeonholes.ads:12, created in Gnat2Why.Subprograms.Translate_Subprogram_Spec *)
+module Pigeonholes__countbirds
+ use        "_gnatprove_standard".Main
+ use        "int".Int
+ use        Array__Int__Pigeonholes__box as Array__Int__Pigeonholes__box
+
+ val function countbirds 
+   (d : Array__Int__Pigeonholes__box.map) (b : int) : int
+ 
+ val predicate countbirds__function_guard 
+   (temp___result_155 : int) (d : Array__Int__Pigeonholes__box.map) (b : int)
+
+end
+
+(* Module for defining the constant "n" defined at pigeonholes.ads:16, created in Gnat2Why.Decls.Translate_Constant *)
+module Pigeonholes__substitutebirds__n
+ use        "_gnatprove_standard".Main
+ use        "int".Int
+
+ val constant n [#"pigeonholes.ads" 16 0 0][@name:n] [@model_trace:2829] 
+   : int
+
+ 
+ val constant attr__ATTRIBUTE_ADDRESS 
+   : int
+
+
+end
+
+(* Module giving an empty axiom for the entity "n" defined at pigeonholes.ads:16, created in Gnat2Why.Driver.Translate_Entity.Generate_Empty_Axiom_Theory *)
+module Pigeonholes__substitutebirds__n___axiom
+ use        "_gnatprove_standard".Main
+ use        "int".Int
+
+
+end
+
+(* Module for defining the constant "b" defined at pigeonholes.ads:16, created in Gnat2Why.Decls.Translate_Constant *)
+module Pigeonholes__substitutebirds__b
+ use        "_gnatprove_standard".Main
+ use        "int".Int
+
+ val constant b [#"pigeonholes.ads" 16 0 0][@name:b] [@model_trace:2838] 
+   : int
+
+ 
+ val constant attr__ATTRIBUTE_ADDRESS 
+   : int
+
+
+end
+
+(* Module giving an empty axiom for the entity "b" defined at pigeonholes.ads:16, created in Gnat2Why.Driver.Translate_Entity.Generate_Empty_Axiom_Theory *)
+module Pigeonholes__substitutebirds__b___axiom
+ use        "_gnatprove_standard".Main
+ use        "int".Int
+
+
+end
+
+(* Module for axiomatizing type "T16s" defined at pigeonholes.ads:17, created in Gnat2Why.Types.Translate_Type *)
+module Pigeonholes__substitutebirds__L15s__T16s
+ use        "_gnatprove_standard".Main
+ use        "int".Int
+ use        "int".Int
+
+ type t16s =
+  < range 1 5 >
+ 
+ val constant first 
+   : int
+  ensures { result =  (1 : int) }
+ 
+ val constant last 
+   : int
+  ensures { result =  (5 : int) }
+ 
+ predicate in_range 
+   (x : int) =
+  ( (first <= x) /\ (x <= last) )
+ val in_range 
+   (x : int) : bool
+  ensures { result <-> in_range (x : int) }
+ 
+ clone export "ada__model".Static_Discrete with axiom .,
+ type t = t16s, 
+ function first = first, 
+ function last = last, 
+ predicate in_range = in_range
+ 
+ type t16s__ref =
+  { mutable t16s__content : t16s }
+ 
+ function t16s__ref_t16s__content__projection 
+   (a : t16s__ref) : t16s =
+  a.t16s__content
+ 
+ meta "model_projection" function t16s__ref_t16s__content__projection
+ 
+ meta "inline:no" function t16s__ref_t16s__content__projection
+ 
+ val t16s__havoc 
+   (x : t16s__ref) : unit
+  writes {x}
+
+end
+
+(* Module defining to_rep/of_rep for type "T16s" defined at pigeonholes.ads:17, created in Gnat2Why.Types.Translate_Type *)
+module Pigeonholes__substitutebirds__L15s__T16s__rep
+ use        Pigeonholes__substitutebirds__L15s__T16s as Pigeonholes__substitutebirds__L15s__T16s
+ use        "_gnatprove_standard".Main
+ use        "int".Int
+
+ function to_rep 
+   (x : Pigeonholes__substitutebirds__L15s__T16s.t16s) : int =
+  (Pigeonholes__substitutebirds__L15s__T16s.t16s'int x)
+ 
+ clone export "ada__model".Rep_Proj_Int with axiom .,
+ type t = Pigeonholes__substitutebirds__L15s__T16s.t16s, 
+ predicate in_range = Pigeonholes__substitutebirds__L15s__T16s.in_range, 
+ function to_rep = to_rep
+ 
+ meta "model_projection" function to_rep
+ 
+ meta "inline:no" function to_rep
+
+end
+
+(* Module for defining the constant "d" defined at pigeonholes.ads:19, created in Gnat2Why.Decls.Translate_Constant *)
+module Pigeonholes__birdexist__d
+ use        "_gnatprove_standard".Main
+ use        "int".Int
+ use        Array__Int__Pigeonholes__box as Array__Int__Pigeonholes__box
+
+ val constant d [#"pigeonholes.ads" 19 0 0][@name:d] [@model_projected] [@model_trace:2890] 
+   : Array__Int__Pigeonholes__box.map
+
+ 
+ val constant attr__ATTRIBUTE_ADDRESS 
+   : int
+
+
+end
+
+(* Module giving an empty axiom for the entity "d" defined at pigeonholes.ads:19, created in Gnat2Why.Driver.Translate_Entity.Generate_Empty_Axiom_Theory *)
+module Pigeonholes__birdexist__d___axiom
+ use        "_gnatprove_standard".Main
+ use        "int".Int
+
+
+end
+
+(* Module for defining the constant "b" defined at pigeonholes.ads:19, created in Gnat2Why.Decls.Translate_Constant *)
+module Pigeonholes__birdexist__b
+ use        "_gnatprove_standard".Main
+ use        "int".Int
+
+ val constant b [#"pigeonholes.ads" 19 0 0][@name:b] [@model_trace:2899] 
+   : int
+
+ 
+ val constant attr__ATTRIBUTE_ADDRESS 
+   : int
+
+
+end
+
+(* Module giving an empty axiom for the entity "b" defined at pigeonholes.ads:19, created in Gnat2Why.Driver.Translate_Entity.Generate_Empty_Axiom_Theory *)
+module Pigeonholes__birdexist__b___axiom
+ use        "_gnatprove_standard".Main
+ use        "int".Int
+
+
+end
+
+(* Module for axiomatizing type "T12s" defined at pigeonholes.ads:20, created in Gnat2Why.Types.Translate_Type *)
+module Pigeonholes__birdexist__L11s__T12s
+ use        "_gnatprove_standard".Main
+ use        "int".Int
+ use        "int".Int
+
+ type t12s =
+  < range 1 5 >
+ 
+ val constant first 
+   : int
+  ensures { result =  (1 : int) }
+ 
+ val constant last 
+   : int
+  ensures { result =  (5 : int) }
+ 
+ predicate in_range 
+   (x : int) =
+  ( (first <= x) /\ (x <= last) )
+ val in_range 
+   (x : int) : bool
+  ensures { result <-> in_range (x : int) }
+ 
+ clone export "ada__model".Static_Discrete with axiom .,
+ type t = t12s, 
+ function first = first, 
+ function last = last, 
+ predicate in_range = in_range
+ 
+ type t12s__ref =
+  { mutable t12s__content : t12s }
+ 
+ function t12s__ref_t12s__content__projection 
+   (a : t12s__ref) : t12s =
+  a.t12s__content
+ 
+ meta "model_projection" function t12s__ref_t12s__content__projection
+ 
+ meta "inline:no" function t12s__ref_t12s__content__projection
+ 
+ val t12s__havoc 
+   (x : t12s__ref) : unit
+  writes {x}
+
+end
+
+(* Module defining to_rep/of_rep for type "T12s" defined at pigeonholes.ads:20, created in Gnat2Why.Types.Translate_Type *)
+module Pigeonholes__birdexist__L11s__T12s__rep
+ use        Pigeonholes__birdexist__L11s__T12s as Pigeonholes__birdexist__L11s__T12s
+ use        "_gnatprove_standard".Main
+ use        "int".Int
+
+ function to_rep 
+   (x : Pigeonholes__birdexist__L11s__T12s.t12s) : int =
+  (Pigeonholes__birdexist__L11s__T12s.t12s'int x)
+ 
+ clone export "ada__model".Rep_Proj_Int with axiom .,
+ type t = Pigeonholes__birdexist__L11s__T12s.t12s, 
+ predicate in_range = Pigeonholes__birdexist__L11s__T12s.in_range, 
+ function to_rep = to_rep
+ 
+ meta "model_projection" function to_rep
+ 
+ meta "inline:no" function to_rep
+
+end
+
+(* Module for axiomatizing type "T7s" defined at pigeonholes.ads:20, created in Gnat2Why.Types.Translate_Type *)
+module Pigeonholes__birdexist__L6s__T7s
  use        "_gnatprove_standard".Main
  use        "int".Int
  use        "int".Int
@@ -2222,19 +2580,19 @@ module Pigeonholes__pigeonbegone__L6s__T7s
 
 end
 
-(* Module defining to_rep/of_rep for type "T7s" defined at pigeonholes.ads:10, created in Gnat2Why.Types.Translate_Type *)
-module Pigeonholes__pigeonbegone__L6s__T7s__rep
- use        Pigeonholes__pigeonbegone__L6s__T7s as Pigeonholes__pigeonbegone__L6s__T7s
+(* Module defining to_rep/of_rep for type "T7s" defined at pigeonholes.ads:20, created in Gnat2Why.Types.Translate_Type *)
+module Pigeonholes__birdexist__L6s__T7s__rep
+ use        Pigeonholes__birdexist__L6s__T7s as Pigeonholes__birdexist__L6s__T7s
  use        "_gnatprove_standard".Main
  use        "int".Int
 
  function to_rep 
-   (x : Pigeonholes__pigeonbegone__L6s__T7s.t7s) : int =
-  (Pigeonholes__pigeonbegone__L6s__T7s.t7s'int x)
+   (x : Pigeonholes__birdexist__L6s__T7s.t7s) : int =
+  (Pigeonholes__birdexist__L6s__T7s.t7s'int x)
  
  clone export "ada__model".Rep_Proj_Int with axiom .,
- type t = Pigeonholes__pigeonbegone__L6s__T7s.t7s, 
- predicate in_range = Pigeonholes__pigeonbegone__L6s__T7s.in_range, 
+ type t = Pigeonholes__birdexist__L6s__T7s.t7s, 
+ predicate in_range = Pigeonholes__birdexist__L6s__T7s.in_range, 
  function to_rep = to_rep
  
  meta "model_projection" function to_rep
@@ -2243,13 +2601,27 @@ module Pigeonholes__pigeonbegone__L6s__T7s__rep
 
 end
 
-(* Module for defining the constant "d" defined at pigeonholes.ads:12, created in Gnat2Why.Decls.Translate_Constant *)
-module Pigeonholes__countbirds__d
+(* Module for possibly declaring a logic function for "birdexist" defined at pigeonholes.ads:19, created in Gnat2Why.Subprograms.Translate_Subprogram_Spec *)
+module Pigeonholes__birdexist
  use        "_gnatprove_standard".Main
  use        "int".Int
  use        Array__Int__Pigeonholes__box as Array__Int__Pigeonholes__box
 
- val constant d [#"pigeonholes.ads" 12 0 0][@name:d] [@model_projected] [@model_trace:2680] 
+ val function birdexist 
+   (d : Array__Int__Pigeonholes__box.map) (b : int) : bool
+ 
+ val predicate birdexist__function_guard 
+   (temp___result_156 : bool) (d : Array__Int__Pigeonholes__box.map) (b : int)
+
+end
+
+(* Module for defining the constant "d" defined at pigeonholes.ads:22, created in Gnat2Why.Decls.Translate_Constant *)
+module Pigeonholes__birdindex__d
+ use        "_gnatprove_standard".Main
+ use        "int".Int
+ use        Array__Int__Pigeonholes__box as Array__Int__Pigeonholes__box
+
+ val constant d [#"pigeonholes.ads" 22 0 0][@name:d] [@model_projected] [@model_trace:2934] 
    : Array__Int__Pigeonholes__box.map
 
  
@@ -2259,20 +2631,20 @@ module Pigeonholes__countbirds__d
 
 end
 
-(* Module giving an empty axiom for the entity "d" defined at pigeonholes.ads:12, created in Gnat2Why.Driver.Translate_Entity.Generate_Empty_Axiom_Theory *)
-module Pigeonholes__countbirds__d___axiom
+(* Module giving an empty axiom for the entity "d" defined at pigeonholes.ads:22, created in Gnat2Why.Driver.Translate_Entity.Generate_Empty_Axiom_Theory *)
+module Pigeonholes__birdindex__d___axiom
  use        "_gnatprove_standard".Main
  use        "int".Int
 
 
 end
 
-(* Module for defining the constant "b" defined at pigeonholes.ads:12, created in Gnat2Why.Decls.Translate_Constant *)
-module Pigeonholes__countbirds__b
+(* Module for defining the constant "b" defined at pigeonholes.ads:22, created in Gnat2Why.Decls.Translate_Constant *)
+module Pigeonholes__birdindex__b
  use        "_gnatprove_standard".Main
  use        "int".Int
 
- val constant b [#"pigeonholes.ads" 12 0 0][@name:b] [@model_trace:2689] 
+ val constant b [#"pigeonholes.ads" 22 0 0][@name:b] [@model_trace:2943] 
    : int
 
  
@@ -2282,86 +2654,26 @@ module Pigeonholes__countbirds__b
 
 end
 
-(* Module giving an empty axiom for the entity "b" defined at pigeonholes.ads:12, created in Gnat2Why.Driver.Translate_Entity.Generate_Empty_Axiom_Theory *)
-module Pigeonholes__countbirds__b___axiom
+(* Module giving an empty axiom for the entity "b" defined at pigeonholes.ads:22, created in Gnat2Why.Driver.Translate_Entity.Generate_Empty_Axiom_Theory *)
+module Pigeonholes__birdindex__b___axiom
  use        "_gnatprove_standard".Main
  use        "int".Int
 
 
 end
 
-(* Module for possibly declaring a logic function for "countbirds" defined at pigeonholes.ads:12, created in Gnat2Why.Subprograms.Translate_Subprogram_Spec *)
-module Pigeonholes__countbirds
- use        "_gnatprove_standard".Main
- use        "int".Int
- use        Array__Int__Pigeonholes__box as Array__Int__Pigeonholes__box
-
- val function countbirds 
-   (d : Array__Int__Pigeonholes__box.map) (b : int) : int
- 
- val predicate countbirds__function_guard 
-   (temp___result_155 : int) (d : Array__Int__Pigeonholes__box.map) (b : int)
-
-end
-
-(* Module for defining the constant "n" defined at pigeonholes.ads:16, created in Gnat2Why.Decls.Translate_Constant *)
-module Pigeonholes__substitutebirds__n
- use        "_gnatprove_standard".Main
- use        "int".Int
-
- val constant n [#"pigeonholes.ads" 16 0 0][@name:n] [@model_trace:2734] 
-   : int
-
- 
- val constant attr__ATTRIBUTE_ADDRESS 
-   : int
-
-
-end
-
-(* Module giving an empty axiom for the entity "n" defined at pigeonholes.ads:16, created in Gnat2Why.Driver.Translate_Entity.Generate_Empty_Axiom_Theory *)
-module Pigeonholes__substitutebirds__n___axiom
- use        "_gnatprove_standard".Main
- use        "int".Int
-
-
-end
-
-(* Module for defining the constant "b" defined at pigeonholes.ads:16, created in Gnat2Why.Decls.Translate_Constant *)
-module Pigeonholes__substitutebirds__b
- use        "_gnatprove_standard".Main
- use        "int".Int
-
- val constant b [#"pigeonholes.ads" 16 0 0][@name:b] [@model_trace:2743] 
-   : int
-
- 
- val constant attr__ATTRIBUTE_ADDRESS 
-   : int
-
-
-end
-
-(* Module giving an empty axiom for the entity "b" defined at pigeonholes.ads:16, created in Gnat2Why.Driver.Translate_Entity.Generate_Empty_Axiom_Theory *)
-module Pigeonholes__substitutebirds__b___axiom
- use        "_gnatprove_standard".Main
- use        "int".Int
-
-
-end
-
-(* Module for axiomatizing type "T9s" defined at pigeonholes.ads:17, created in Gnat2Why.Types.Translate_Type *)
-module Pigeonholes__substitutebirds__L8s__T9s
+(* Module for axiomatizing type "T18s" defined at pigeonholes.ads:26, created in Gnat2Why.Types.Translate_Type *)
+module Pigeonholes__birdindex__L17s__T18s
  use        "_gnatprove_standard".Main
  use        "int".Int
  use        "int".Int
 
- type t9s =
-  < range 1 5 >
+ type t18s =
+  < range 2 5 >
  
  val constant first 
    : int
-  ensures { result =  (1 : int) }
+  ensures { result =  (2 : int) }
  
  val constant last 
    : int
@@ -2375,46 +2687,60 @@ module Pigeonholes__substitutebirds__L8s__T9s
   ensures { result <-> in_range (x : int) }
  
  clone export "ada__model".Static_Discrete with axiom .,
- type t = t9s, 
+ type t = t18s, 
  function first = first, 
  function last = last, 
  predicate in_range = in_range
  
- type t9s__ref =
-  { mutable t9s__content : t9s }
+ type t18s__ref =
+  { mutable t18s__content : t18s }
  
- function t9s__ref_t9s__content__projection 
-   (a : t9s__ref) : t9s =
-  a.t9s__content
+ function t18s__ref_t18s__content__projection 
+   (a : t18s__ref) : t18s =
+  a.t18s__content
  
- meta "model_projection" function t9s__ref_t9s__content__projection
+ meta "model_projection" function t18s__ref_t18s__content__projection
  
- meta "inline:no" function t9s__ref_t9s__content__projection
+ meta "inline:no" function t18s__ref_t18s__content__projection
  
- val t9s__havoc 
-   (x : t9s__ref) : unit
+ val t18s__havoc 
+   (x : t18s__ref) : unit
   writes {x}
 
 end
 
-(* Module defining to_rep/of_rep for type "T9s" defined at pigeonholes.ads:17, created in Gnat2Why.Types.Translate_Type *)
-module Pigeonholes__substitutebirds__L8s__T9s__rep
- use        Pigeonholes__substitutebirds__L8s__T9s as Pigeonholes__substitutebirds__L8s__T9s
+(* Module defining to_rep/of_rep for type "T18s" defined at pigeonholes.ads:26, created in Gnat2Why.Types.Translate_Type *)
+module Pigeonholes__birdindex__L17s__T18s__rep
+ use        Pigeonholes__birdindex__L17s__T18s as Pigeonholes__birdindex__L17s__T18s
  use        "_gnatprove_standard".Main
  use        "int".Int
 
  function to_rep 
-   (x : Pigeonholes__substitutebirds__L8s__T9s.t9s) : int =
-  (Pigeonholes__substitutebirds__L8s__T9s.t9s'int x)
+   (x : Pigeonholes__birdindex__L17s__T18s.t18s) : int =
+  (Pigeonholes__birdindex__L17s__T18s.t18s'int x)
  
  clone export "ada__model".Rep_Proj_Int with axiom .,
- type t = Pigeonholes__substitutebirds__L8s__T9s.t9s, 
- predicate in_range = Pigeonholes__substitutebirds__L8s__T9s.in_range, 
+ type t = Pigeonholes__birdindex__L17s__T18s.t18s, 
+ predicate in_range = Pigeonholes__birdindex__L17s__T18s.in_range, 
  function to_rep = to_rep
  
  meta "model_projection" function to_rep
  
  meta "inline:no" function to_rep
+
+end
+
+(* Module for possibly declaring a logic function for "birdindex" defined at pigeonholes.ads:22, created in Gnat2Why.Subprograms.Translate_Subprogram_Spec *)
+module Pigeonholes__birdindex
+ use        "_gnatprove_standard".Main
+ use        "int".Int
+ use        Array__Int__Pigeonholes__box as Array__Int__Pigeonholes__box
+
+ val function birdindex 
+   (d : Array__Int__Pigeonholes__box.map) (b : int) : int
+ 
+ val predicate birdindex__function_guard 
+   (temp___result_157 : int) (d : Array__Int__Pigeonholes__box.map) (b : int)
 
 end
 
@@ -2573,13 +2899,97 @@ module Pigeonholes__countbirds__L_2__T7b
   writes {x}
 
 end
+
+(* Module for axiomatizing type "T13b" defined at pigeonholes.adb:43, created in Gnat2Why.Types.Translate_Type *)
+module Pigeonholes__birdindex__L_3__L12b__T13b
+ use        "_gnatprove_standard".Main
+ use        "int".Int
+ use        "int".Int
+ use        Pigeonholes__Tph_indexB as Pigeonholes__Tph_indexB
+ use        Pigeonholes__Tph_indexB__rep as Pigeonholes__Tph_indexB__rep
+
+ type t13b =
+  Pigeonholes__Tph_indexB.tph_indexB
+ 
+ predicate dynamic_property 
+   (first_int : int) (last_int : int) (x : int) =
+  ( (first_int <= x) /\ (x <= last_int) )
+ val dynamic_property 
+   (first_int : int) (last_int : int) (x : int) : bool
+  ensures { result <-> dynamic_property (first_int : int) (last_int : int) (x : int) }
+ 
+ clone export "ada__model".Dynamic_Discrete with axiom .,
+ type t = t13b, 
+ type rep_type = int, 
+ function base_to_rep = Pigeonholes__Tph_indexB__rep.to_rep, 
+ function base_of_rep = Pigeonholes__Tph_indexB__rep.of_rep, 
+ predicate dynamic_property = dynamic_property
+ 
+ type t13b__ref =
+  { mutable t13b__content : t13b }
+ 
+ function t13b__ref_t13b__content__projection 
+   (a : t13b__ref) : t13b =
+  a.t13b__content
+ 
+ meta "model_projection" function t13b__ref_t13b__content__projection
+ 
+ meta "inline:no" function t13b__ref_t13b__content__projection
+ 
+ val t13b__havoc 
+   (x : t13b__ref) : unit
+  writes {x}
+
+end
+
+(* Module for axiomatizing type "T11b" defined at pigeonholes.adb:43, created in Gnat2Why.Types.Translate_Type *)
+module Pigeonholes__birdindex__L_3__L10b__T11b
+ use        "_gnatprove_standard".Main
+ use        "int".Int
+ use        "int".Int
+ use        Pigeonholes__Tph_indexB as Pigeonholes__Tph_indexB
+ use        Pigeonholes__Tph_indexB__rep as Pigeonholes__Tph_indexB__rep
+
+ type t11b =
+  Pigeonholes__Tph_indexB.tph_indexB
+ 
+ predicate dynamic_property 
+   (first_int : int) (last_int : int) (x : int) =
+  ( (first_int <= x) /\ (x <= last_int) )
+ val dynamic_property 
+   (first_int : int) (last_int : int) (x : int) : bool
+  ensures { result <-> dynamic_property (first_int : int) (last_int : int) (x : int) }
+ 
+ clone export "ada__model".Dynamic_Discrete with axiom .,
+ type t = t11b, 
+ type rep_type = int, 
+ function base_to_rep = Pigeonholes__Tph_indexB__rep.to_rep, 
+ function base_of_rep = Pigeonholes__Tph_indexB__rep.of_rep, 
+ predicate dynamic_property = dynamic_property
+ 
+ type t11b__ref =
+  { mutable t11b__content : t11b }
+ 
+ function t11b__ref_t11b__content__projection 
+   (a : t11b__ref) : t11b =
+  a.t11b__content
+ 
+ meta "model_projection" function t11b__ref_t11b__content__projection
+ 
+ meta "inline:no" function t11b__ref_t11b__content__projection
+ 
+ val t11b__havoc 
+   (x : t11b__ref) : unit
+  writes {x}
+
+end
 (* Module for defining a ref holding the value of variable "d" defined at pigeonholes.ads:9, created in Gnat2Why.Decls.Translate_Variable *)
 module Pigeonholes__pigeonbegone__d
  use        "_gnatprove_standard".Main
  use        "int".Int
  use        Array__Int__Pigeonholes__box as Array__Int__Pigeonholes__box
 
- val d [#"pigeonholes.ads" 9 0 0][@name:d] [@model_projected] [@model_trace:2642]  : Array__Int__Pigeonholes__box.map__ref 
+ val d [#"pigeonholes.ads" 9 0 0][@name:d] [@model_projected] [@model_trace:2737]  : Array__Int__Pigeonholes__box.map__ref 
  
  val constant attr__ATTRIBUTE_ADDRESS 
    : int
@@ -2601,7 +3011,7 @@ module Pigeonholes__substitutebirds__d
  use        "int".Int
  use        Array__Int__Pigeonholes__box as Array__Int__Pigeonholes__box
 
- val d [#"pigeonholes.ads" 16 0 0][@model_trace:2725] [@name:d] [@model_projected]  : Array__Int__Pigeonholes__box.map__ref 
+ val d [#"pigeonholes.ads" 16 0 0][@name:d] [@model_projected] [@model_trace:2820]  : Array__Int__Pigeonholes__box.map__ref 
  
  val constant attr__ATTRIBUTE_ADDRESS 
    : int
@@ -2716,6 +3126,27 @@ end
 
 (* Module giving an empty axiom for the entity "i" defined at pigeonholes.adb:22, created in Gnat2Why.Driver.Translate_Entity.Generate_Empty_Axiom_Theory *)
 module Pigeonholes__countbirds__L_2__i___axiom
+ use        "_gnatprove_standard".Main
+ use        "int".Int
+
+
+end
+
+(* Module for defining a ref holding the value of variable "pos" defined at pigeonholes.adb:36, created in Gnat2Why.Decls.Translate_Variable *)
+module Pigeonholes__birdindex__pos
+ use        "_gnatprove_standard".Main
+ use        "int".Int
+
+ val pos [#"pigeonholes.adb" 36 0 0][@name:pos] [@model_projected] [@model_trace:2573]  : int__ref 
+ 
+ val constant attr__ATTRIBUTE_ADDRESS 
+   : int
+
+
+end
+
+(* Module giving an empty axiom for the entity "pos" defined at pigeonholes.adb:36, created in Gnat2Why.Driver.Translate_Entity.Generate_Empty_Axiom_Theory *)
+module Pigeonholes__birdindex__pos___axiom
  use        "_gnatprove_standard".Main
  use        "int".Int
 
@@ -3282,6 +3713,23 @@ module Pigeonholes__countbirds__L_2___axiom
 
 end
 
+(* Module for defining the loop exit exception for the loop "L_3" defined at pigeonholes.adb:38, created in Gnat2Why.Decls.Translate_Loop_Entity *)
+module Pigeonholes__birdindex__L_3
+ use        "_gnatprove_standard".Main
+ use        "int".Int
+
+ exception L_3
+
+end
+
+(* Module giving an empty axiom for the entity "L_3" defined at pigeonholes.adb:38, created in Gnat2Why.Driver.Translate_Entity.Generate_Empty_Axiom_Theory *)
+module Pigeonholes__birdindex__L_3___axiom
+ use        "_gnatprove_standard".Main
+ use        "int".Int
+
+
+end
+
 (* Module giving axioms for type "box" defined at pigeonholes.ads:3, created in Gnat2Why.Types.Generate_Type_Completion *)
 module Pigeonholes__box___axiom
  use        "_gnatprove_standard".Main
@@ -3290,19 +3738,19 @@ module Pigeonholes__box___axiom
  use        Pigeonholes__box as Pigeonholes__box
 
  predicate dynamic_invariant [@inline] 
-   (temp___expr_160 : int) (temp___is_init_156 : bool) (temp___skip_constant_157 : bool) (temp___do_toplevel_158 : bool) (temp___do_typ_inv_159 : bool) =
-  (if (( temp___is_init_156 \/ (Pigeonholes__box.first <= Pigeonholes__box.last) )) then (
-   (Pigeonholes__box.dynamic_property Pigeonholes__box.first Pigeonholes__box.last temp___expr_160)) else true)
+   (temp___expr_162 : int) (temp___is_init_158 : bool) (temp___skip_constant_159 : bool) (temp___do_toplevel_160 : bool) (temp___do_typ_inv_161 : bool) =
+  (if (( temp___is_init_158 \/ (Pigeonholes__box.first <= Pigeonholes__box.last) )) then (
+   (Pigeonholes__box.dynamic_property Pigeonholes__box.first Pigeonholes__box.last temp___expr_162)) else true)
  val dynamic_invariant [@inline] 
-   (temp___expr_160 : int) (temp___is_init_156 : bool) (temp___skip_constant_157 : bool) (temp___do_toplevel_158 : bool) (temp___do_typ_inv_159 : bool) : bool
-  ensures { result <-> dynamic_invariant (temp___expr_160 : int) (temp___is_init_156 : bool) (temp___skip_constant_157 : bool) (temp___do_toplevel_158 : bool) (temp___do_typ_inv_159 : bool) }
+   (temp___expr_162 : int) (temp___is_init_158 : bool) (temp___skip_constant_159 : bool) (temp___do_toplevel_160 : bool) (temp___do_typ_inv_161 : bool) : bool
+  ensures { result <-> dynamic_invariant (temp___expr_162 : int) (temp___is_init_158 : bool) (temp___skip_constant_159 : bool) (temp___do_toplevel_160 : bool) (temp___do_typ_inv_161 : bool) }
  
  predicate default_initial_assumption [@inline] 
-   (temp___expr_161 : int) (temp___skip_top_level_162 : bool) =
+   (temp___expr_163 : int) (temp___skip_top_level_164 : bool) =
   true
  val default_initial_assumption [@inline] 
-   (temp___expr_161 : int) (temp___skip_top_level_162 : bool) : bool
-  ensures { result <-> default_initial_assumption (temp___expr_161 : int) (temp___skip_top_level_162 : bool) }
+   (temp___expr_163 : int) (temp___skip_top_level_164 : bool) : bool
+  ensures { result <-> default_initial_assumption (temp___expr_163 : int) (temp___skip_top_level_164 : bool) }
 
 end
 
@@ -3322,19 +3770,19 @@ module Pigeonholes__ph_index___axiom
  use        Pigeonholes__ph_index as Pigeonholes__ph_index
 
  predicate dynamic_invariant [@inline] 
-   (temp___expr_167 : int) (temp___is_init_163 : bool) (temp___skip_constant_164 : bool) (temp___do_toplevel_165 : bool) (temp___do_typ_inv_166 : bool) =
-  (if (( temp___is_init_163 \/ (Pigeonholes__ph_index.first <= Pigeonholes__ph_index.last) )) then (
-   (Pigeonholes__ph_index.dynamic_property Pigeonholes__ph_index.first Pigeonholes__ph_index.last temp___expr_167)) else true)
+   (temp___expr_169 : int) (temp___is_init_165 : bool) (temp___skip_constant_166 : bool) (temp___do_toplevel_167 : bool) (temp___do_typ_inv_168 : bool) =
+  (if (( temp___is_init_165 \/ (Pigeonholes__ph_index.first <= Pigeonholes__ph_index.last) )) then (
+   (Pigeonholes__ph_index.dynamic_property Pigeonholes__ph_index.first Pigeonholes__ph_index.last temp___expr_169)) else true)
  val dynamic_invariant [@inline] 
-   (temp___expr_167 : int) (temp___is_init_163 : bool) (temp___skip_constant_164 : bool) (temp___do_toplevel_165 : bool) (temp___do_typ_inv_166 : bool) : bool
-  ensures { result <-> dynamic_invariant (temp___expr_167 : int) (temp___is_init_163 : bool) (temp___skip_constant_164 : bool) (temp___do_toplevel_165 : bool) (temp___do_typ_inv_166 : bool) }
+   (temp___expr_169 : int) (temp___is_init_165 : bool) (temp___skip_constant_166 : bool) (temp___do_toplevel_167 : bool) (temp___do_typ_inv_168 : bool) : bool
+  ensures { result <-> dynamic_invariant (temp___expr_169 : int) (temp___is_init_165 : bool) (temp___skip_constant_166 : bool) (temp___do_toplevel_167 : bool) (temp___do_typ_inv_168 : bool) }
  
  predicate default_initial_assumption [@inline] 
-   (temp___expr_168 : int) (temp___skip_top_level_169 : bool) =
+   (temp___expr_170 : int) (temp___skip_top_level_171 : bool) =
   true
  val default_initial_assumption [@inline] 
-   (temp___expr_168 : int) (temp___skip_top_level_169 : bool) : bool
-  ensures { result <-> default_initial_assumption (temp___expr_168 : int) (temp___skip_top_level_169 : bool) }
+   (temp___expr_170 : int) (temp___skip_top_level_171 : bool) : bool
+  ensures { result <-> default_initial_assumption (temp___expr_170 : int) (temp___skip_top_level_171 : bool) }
 
 end
 
@@ -3354,31 +3802,55 @@ module Pigeonholes__pigeonhole___axiom
  use        Array__Int__Pigeonholes__box as Array__Int__Pigeonholes__box
 
  predicate dynamic_invariant [@inline] 
-   (temp___expr_174 : Array__Int__Pigeonholes__box.map) (temp___is_init_170 : bool) (temp___skip_constant_171 : bool) (temp___do_toplevel_172 : bool) (temp___do_typ_inv_173 : bool) =
+   (temp___expr_176 : Array__Int__Pigeonholes__box.map) (temp___is_init_172 : bool) (temp___skip_constant_173 : bool) (temp___do_toplevel_174 : bool) (temp___do_typ_inv_175 : bool) =
   true
  val dynamic_invariant [@inline] 
-   (temp___expr_174 : Array__Int__Pigeonholes__box.map) (temp___is_init_170 : bool) (temp___skip_constant_171 : bool) (temp___do_toplevel_172 : bool) (temp___do_typ_inv_173 : bool) : bool
-  ensures { result <-> dynamic_invariant (temp___expr_174 : Array__Int__Pigeonholes__box.map) (temp___is_init_170 : bool) (temp___skip_constant_171 : bool) (temp___do_toplevel_172 : bool) (temp___do_typ_inv_173 : bool) }
+   (temp___expr_176 : Array__Int__Pigeonholes__box.map) (temp___is_init_172 : bool) (temp___skip_constant_173 : bool) (temp___do_toplevel_174 : bool) (temp___do_typ_inv_175 : bool) : bool
+  ensures { result <-> dynamic_invariant (temp___expr_176 : Array__Int__Pigeonholes__box.map) (temp___is_init_172 : bool) (temp___skip_constant_173 : bool) (temp___do_toplevel_174 : bool) (temp___do_typ_inv_175 : bool) }
  
  predicate default_initial_assumption [@inline] 
-   (temp___expr_176 : Array__Int__Pigeonholes__box.map) (temp___skip_top_level_177 : bool) =
+   (temp___expr_178 : Array__Int__Pigeonholes__box.map) (temp___skip_top_level_179 : bool) =
   true
  val default_initial_assumption [@inline] 
-   (temp___expr_176 : Array__Int__Pigeonholes__box.map) (temp___skip_top_level_177 : bool) : bool
-  ensures { result <-> default_initial_assumption (temp___expr_176 : Array__Int__Pigeonholes__box.map) (temp___skip_top_level_177 : bool) }
+   (temp___expr_178 : Array__Int__Pigeonholes__box.map) (temp___skip_top_level_179 : bool) : bool
+  ensures { result <-> default_initial_assumption (temp___expr_178 : Array__Int__Pigeonholes__box.map) (temp___skip_top_level_179 : bool) }
 
 end
 
-(* Module giving axioms for type "T7s" defined at pigeonholes.ads:10, created in Gnat2Why.Types.Generate_Type_Completion *)
-module Pigeonholes__pigeonbegone__L6s__T7s___axiom
+(* Module giving axioms for type "T14s" defined at pigeonholes.ads:10, created in Gnat2Why.Types.Generate_Type_Completion *)
+module Pigeonholes__pigeonbegone__L13s__T14s___axiom
  use        "_gnatprove_standard".Main
  use        "int".Int
 
 
 end
 
-(* Module giving axioms for type "T9s" defined at pigeonholes.ads:17, created in Gnat2Why.Types.Generate_Type_Completion *)
-module Pigeonholes__substitutebirds__L8s__T9s___axiom
+(* Module giving axioms for type "T16s" defined at pigeonholes.ads:17, created in Gnat2Why.Types.Generate_Type_Completion *)
+module Pigeonholes__substitutebirds__L15s__T16s___axiom
+ use        "_gnatprove_standard".Main
+ use        "int".Int
+
+
+end
+
+(* Module giving axioms for type "T12s" defined at pigeonholes.ads:20, created in Gnat2Why.Types.Generate_Type_Completion *)
+module Pigeonholes__birdexist__L11s__T12s___axiom
+ use        "_gnatprove_standard".Main
+ use        "int".Int
+
+
+end
+
+(* Module giving axioms for type "T7s" defined at pigeonholes.ads:20, created in Gnat2Why.Types.Generate_Type_Completion *)
+module Pigeonholes__birdexist__L6s__T7s___axiom
+ use        "_gnatprove_standard".Main
+ use        "int".Int
+
+
+end
+
+(* Module giving axioms for type "T18s" defined at pigeonholes.ads:26, created in Gnat2Why.Types.Generate_Type_Completion *)
+module Pigeonholes__birdindex__L17s__T18s___axiom
  use        "_gnatprove_standard".Main
  use        "int".Int
 
@@ -3403,6 +3875,22 @@ end
 
 (* Module giving axioms for type "T7b" defined at pigeonholes.adb:22, created in Gnat2Why.Types.Generate_Type_Completion *)
 module Pigeonholes__countbirds__L_2__T7b___axiom
+ use        "_gnatprove_standard".Main
+ use        "int".Int
+
+
+end
+
+(* Module giving axioms for type "T13b" defined at pigeonholes.adb:43, created in Gnat2Why.Types.Generate_Type_Completion *)
+module Pigeonholes__birdindex__L_3__L12b__T13b___axiom
+ use        "_gnatprove_standard".Main
+ use        "int".Int
+
+
+end
+
+(* Module giving axioms for type "T11b" defined at pigeonholes.adb:43, created in Gnat2Why.Types.Generate_Type_Completion *)
+module Pigeonholes__birdindex__L_3__L10b__T11b___axiom
  use        "_gnatprove_standard".Main
  use        "int".Int
 
@@ -3438,8 +3926,8 @@ module Pigeonholes__pigeonbegone___axiom
  val pigeonbegone 
    (d : Array__Int__Pigeonholes__box.map__ref) : unit
   requires {  true }
-  ensures {  ( (forall j   [@name:J] [@model_trace:2658]  : int.
-   ( ( ((1 : int) <= j) /\ (j <= (5 : int)) ) -> ( [@GP_Pretty_Ada:2672] ((Pigeonholes__box__rep.to_rep (Array__Int__Pigeonholes__box.get d.Array__Int__Pigeonholes__box.map__content j)) <> (0 : int)) ) )) /\ (Pigeonholes__pigeonhole___axiom.dynamic_invariant d.Array__Int__Pigeonholes__box.map__content True True True True) ) }
+  ensures {  ( (forall j   [@model_trace:2753] [@name:J]  : int.
+   ( ( ((1 : int) <= j) /\ (j <= (5 : int)) ) -> ( [@GP_Pretty_Ada:2767] ((Pigeonholes__box__rep.to_rep (Array__Int__Pigeonholes__box.get d.Array__Int__Pigeonholes__box.map__content j)) <> (0 : int)) ) )) /\ (Pigeonholes__pigeonhole___axiom.dynamic_invariant d.Array__Int__Pigeonholes__box.map__content True True True True) ) }
   writes {d}
 
 end
@@ -3459,14 +3947,14 @@ module Pigeonholes__countbirds___axiom
  val countbirds 
    (d : Array__Int__Pigeonholes__box.map) (b : int) : int
   requires {  true }
-  ensures {  ( ( (result = (Pigeonholes__countbirds.countbirds d b)) /\ (Pigeonholes__countbirds.countbirds__function_guard result d b) )/\( (Standard__integer___axiom.dynamic_invariant result True False True True) /\ ( ( [@GP_Pretty_Ada:2709] (result >= (0 : int)) ) /\ ( [@GP_Pretty_Ada:2715] (result <= (5 : int)) ) ) ) ) }
+  ensures {  ( ( (result = (Pigeonholes__countbirds.countbirds d b)) /\ (Pigeonholes__countbirds.countbirds__function_guard result d b) )/\( (Standard__integer___axiom.dynamic_invariant result True False True True) /\ ( ( [@GP_Pretty_Ada:2804] (result >= (0 : int)) ) /\ ( [@GP_Pretty_Ada:2810] (result <= (5 : int)) ) ) ) ) }
  
  axiom countbirds__post_axiom :
   (forall d   : Array__Int__Pigeonholes__box.map.
   (forall b   : int [(Pigeonholes__countbirds.countbirds d b)].
    ( ( (Pigeonholes__pigeonhole___axiom.dynamic_invariant d True True True True) /\ (Pigeonholes__box___axiom.dynamic_invariant b True True True True) ) -> (let result = (Pigeonholes__countbirds.countbirds d b) in (
     (if ((Pigeonholes__countbirds.countbirds__function_guard result d b)) then (
-     ( ( ( ( [@GP_Pretty_Ada:2709] (result >= (0 : int)) ) /\ ( [@GP_Pretty_Ada:2715] (result <= (5 : int)) ) ) /\ (Standard__integer___axiom.dynamic_invariant result True False True True) )/\true )) else true)))
+     ( ( ( ( [@GP_Pretty_Ada:2804] (result >= (0 : int)) ) /\ ( [@GP_Pretty_Ada:2810] (result <= (5 : int)) ) ) /\ (Standard__integer___axiom.dynamic_invariant result True False True True) )/\true )) else true)))
     )))
 
 end
@@ -3485,13 +3973,90 @@ module Pigeonholes__substitutebirds___axiom
  val substitutebirds 
    (d : Array__Int__Pigeonholes__box.map__ref) (n : int) (b : int) : unit
   requires {  true }
-  ensures {  ( ( ( [@GP_Pretty_Ada:2762] ((Pigeonholes__box__rep.to_rep (Array__Int__Pigeonholes__box.get d.Array__Int__Pigeonholes__box.map__content n)) = b) ) /\ (forall i   [@name:I] [@model_trace:2765]  : int.
+  ensures {  ( ( ( [@GP_Pretty_Ada:2857] ((Pigeonholes__box__rep.to_rep (Array__Int__Pigeonholes__box.get d.Array__Int__Pigeonholes__box.map__content n)) = b) ) /\ (forall i   [@model_trace:2860] [@name:I]  : int.
    ( ( ((1 : int) <= i) /\ (i <= (5 : int)) ) -> (if ((i <> n)) then (
-    ( [@GP_Pretty_Ada:2782] ((Pigeonholes__box__rep.to_rep (Array__Int__Pigeonholes__box.get d.Array__Int__Pigeonholes__box.map__content i)) = (Pigeonholes__box__rep.to_rep (let temp___184 [@mlw:proxy_symbol] [@introduced] = (old d.Array__Int__Pigeonholes__box.map__content ) in (
-     (Array__Int__Pigeonholes__box.get temp___184 i)))
+    ( [@GP_Pretty_Ada:2877] ((Pigeonholes__box__rep.to_rep (Array__Int__Pigeonholes__box.get d.Array__Int__Pigeonholes__box.map__content i)) = (Pigeonholes__box__rep.to_rep (let temp___186 [@mlw:proxy_symbol] [@introduced] = (old d.Array__Int__Pigeonholes__box.map__content ) in (
+     (Array__Int__Pigeonholes__box.get temp___186 i)))
     )) )) else (
-    ( [@GP_Pretty_Ada:2999] true ))) )) ) /\ (Pigeonholes__pigeonhole___axiom.dynamic_invariant d.Array__Int__Pigeonholes__box.map__content True True True True) ) }
+    ( [@GP_Pretty_Ada:3425] true ))) )) ) /\ (Pigeonholes__pigeonhole___axiom.dynamic_invariant d.Array__Int__Pigeonholes__box.map__content True True True True) ) }
   writes {d}
+
+end
+
+(* Module giving a program function and a defining axiom for the expression function "birdexist" defined at pigeonholes.ads:19, created in Gnat2Why.Subprograms.Translate_Expression_Function_Body *)
+module Pigeonholes__birdexist___axiom
+ use        "_gnatprove_standard".Main
+ use        "int".Int
+ use        "int".Int
+ use        Pigeonholes__birdexist as Pigeonholes__birdexist
+ use        Pigeonholes__box as Pigeonholes__box
+ use        Pigeonholes__box___axiom as Pigeonholes__box___axiom
+ use        Pigeonholes__box__rep as Pigeonholes__box__rep
+ use        Array__Int__Pigeonholes__box as Array__Int__Pigeonholes__box
+ use        Pigeonholes__pigeonhole___axiom as Pigeonholes__pigeonhole___axiom
+ use        Array__Int__Pigeonholes__box as Array__Int__Pigeonholes__box
+ use        Array__Int__Pigeonholes__box as Array__Int__Pigeonholes__box
+ use        Array__Int__Pigeonholes__box as Array__Int__Pigeonholes__box
+
+ val birdexist 
+   (d : Array__Int__Pigeonholes__box.map) (b : int) : bool
+  requires {  true }
+  ensures {  ( ( (result = (Pigeonholes__birdexist.birdexist d b)) /\ (Pigeonholes__birdexist.birdexist__function_guard result d b) )/\( (result = True) <-> (exists i  : int.
+   ( ( ((1 : int) <= i) /\ (i <= (5 : int)) ) /\ ((Pigeonholes__box__rep.to_rep (Array__Int__Pigeonholes__box.get d i)) = b) )) ) ) }
+ 
+ axiom birdexist__post_axiom :
+  (forall d   : Array__Int__Pigeonholes__box.map.
+  (forall b   : int [(Pigeonholes__birdexist.birdexist d b)].
+   ( ( (Pigeonholes__pigeonhole___axiom.dynamic_invariant d True True True True) /\ (Pigeonholes__box___axiom.dynamic_invariant b True True True True) ) -> (let result = (Pigeonholes__birdexist.birdexist d b) in (
+    (if ((Pigeonholes__birdexist.birdexist__function_guard result d b)) then (
+     ( ( true /\ true )/\true )) else true)))
+    )))
+ 
+ axiom birdexist__def_axiom :
+  (forall d   : Array__Int__Pigeonholes__box.map.
+  (forall b   : int [(Pigeonholes__birdexist.birdexist d b)].
+   ( (let result = (Pigeonholes__birdexist.birdexist d b) in (
+    (Pigeonholes__birdexist.birdexist__function_guard result d b)))
+    -> ( ((Pigeonholes__birdexist.birdexist d b) = True) <-> (exists i  : int.
+    ( ( ((1 : int) <= i) /\ (i <= (5 : int)) ) /\ ((Pigeonholes__box__rep.to_rep (Array__Int__Pigeonholes__box.get d i)) = b) )) ) )))
+
+end
+
+(* Module for declaring a program function (and possibly an axiom) for "birdindex" defined at pigeonholes.ads:22, created in Gnat2Why.Subprograms.Generate_Subprogram_Completion *)
+module Pigeonholes__birdindex___axiom
+ use        "_gnatprove_standard".Main
+ use        "int".Int
+ use        "int".Int
+ use        "_gnatprove_standard".Integer as Integer
+ use        "_gnatprove_standard".Boolean as Boolean
+ use        Pigeonholes__birdexist as Pigeonholes__birdexist
+ use        Pigeonholes__birdindex as Pigeonholes__birdindex
+ use        Pigeonholes__box as Pigeonholes__box
+ use        Pigeonholes__box__rep as Pigeonholes__box__rep
+ use        Pigeonholes__ph_index as Pigeonholes__ph_index
+ use        Pigeonholes__ph_index___axiom as Pigeonholes__ph_index___axiom
+ use        Array__Int__Pigeonholes__box as Array__Int__Pigeonholes__box
+ use        Array__Int__Pigeonholes__box as Array__Int__Pigeonholes__box
+ use        Array__Int__Pigeonholes__box as Array__Int__Pigeonholes__box
+
+ val birdindex 
+   (d : Array__Int__Pigeonholes__box.map) (b : int) : int
+  requires {  ( [@GP_Pretty_Ada:3250] ((epsilon temp___result_191 : bool.
+   ( (temp___result_191 = (Pigeonholes__birdexist.birdexist d b)) /\ (Pigeonholes__birdexist.birdexist__function_guard temp___result_191 d b) )) = True) ) }
+  ensures {  ( ( (result = (Pigeonholes__birdindex.birdindex d b)) /\ (Pigeonholes__birdindex.birdindex__function_guard result d b) )/\( (Pigeonholes__ph_index___axiom.dynamic_invariant result True False True True) /\ ( ( [@GP_Pretty_Ada:3263] ((Pigeonholes__box__rep.to_rep (Array__Int__Pigeonholes__box.get d result)) = b) ) /\ (if (((old (Boolean.andb (Integer.bool_eq (Pigeonholes__box__rep.to_rep (Array__Int__Pigeonholes__box.get d (1 : int))) b) (if ((exists j  : int.
+   ( ( ((2 : int) <= j) /\ (j <= (5 : int)) ) /\ ((Pigeonholes__box__rep.to_rep (Array__Int__Pigeonholes__box.get d j)) = b) ))) then (
+   True) else (
+   False))) ) = True)) then (
+   (result = (1 : int))) else ((if (((old (Integer.bool_ne (Pigeonholes__box__rep.to_rep (Array__Int__Pigeonholes__box.get d (1 : int))) b) ) = True)) then (
+   (result > (1 : int))) else (
+   true)))) ) ) ) }
+ 
+ axiom birdindex__post_axiom :
+  (forall d   : Array__Int__Pigeonholes__box.map.
+  (forall b   : int [(Pigeonholes__birdindex.birdindex d b)].
+   (let result = (Pigeonholes__birdindex.birdindex d b) in (
+    (Pigeonholes__ph_index.dynamic_property Pigeonholes__ph_index.first Pigeonholes__ph_index.last result)))
+  ))
 
 end
 
@@ -3515,21 +4080,30 @@ module Pigeonholes__package_def
   ([#"pigeonholes.ads" 14 0 0] ());
   ([#"pigeonholes.ads" 16 0 0] ());
   ([#"pigeonholes.ads" 17 0 0] ());
-  ([#"pigeonholes.ads" 17 0 0] ());
-  ([#"pigeonholes.ads" 17 0 0] ());
-  ([#"pigeonholes.ads" 17 0 0] ());
-  ([#"pigeonholes.ads" 17 0 0] ());
-  ([#"pigeonholes.ads" 17 0 0] ());
-  ([#"pigeonholes.ads" 17 0 0] ());
-  ([#"pigeonholes.ads" 17 0 0] ());
-  ([#"pigeonholes.ads" 17 0 0] ());
+  ([#"pigeonholes.ads" 20 0 0] ());
+  ([#"pigeonholes.ads" 20 0 0] ());
+  ([#"pigeonholes.ads" 19 0 0] ());
+  ([#"pigeonholes.ads" 22 0 0] ());
+  ([#"pigeonholes.ads" 25 0 0] ());
+  ([#"pigeonholes.ads" 24 0 0] ());
+  ([#"pigeonholes.ads" 23 0 0] ());
+  ([#"pigeonholes.ads" 23 0 0] ());
+  ([#"pigeonholes.ads" 23 0 0] ());
+  ([#"pigeonholes.ads" 23 0 0] ());
+  ([#"pigeonholes.ads" 23 0 0] ());
+  ([#"pigeonholes.ads" 23 0 0] ());
+  ([#"pigeonholes.ads" 23 0 0] ());
+  ([#"pigeonholes.ads" 23 0 0] ());
+  ([#"pigeonholes.ads" 23 0 0] ());
+  ([#"pigeonholes.ads" 19 0 0] ());
   ();
   ([#"pigeonholes.adb" 1 0 0] ());
   ([#"pigeonholes.adb" 4 0 0] ());
   ([#"pigeonholes.adb" 17 0 0] ());
   ([#"pigeonholes.adb" 28 0 0] ());
+  ([#"pigeonholes.adb" 34 0 0] ());
   ();
-  ( [@GP_Sloc:pigeonholes.adb:46:1] ([#"pigeonholes.adb" 46 0 0] ()) ) )
+  ( [@GP_Sloc:pigeonholes.adb:60:1] ([#"pigeonholes.adb" 60 0 0] ()) ) )
 end
 
 (* Module for checking contracts and absence of run-time errors in subprogram "pigeonbegone" defined at pigeonholes.ads:9, created in Gnat2Why.Subprograms.Generate_VCs_For_Subprogram *)
@@ -3558,8 +4132,8 @@ module Pigeonholes__pigeonbegone__subprogram_def
  let def [#"pigeonholes.ads" 9 0 0][@GP_Subp:pigeonholes.ads:9] 
    (__void_param : unit)
   requires { [#"pigeonholes.ads" 9 0 0] true }
-  ensures { [#"pigeonholes.ads" 9 0 0] ([#"pigeonholes.ads" 10 0 0] ( [@comment:     Post => (for all J in d'Range => d(J) /= Pigeon);              ^ pigeonholes.ads:10:14:VC_POSTCONDITION] [@GP_Shape:pragargs__forall] [@GP_Reason:VC_POSTCONDITION] [@model_vc_post] [@GP_Sloc:pigeonholes.ads:10:14] [@GP_Id:4] (forall j [#"pigeonholes.ads" 10 0 0]  [@name:J] [@model_trace:2658]  : int.
-   ( ( ((1 : int) <= j) /\ (j <= (5 : int)) ) -> ( [@GP_Pretty_Ada:2672] [@GP_Sloc:pigeonholes.ads:10:39] ((Pigeonholes__box__rep.to_rep (Array__Int__Pigeonholes__box.get Pigeonholes__pigeonbegone__d.d.Array__Int__Pigeonholes__box.map__content j)) <> (0 : int)) ) )) )) }
+  ensures { [#"pigeonholes.ads" 9 0 0] ([#"pigeonholes.ads" 10 0 0] ( [@comment:     Post => (for all J in d'Range => d(J) /= Pigeon);              ^ pigeonholes.ads:10:14:VC_POSTCONDITION] [@GP_Shape:pragargs__forall] [@GP_Reason:VC_POSTCONDITION] [@model_vc_post] [@GP_Sloc:pigeonholes.ads:10:14] [@GP_Id:4] (forall j [#"pigeonholes.ads" 10 0 0]  [@model_trace:2753] [@name:J]  : int.
+   ( ( ((1 : int) <= j) /\ (j <= (5 : int)) ) -> ( [@GP_Pretty_Ada:2767] [@GP_Sloc:pigeonholes.ads:10:39] ((Pigeonholes__box__rep.to_rep (Array__Int__Pigeonholes__box.get Pigeonholes__pigeonbegone__d.d.Array__Int__Pigeonholes__box.map__content j)) <> (0 : int)) ) )) )) }
    = [@vc:divergent]
   ( () (* Assume dynamic invariants of inputs of the subprogram pigeonholes.ads:9 *)
   ;
@@ -3586,16 +4160,16 @@ module Pigeonholes__pigeonbegone__subprogram_def
      ( [#"pigeonholes.adb" 8 0 0] begin ensures {true} let _ = (let _ = Pigeonholes__pigeonbegone__pos.pos.int__content in (
       ()))
       in () end ;
-     (let temp___189 [@mlw:proxy_symbol] [@introduced] = [#"pigeonholes.adb" 8 0 0] (val _f : int
+     (let temp___195 [@mlw:proxy_symbol] [@introduced] = [#"pigeonholes.adb" 8 0 0] (val _f : int
      ensures {[#"pigeonholes.adb" 8 0 0] (result = Pigeonholes__pigeonbegone__pos.pos.int__content)} 
      in _f) in (
       ( [#"pigeonholes.adb" 8 0 0] begin ensures {true} let _ = (let _ = Pigeonholes__pigeonbegone__d.d.Array__Int__Pigeonholes__box.map__content in (
        ()))
        in () end ;
-      (let temp___187 [@mlw:proxy_symbol] [@introduced] = [#"pigeonholes.adb" 8 0 0] (val _f : Array__Int__Pigeonholes__box.map
+      (let temp___193 [@mlw:proxy_symbol] [@introduced] = [#"pigeonholes.adb" 8 0 0] (val _f : Array__Int__Pigeonholes__box.map
       ensures {[#"pigeonholes.adb" 8 0 0] (result = Pigeonholes__pigeonbegone__d.d.Array__Int__Pigeonholes__box.map__content)} 
       in _f) in (
-       [#"pigeonholes.adb" 8 0 0] let temp___191 [@mlw:proxy_symbol] [@introduced] = { int__content = (0 : int) } in 
+       [#"pigeonholes.adb" 8 0 0] let temp___197 [@mlw:proxy_symbol] [@introduced] = { int__content = (0 : int) } in 
         ( () (* First unroling of the loop statements appearing before the loop invariant of loop pigeonholes.adb:8 *)
         ;
         ();
@@ -3606,7 +4180,7 @@ module Pigeonholes__pigeonbegone__subprogram_def
         ( [@GP_Sloc:pigeonholes.adb:10:14] ([#"pigeonholes.adb" 10 0 0] [#"pigeonholes.adb" 10 0 0] (Pigeonholes__pigeonbegone__pos.pos.int__content <- ( ([#"pigeonholes.adb" 10 0 0] ( [@GP_Shape:L_1_while__pos_assign__add] [@vc:annotation] [@GP_Reason:VC_RANGE_CHECK] [@GP_Sloc:pigeonholes.adb:10:21] [@comment:         Pos := Pos + 1;                     ^ pigeonholes.adb:10:21:VC_RANGE_CHECK] [@GP_Id:0] (Pigeonholes__ph_index.range_check_((Pigeonholes__pigeonbegone__pos.pos.int__content + (1 : int)))) )) ))) );
         () (* While loop translating the Ada loop from pigeonholes.adb:8 *)
         ;
-        (let temp___inv_190 [@mlw:proxy_symbol] [@introduced] = ( (let j =  (val _f : int
+        (let temp___inv_196 [@mlw:proxy_symbol] [@introduced] = ( (let j =  (val _f : int
         in _f) in (
          (if ((Boolean.andb(((1 : int) <= j)) ((j <= (Pigeonholes__pigeonbegone__pos.pos.int__content - (1 : int)))))) then (
            begin ensures {true} let _ = (let _ = ((Pigeonholes__box__rep.to_rep((Array__Int__Pigeonholes__box.get(Pigeonholes__pigeonbegone__d.d.Array__Int__Pigeonholes__box.map__content) ((  assert {  ([#"pigeonholes.adb" 11 0 0] ( [@vc:annotation] [@GP_Shape:L_1_while__pragargs__forall__cmp__ixdcomp] [@comment:         pragma Loop_Invariant(for all J in d'First..(Pos-1) => d(J) /= Pigeon);                                                                   ^ pigeonholes.adb:11:67:VC_INDEX_CHECK] [@GP_Reason:VC_INDEX_CHECK] [@GP_Id:1] [@GP_Sloc:pigeonholes.adb:11:67] ( (Pigeonholes__ph_index.first <= j) /\ (j <= Pigeonholes__ph_index.last) ) )) };
@@ -3632,7 +4206,7 @@ module Pigeonholes__pigeonbegone__subprogram_def
           assume {  ( ( ( ( true /\ (Pigeonholes__pigeonhole___axiom.dynamic_invariant Pigeonholes__pigeonbegone__d.d.Array__Int__Pigeonholes__box.map__content True True True True) )/\true ) /\ (Pigeonholes__ph_index___axiom.dynamic_invariant Pigeonholes__pigeonbegone__pos.pos.int__content True True True True) )/\true ) };
          () (* Check for absence of RTE in the invariant of loop pigeonholes.adb:8 *)
          ;
-          (temp___191.int__content <- ( Pigeonholes__pigeonbegone__pos.pos.int__content ));
+          (temp___197.int__content <- ( Pigeonholes__pigeonbegone__pos.pos.int__content ));
          () (* Loop statements appearing after the loop invariant of loop pigeonholes.adb:8 *)
          ;
          () (* Check for the exit condition and loop statements appearing before the loop invariant of loop pigeonholes.adb:8 *)
@@ -3650,8 +4224,8 @@ module Pigeonholes__pigeonbegone__subprogram_def
           in () end  in (
           ()))
           in () end ;
-          check {  ([#"pigeonholes.adb" 12 0 0] ( [@GP_Reason:VC_LOOP_VARIANT] [@GP_Shape:L_1_while] [@comment:         pragma Loop_Variant (Increases => Pos);          ^ pigeonholes.adb:12:10:VC_LOOP_VARIANT] [@vc:annotation] [@GP_Sloc:pigeonholes.adb:12:10] [@GP_Id:3] (Pigeonholes__pigeonbegone__pos.pos.int__content > temp___191.int__content) )) };
-         (let temp___inv_190 [@mlw:proxy_symbol] [@introduced] = ( (let j =  (val _f : int
+          check {  ([#"pigeonholes.adb" 12 0 0] ( [@GP_Reason:VC_LOOP_VARIANT] [@GP_Shape:L_1_while] [@comment:         pragma Loop_Variant (Increases => Pos);          ^ pigeonholes.adb:12:10:VC_LOOP_VARIANT] [@vc:annotation] [@GP_Sloc:pigeonholes.adb:12:10] [@GP_Id:3] (Pigeonholes__pigeonbegone__pos.pos.int__content > temp___197.int__content) )) };
+         (let temp___inv_196 [@mlw:proxy_symbol] [@introduced] = ( (let j =  (val _f : int
          in _f) in (
           (if ((Boolean.andb(((1 : int) <= j)) ((j <= (Pigeonholes__pigeonbegone__pos.pos.int__content - (1 : int)))))) then (
             begin ensures {true} let _ = (let _ = ((Pigeonholes__box__rep.to_rep((Array__Int__Pigeonholes__box.get(Pigeonholes__pigeonbegone__d.d.Array__Int__Pigeonholes__box.map__content) ((  assert {  ([#"pigeonholes.adb" 11 0 0] ( [@vc:annotation] [@GP_Shape:L_1_while__pragargs__forall__cmp__ixdcomp] [@comment:         pragma Loop_Invariant(for all J in d'First..(Pos-1) => d(J) /= Pigeon);                                                                   ^ pigeonholes.adb:11:67:VC_INDEX_CHECK] [@GP_Reason:VC_INDEX_CHECK] [@GP_Id:1] [@GP_Sloc:pigeonholes.adb:11:67] ( (Pigeonholes__ph_index.first <= j) /\ (j <= Pigeonholes__ph_index.last) ) )) };
@@ -3686,8 +4260,8 @@ module Pigeonholes__pigeonbegone__subprogram_def
      in () end ))))
   ;
    (val _f : bool
-  ensures { ( (result = True) <-> (forall j   [@name:J] [@model_trace:2658]  : int.
-   ( ( ((1 : int) <= j) /\ (j <= (5 : int)) ) -> ( [@GP_Pretty_Ada:2672] ((Pigeonholes__box__rep.to_rep (Array__Int__Pigeonholes__box.get Pigeonholes__pigeonbegone__d.d.Array__Int__Pigeonholes__box.map__content j)) <> (0 : int)) ) )) )} 
+  ensures { ( (result = True) <-> (forall j   [@model_trace:2753] [@name:J]  : int.
+   ( ( ((1 : int) <= j) /\ (j <= (5 : int)) ) -> ( [@GP_Pretty_Ada:2767] ((Pigeonholes__box__rep.to_rep (Array__Int__Pigeonholes__box.get Pigeonholes__pigeonbegone__d.d.Array__Int__Pigeonholes__box.map__content j)) <> (0 : int)) ) )) )} 
   in _f) ) in (
    ()))
    in () end  )
@@ -3732,12 +4306,12 @@ module Pigeonholes__countbirds__subprogram_def
  use        Pigeonholes__countbirds__L_2__R5b___axiom as Pigeonholes__countbirds__L_2__R5b___axiom
  use        Pigeonholes__countbirds__L_2__R6b___axiom as Pigeonholes__countbirds__L_2__R6b___axiom
 
- val pigeonholes__countbirds__result [@model_trace:2673@result] [@model_projected] [@name:CountBirds]  : int__ref 
+ val pigeonholes__countbirds__result [@model_projected] [@model_trace:2768@result] [@name:CountBirds]  : int__ref 
  
  let def [#"pigeonholes.ads" 12 0 0][@GP_Subp:pigeonholes.ads:12] 
    (__void_param : unit)
   requires { [#"pigeonholes.ads" 12 0 0] true }
-  ensures { [#"pigeonholes.ads" 12 0 0] ([#"pigeonholes.ads" 14 0 0] ( [@GP_Reason:VC_POSTCONDITION] [@comment:       Post => CountBirds'Result >= 0 and CountBirds'Result <= d'Length;                ^ pigeonholes.ads:14:16:VC_POSTCONDITION] [@GP_Sloc:pigeonholes.ads:14:16] [@model_vc_post] [@GP_Shape:pragargs__and] [@GP_Id:6] ( ( [@GP_Sloc:pigeonholes.ads:14:16] [@GP_Pretty_Ada:2709] (pigeonholes__countbirds__result.int__content >= (0 : int)) ) /\ ( [@GP_Pretty_Ada:2715] [@GP_Sloc:pigeonholes.ads:14:43] (pigeonholes__countbirds__result.int__content <= (5 : int)) ) ) )) }
+  ensures { [#"pigeonholes.ads" 12 0 0] ([#"pigeonholes.ads" 14 0 0] ( [@GP_Reason:VC_POSTCONDITION] [@comment:       Post => CountBirds'Result >= 0 and CountBirds'Result <= d'Length;                ^ pigeonholes.ads:14:16:VC_POSTCONDITION] [@GP_Sloc:pigeonholes.ads:14:16] [@model_vc_post] [@GP_Shape:pragargs__and] [@GP_Id:6] ( ( [@GP_Pretty_Ada:2804] [@GP_Sloc:pigeonholes.ads:14:16] (pigeonholes__countbirds__result.int__content >= (0 : int)) ) /\ ( [@GP_Sloc:pigeonholes.ads:14:43] [@GP_Pretty_Ada:2810] (pigeonholes__countbirds__result.int__content <= (5 : int)) ) ) )) }
    = [@vc:divergent]
   ( () (* Assume dynamic invariants of inputs of the subprogram pigeonholes.ads:12 *)
   ;
@@ -3772,21 +4346,21 @@ module Pigeonholes__countbirds__subprogram_def
     [#"pigeonholes.adb" 22 0 0] assume { [#"pigeonholes.adb" 22 0 0] (pigeonholes__countbirds__L_2__R6b__assume = Pigeonholes__countbirds__L_2__R6b.r6b) }))
    ;
    [#"pigeonholes.adb" 22 0 0] assume { [#"pigeonholes.adb" 22 0 0] (Pigeonholes__ph_index___axiom.dynamic_invariant Pigeonholes__countbirds__L_2__R6b.r6b True False True True) } ))) );
-   ( [@GP_Sloc:pigeonholes.adb:22:21] ([#"pigeonholes.adb" 22 0 0] (let temp___194 [@mlw:proxy_symbol] [@introduced] = Pigeonholes__countbirds__L_2__R5b.r5b in (
-   (let temp___195 [@mlw:proxy_symbol] [@introduced] = Pigeonholes__countbirds__L_2__R6b.r6b in (
+   ( [@GP_Sloc:pigeonholes.adb:22:21] ([#"pigeonholes.adb" 22 0 0] (let temp___200 [@mlw:proxy_symbol] [@introduced] = Pigeonholes__countbirds__L_2__R5b.r5b in (
+   (let temp___201 [@mlw:proxy_symbol] [@introduced] = Pigeonholes__countbirds__L_2__R6b.r6b in (
     ( () (* Translation of an Ada loop from pigeonholes.adb:22 *)
     ;
     [#"pigeonholes.adb" 22 0 0] try
      ( [#"pigeonholes.adb" 22 0 0] begin ensures {true} let _ = (let _ = Pigeonholes__countbirds__bs.bs.int__content in (
       ()))
       in () end ;
-     (let temp___196 [@mlw:proxy_symbol] [@introduced] = [#"pigeonholes.adb" 22 0 0] (val _f : int
+     (let temp___202 [@mlw:proxy_symbol] [@introduced] = [#"pigeonholes.adb" 22 0 0] (val _f : int
      ensures {[#"pigeonholes.adb" 22 0 0] (result = Pigeonholes__countbirds__bs.bs.int__content)} 
      in _f) in (
       ( () (* Unrolling of the loop statements of loop pigeonholes.adb:22 *)
       ;
       [#"pigeonholes.adb" 22 0 0] (Pigeonholes__countbirds__L_2__i.i.int__content <- ( (1 : int) ));
-      (if ((Boolean.andb((temp___194 <= Pigeonholes__countbirds__L_2__i.i.int__content)) ((Pigeonholes__countbirds__L_2__i.i.int__content <= temp___195)))) then (
+      (if ((Boolean.andb((temp___200 <= Pigeonholes__countbirds__L_2__i.i.int__content)) ((Pigeonholes__countbirds__L_2__i.i.int__content <= temp___201)))) then (
        ( ();
        ( [@GP_Sloc:pigeonholes.adb:23:10] ([#"pigeonholes.adb" 23 0 0] (if (( ([#"pigeonholes.adb" 23 0 0] [#"pigeonholes.adb" 23 0 0] (([@branch_id=2479] Main.spark__branch).bool__content <- ( ((Pigeonholes__box__rep.to_rep((Array__Int__Pigeonholes__box.get(Pigeonholes__countbirds__d.d) (Pigeonholes__countbirds__L_2__i.i.int__content)))) = Pigeonholes__countbirds__b.b) )));
        ( [@branch_id=2479] Main.spark__branch ).bool__content )) then (
@@ -3799,7 +4373,7 @@ module Pigeonholes__countbirds__subprogram_def
         ( [@GP_Sloc:pigeonholes.adb:23:49] ([#"pigeonholes.adb" 23 0 0] ()) );
         ( [@GP_Sloc:pigeonholes.adb:23:46] ([#"pigeonholes.adb" 23 0 0] [#"pigeonholes.adb" 23 0 0] (Pigeonholes__countbirds__bs.bs.int__content <- ( Pigeonholes__countbirds__bs.bs.int__content ))) ) )))) ) )));
        (Pigeonholes__countbirds__L_2__i.i.int__content <- ( (2 : int) ));
-      (if ((Boolean.andb((temp___194 <= Pigeonholes__countbirds__L_2__i.i.int__content)) ((Pigeonholes__countbirds__L_2__i.i.int__content <= temp___195)))) then (
+      (if ((Boolean.andb((temp___200 <= Pigeonholes__countbirds__L_2__i.i.int__content)) ((Pigeonholes__countbirds__L_2__i.i.int__content <= temp___201)))) then (
        ( ();
        ( [@GP_Sloc:pigeonholes.adb:23:10] ([#"pigeonholes.adb" 23 0 0] (if (( ([#"pigeonholes.adb" 23 0 0] [#"pigeonholes.adb" 23 0 0] (([@branch_id=2479] Main.spark__branch).bool__content <- ( ((Pigeonholes__box__rep.to_rep((Array__Int__Pigeonholes__box.get(Pigeonholes__countbirds__d.d) (Pigeonholes__countbirds__L_2__i.i.int__content)))) = Pigeonholes__countbirds__b.b) )));
        ( [@branch_id=2479] Main.spark__branch ).bool__content )) then (
@@ -3812,7 +4386,7 @@ module Pigeonholes__countbirds__subprogram_def
         ( [@GP_Sloc:pigeonholes.adb:23:49] ([#"pigeonholes.adb" 23 0 0] ()) );
         ( [@GP_Sloc:pigeonholes.adb:23:46] ([#"pigeonholes.adb" 23 0 0] [#"pigeonholes.adb" 23 0 0] (Pigeonholes__countbirds__bs.bs.int__content <- ( Pigeonholes__countbirds__bs.bs.int__content ))) ) )))) ) )));
        (Pigeonholes__countbirds__L_2__i.i.int__content <- ( (3 : int) ));
-      (if ((Boolean.andb((temp___194 <= Pigeonholes__countbirds__L_2__i.i.int__content)) ((Pigeonholes__countbirds__L_2__i.i.int__content <= temp___195)))) then (
+      (if ((Boolean.andb((temp___200 <= Pigeonholes__countbirds__L_2__i.i.int__content)) ((Pigeonholes__countbirds__L_2__i.i.int__content <= temp___201)))) then (
        ( ();
        ( [@GP_Sloc:pigeonholes.adb:23:10] ([#"pigeonholes.adb" 23 0 0] (if (( ([#"pigeonholes.adb" 23 0 0] [#"pigeonholes.adb" 23 0 0] (([@branch_id=2479] Main.spark__branch).bool__content <- ( ((Pigeonholes__box__rep.to_rep((Array__Int__Pigeonholes__box.get(Pigeonholes__countbirds__d.d) (Pigeonholes__countbirds__L_2__i.i.int__content)))) = Pigeonholes__countbirds__b.b) )));
        ( [@branch_id=2479] Main.spark__branch ).bool__content )) then (
@@ -3825,7 +4399,7 @@ module Pigeonholes__countbirds__subprogram_def
         ( [@GP_Sloc:pigeonholes.adb:23:49] ([#"pigeonholes.adb" 23 0 0] ()) );
         ( [@GP_Sloc:pigeonholes.adb:23:46] ([#"pigeonholes.adb" 23 0 0] [#"pigeonholes.adb" 23 0 0] (Pigeonholes__countbirds__bs.bs.int__content <- ( Pigeonholes__countbirds__bs.bs.int__content ))) ) )))) ) )));
        (Pigeonholes__countbirds__L_2__i.i.int__content <- ( (4 : int) ));
-      (if ((Boolean.andb((temp___194 <= Pigeonholes__countbirds__L_2__i.i.int__content)) ((Pigeonholes__countbirds__L_2__i.i.int__content <= temp___195)))) then (
+      (if ((Boolean.andb((temp___200 <= Pigeonholes__countbirds__L_2__i.i.int__content)) ((Pigeonholes__countbirds__L_2__i.i.int__content <= temp___201)))) then (
        ( ();
        ( [@GP_Sloc:pigeonholes.adb:23:10] ([#"pigeonholes.adb" 23 0 0] (if (( ([#"pigeonholes.adb" 23 0 0] [#"pigeonholes.adb" 23 0 0] (([@branch_id=2479] Main.spark__branch).bool__content <- ( ((Pigeonholes__box__rep.to_rep((Array__Int__Pigeonholes__box.get(Pigeonholes__countbirds__d.d) (Pigeonholes__countbirds__L_2__i.i.int__content)))) = Pigeonholes__countbirds__b.b) )));
        ( [@branch_id=2479] Main.spark__branch ).bool__content )) then (
@@ -3838,7 +4412,7 @@ module Pigeonholes__countbirds__subprogram_def
         ( [@GP_Sloc:pigeonholes.adb:23:49] ([#"pigeonholes.adb" 23 0 0] ()) );
         ( [@GP_Sloc:pigeonholes.adb:23:46] ([#"pigeonholes.adb" 23 0 0] [#"pigeonholes.adb" 23 0 0] (Pigeonholes__countbirds__bs.bs.int__content <- ( Pigeonholes__countbirds__bs.bs.int__content ))) ) )))) ) )));
        (Pigeonholes__countbirds__L_2__i.i.int__content <- ( (5 : int) ));
-      (if ((Boolean.andb((temp___194 <= Pigeonholes__countbirds__L_2__i.i.int__content)) ((Pigeonholes__countbirds__L_2__i.i.int__content <= temp___195)))) then (
+      (if ((Boolean.andb((temp___200 <= Pigeonholes__countbirds__L_2__i.i.int__content)) ((Pigeonholes__countbirds__L_2__i.i.int__content <= temp___201)))) then (
        ( ();
        ( [@GP_Sloc:pigeonholes.adb:23:10] ([#"pigeonholes.adb" 23 0 0] (if (( ([#"pigeonholes.adb" 23 0 0] [#"pigeonholes.adb" 23 0 0] (([@branch_id=2479] Main.spark__branch).bool__content <- ( ((Pigeonholes__box__rep.to_rep((Array__Int__Pigeonholes__box.get(Pigeonholes__countbirds__d.d) (Pigeonholes__countbirds__L_2__i.i.int__content)))) = Pigeonholes__countbirds__b.b) )));
        ( [@branch_id=2479] Main.spark__branch ).bool__content )) then (
@@ -3895,12 +4469,12 @@ module Pigeonholes__substitutebirds__subprogram_def
  let def [#"pigeonholes.ads" 16 0 0][@GP_Subp:pigeonholes.ads:16] 
    (__void_param : unit)
   requires { [#"pigeonholes.ads" 16 0 0] true }
-  ensures { [#"pigeonholes.ads" 16 0 0] ([#"pigeonholes.ads" 17 0 0] ( [@GP_Reason:VC_POSTCONDITION] [@comment:     Post => d(n) = b and (for all I in d'Range => (if I /= n then d(I) = d'Old(I)));              ^ pigeonholes.ads:17:14:VC_POSTCONDITION] [@GP_Sloc:pigeonholes.ads:17:14] [@model_vc_post] [@GP_Shape:pragargs__and] [@GP_Id:7] ( ( [@GP_Sloc:pigeonholes.ads:17:14] [@GP_Pretty_Ada:2762] ((Pigeonholes__box__rep.to_rep (Array__Int__Pigeonholes__box.get Pigeonholes__substitutebirds__d.d.Array__Int__Pigeonholes__box.map__content Pigeonholes__substitutebirds__n.n)) = Pigeonholes__substitutebirds__b.b) ) /\ (forall i [#"pigeonholes.ads" 17 0 0]  [@name:I] [@model_trace:2765]  : int.
+  ensures { [#"pigeonholes.ads" 16 0 0] ([#"pigeonholes.ads" 17 0 0] ( [@GP_Reason:VC_POSTCONDITION] [@comment:     Post => d(n) = b and (for all I in d'Range => (if I /= n then d(I) = d'Old(I)));              ^ pigeonholes.ads:17:14:VC_POSTCONDITION] [@GP_Sloc:pigeonholes.ads:17:14] [@model_vc_post] [@GP_Shape:pragargs__and] [@GP_Id:7] ( ( [@GP_Sloc:pigeonholes.ads:17:14] [@GP_Pretty_Ada:2857] ((Pigeonholes__box__rep.to_rep (Array__Int__Pigeonholes__box.get Pigeonholes__substitutebirds__d.d.Array__Int__Pigeonholes__box.map__content Pigeonholes__substitutebirds__n.n)) = Pigeonholes__substitutebirds__b.b) ) /\ (forall i [#"pigeonholes.ads" 17 0 0]  [@model_trace:2860] [@name:I]  : int.
    ( ( ((1 : int) <= i) /\ (i <= (5 : int)) ) -> (if ((i <> Pigeonholes__substitutebirds__n.n)) then (
-    ( [@GP_Sloc:pigeonholes.ads:17:68] [@GP_Pretty_Ada:2782] ((Pigeonholes__box__rep.to_rep (Array__Int__Pigeonholes__box.get Pigeonholes__substitutebirds__d.d.Array__Int__Pigeonholes__box.map__content i)) = (Pigeonholes__box__rep.to_rep (let temp___201 [@mlw:proxy_symbol] [@introduced] = (old Pigeonholes__substitutebirds__d.d.Array__Int__Pigeonholes__box.map__content ) in (
-     (Array__Int__Pigeonholes__box.get temp___201 i)))
+    ( [@GP_Pretty_Ada:2877] [@GP_Sloc:pigeonholes.ads:17:68] ((Pigeonholes__box__rep.to_rep (Array__Int__Pigeonholes__box.get Pigeonholes__substitutebirds__d.d.Array__Int__Pigeonholes__box.map__content i)) = (Pigeonholes__box__rep.to_rep (let temp___207 [@mlw:proxy_symbol] [@introduced] = (old Pigeonholes__substitutebirds__d.d.Array__Int__Pigeonholes__box.map__content ) in (
+     (Array__Int__Pigeonholes__box.get temp___207 i)))
     )) )) else (
-    ( [@GP_Pretty_Ada:2999] [@GP_Sloc:pigeonholes.ads:17:53] true ))) )) ) )) }
+    ( [@GP_Pretty_Ada:3425] [@GP_Sloc:pigeonholes.ads:17:53] true ))) )) ) )) }
    = [@vc:divergent]
   ( () (* Assume dynamic invariants of inputs of the subprogram pigeonholes.ads:16 *)
   ;
@@ -3919,13 +4493,12 @@ module Pigeonholes__substitutebirds__subprogram_def
    begin ensures {true} let _ = (let _ = Pigeonholes__substitutebirds__d.d.Array__Int__Pigeonholes__box.map__content in (
    ()))
    in () end ;
-  (let temp___old_199 [@mlw:proxy_symbol] [@introduced] =  (val _f : Array__Int__Pigeonholes__box.map
+  (let temp___old_205 [@mlw:proxy_symbol] [@introduced] =  (val _f : Array__Int__Pigeonholes__box.map
   ensures { (result = Pigeonholes__substitutebirds__d.d.Array__Int__Pigeonholes__box.map__content)} 
   in _f) in (
    (  try
     ( ();
     ( [@GP_Sloc:pigeonholes.adb:31:12] ([#"pigeonholes.adb" 31 0 0] [#"pigeonholes.adb" 31 0 0] (Pigeonholes__substitutebirds__d.d.Array__Int__Pigeonholes__box.map__content <- ( (Array__Int__Pigeonholes__box.set(Pigeonholes__substitutebirds__d.d.Array__Int__Pigeonholes__box.map__content) (Pigeonholes__substitutebirds__n.n) ((Pigeonholes__box__rep.of_rep(Pigeonholes__substitutebirds__b.b)))) ))) );
-    ( [@GP_Sloc:pigeonholes.adb:32:18] ([#"pigeonholes.adb" 32 0 0] [#"pigeonholes.adb" 32 0 0] (Pigeonholes__substitutebirds__d.d.Array__Int__Pigeonholes__box.map__content <- ( (Array__Int__Pigeonholes__box.set(Pigeonholes__substitutebirds__d.d.Array__Int__Pigeonholes__box.map__content) ((1 : int)) ((Pigeonholes__box__rep.of_rep(Pigeonholes__substitutebirds__b.b)))) ))) );
      raise Return__exc )
    with
     Return__exc -> ()
@@ -3934,18 +4507,295 @@ module Pigeonholes__substitutebirds__subprogram_def
    in _f) in (
     (if ((Boolean.andb(((1 : int) <= i)) ((i <= (5 : int))))) then (
       begin ensures {true} let _ = (let _ = (if ((i <> Pigeonholes__substitutebirds__n.n)) then (
-      ((Pigeonholes__box__rep.to_rep((Array__Int__Pigeonholes__box.get(Pigeonholes__substitutebirds__d.d.Array__Int__Pigeonholes__box.map__content) (i)))) = (Pigeonholes__box__rep.to_rep((Array__Int__Pigeonholes__box.get(temp___old_199) (i)))))) else (
+      ((Pigeonholes__box__rep.to_rep((Array__Int__Pigeonholes__box.get(Pigeonholes__substitutebirds__d.d.Array__Int__Pigeonholes__box.map__content) (i)))) = (Pigeonholes__box__rep.to_rep((Array__Int__Pigeonholes__box.get(temp___old_205) (i)))))) else (
       (Boolean.of_int((1 : int))))) in (
       ()))
       in () end ))))
    ;
     (val _f : bool
-   ensures { ( (result = True) <-> (forall i   [@name:I] [@model_trace:2765]  : int.
+   ensures { ( (result = True) <-> (forall i   [@model_trace:2860] [@name:I]  : int.
     ( ( ((1 : int) <= i) /\ (i <= (5 : int)) ) -> (if ((i <> Pigeonholes__substitutebirds__n.n)) then (
-     ( [@GP_Pretty_Ada:2782] ((Pigeonholes__box__rep.to_rep (Array__Int__Pigeonholes__box.get Pigeonholes__substitutebirds__d.d.Array__Int__Pigeonholes__box.map__content i)) = (Pigeonholes__box__rep.to_rep (Array__Int__Pigeonholes__box.get temp___old_199 i))) )) else (
-     ( [@GP_Pretty_Ada:2999] true ))) )) )} 
+     ( [@GP_Pretty_Ada:2877] ((Pigeonholes__box__rep.to_rep (Array__Int__Pigeonholes__box.get Pigeonholes__substitutebirds__d.d.Array__Int__Pigeonholes__box.map__content i)) = (Pigeonholes__box__rep.to_rep (Array__Int__Pigeonholes__box.get temp___old_205 i))) )) else (
+     ( [@GP_Pretty_Ada:3425] true ))) )) )} 
    in _f) ))) in (
     ()))
     in () end  )))
+   )
+end
+
+(* Module for checking contracts and absence of run-time errors in subprogram "birdexist" defined at pigeonholes.ads:19, created in Gnat2Why.Subprograms.Generate_VCs_For_Subprogram *)
+module Pigeonholes__birdexist__subprogram_def
+ use        "_gnatprove_standard".Main
+ use        "int".Int
+ use        "int".Int
+ use        "_gnatprove_standard".Boolean as Boolean
+ use        Pigeonholes__birdexist__d as Pigeonholes__birdexist__d
+ use        Pigeonholes__birdexist__b as Pigeonholes__birdexist__b
+ use        Pigeonholes__box as Pigeonholes__box
+ use        Pigeonholes__box___axiom as Pigeonholes__box___axiom
+ use        Pigeonholes__box__rep as Pigeonholes__box__rep
+ use        Array__Int__Pigeonholes__box as Array__Int__Pigeonholes__box
+ use        Pigeonholes__pigeonhole___axiom as Pigeonholes__pigeonhole___axiom
+ use        Pigeonholes__box___axiom as Pigeonholes__box___axiom
+ use        Pigeonholes__pigeonhole___axiom as Pigeonholes__pigeonhole___axiom
+ use        Pigeonholes__birdexist__d___axiom as Pigeonholes__birdexist__d___axiom
+ use        Pigeonholes__birdexist__b___axiom as Pigeonholes__birdexist__b___axiom
+
+ val pigeonholes__birdexist__result [@name:birdExist] [@model_projected] [@model_trace:2883@result]  : bool__ref 
+ 
+ let def [#"pigeonholes.ads" 19 0 0][@GP_Subp:pigeonholes.ads:19] 
+   (__void_param : unit)
+  requires { [#"pigeonholes.ads" 19 0 0] true }
+   = [@vc:divergent]
+  ( () (* Assume dynamic invariants of inputs of the subprogram pigeonholes.ads:19 *)
+  ;
+  [#"pigeonholes.ads" 19 0 0] assume { [#"pigeonholes.ads" 19 0 0] (Pigeonholes__pigeonhole___axiom.dynamic_invariant Pigeonholes__birdexist__d.d True False True True) };
+  [#"pigeonholes.ads" 19 0 0] assume { [#"pigeonholes.ads" 19 0 0] (Pigeonholes__box___axiom.dynamic_invariant Pigeonholes__birdexist__b.b True False True True) };
+  () (* Declarations introduced by the compiler at the beginning of the subprogram pigeonholes.ads:19 *)
+  ;
+  () (* Check for RTE in the Pre of the subprogram pigeonholes.ads:19 *)
+  ;
+  [#"pigeonholes.ads" 19 0 0] begin ensures {true} let _ = (let _ = True in (
+   ()))
+   in () end ;
+  () (* Assume Pre of the subprogram pigeonholes.ads:19 *)
+  ;
+  [#"pigeonholes.ads" 19 0 0] try
+   ( ();
+   ( [@GP_Sloc:pigeonholes.ads:20:7] ([#"pigeonholes.ads" 20 0 0] ( [#"pigeonholes.ads" 20 0 0] (pigeonholes__birdexist__result.bool__content <- ( ( (let i = [#"pigeonholes.ads" 20 0 0] (val _f : int
+   in _f) in (
+    (if ((Boolean.andb(((1 : int) <= i)) ((i <= (5 : int))))) then (
+     [#"pigeonholes.ads" 20 0 0] begin ensures {true} let _ = (let _ = ((Pigeonholes__box__rep.to_rep((Array__Int__Pigeonholes__box.get(Pigeonholes__birdexist__d.d) (i)))) = Pigeonholes__birdexist__b.b) in (
+      ()))
+      in () end ))))
+   ;
+   [#"pigeonholes.ads" 20 0 0] (val _f : bool
+   ensures {[#"pigeonholes.ads" 20 0 0] ( (result = True) <-> (exists i  : int.
+    ( ( ((1 : int) <= i) /\ (i <= (5 : int)) ) /\ ((Pigeonholes__box__rep.to_rep (Array__Int__Pigeonholes__box.get Pigeonholes__birdexist__d.d i)) = Pigeonholes__birdexist__b.b) )) )} 
+   in _f) ) ));
+   [#"pigeonholes.ads" 20 0 0] raise Return__exc )) );
+    raise Return__exc )
+  with
+   Return__exc -> ()
+  end;
+   begin ensures {true} let _ = (let _ = True in (
+   ()))
+   in () end ;
+  pigeonholes__birdexist__result.bool__content )
+end
+
+(* Module for checking contracts and absence of run-time errors in subprogram "birdindex" defined at pigeonholes.ads:22, created in Gnat2Why.Subprograms.Generate_VCs_For_Subprogram *)
+module Pigeonholes__birdindex__subprogram_def
+ use        "_gnatprove_standard".Main
+ use        "int".Int
+ use        "int".Int
+ use        "_gnatprove_standard".Main as Main
+ use        "_gnatprove_standard".Integer as Integer
+ use        "_gnatprove_standard".Boolean as Boolean
+ use        Pigeonholes__birdexist as Pigeonholes__birdexist
+ use        Pigeonholes__birdexist___axiom as Pigeonholes__birdexist___axiom
+ use        Pigeonholes__birdindex__d as Pigeonholes__birdindex__d
+ use        Pigeonholes__birdindex__b as Pigeonholes__birdindex__b
+ use        Pigeonholes__birdindex__pos as Pigeonholes__birdindex__pos
+ use        Pigeonholes__box as Pigeonholes__box
+ use        Pigeonholes__box___axiom as Pigeonholes__box___axiom
+ use        Pigeonholes__box__rep as Pigeonholes__box__rep
+ use        Pigeonholes__ph_index as Pigeonholes__ph_index
+ use        Pigeonholes__ph_index___axiom as Pigeonholes__ph_index___axiom
+ use        Array__Int__Pigeonholes__box as Array__Int__Pigeonholes__box
+ use        Pigeonholes__pigeonhole___axiom as Pigeonholes__pigeonhole___axiom
+ use        Pigeonholes__birdindex__L_3 as Pigeonholes__birdindex__L_3
+ use        Pigeonholes__birdindex__pos___axiom as Pigeonholes__birdindex__pos___axiom
+ use        Pigeonholes__birdindex__L_3___axiom as Pigeonholes__birdindex__L_3___axiom
+ use        Pigeonholes__box___axiom as Pigeonholes__box___axiom
+ use        Pigeonholes__ph_index___axiom as Pigeonholes__ph_index___axiom
+ use        Pigeonholes__pigeonhole___axiom as Pigeonholes__pigeonhole___axiom
+ use        Pigeonholes__birdexist___axiom as Pigeonholes__birdexist___axiom
+ use        Pigeonholes__birdindex__d___axiom as Pigeonholes__birdindex__d___axiom
+ use        Pigeonholes__birdindex__b___axiom as Pigeonholes__birdindex__b___axiom
+
+ val pigeonholes__birdindex__result [@name:birdIndex] [@model_projected] [@model_trace:2927@result]  : int__ref 
+ 
+ exception Temp___exception_211
+ 
+ let def [#"pigeonholes.ads" 22 0 0][@GP_Subp:pigeonholes.ads:22] 
+   (__void_param : unit)
+  requires { [#"pigeonholes.ads" 22 0 0] true }
+  ensures { [#"pigeonholes.ads" 22 0 0] ([#"pigeonholes.ads" 24 0 0] ( [@GP_Reason:VC_POSTCONDITION] [@GP_Id:15] [@GP_Shape:pragargs__cmp] [@comment:     Post => d(birdIndex'Result) = b,              ^ pigeonholes.ads:24:14:VC_POSTCONDITION] [@GP_Sloc:pigeonholes.ads:24:14] [@model_vc_post] ( [@GP_Pretty_Ada:3263] [@GP_Sloc:pigeonholes.ads:24:14] ((Pigeonholes__box__rep.to_rep (Array__Int__Pigeonholes__box.get Pigeonholes__birdindex__d.d pigeonholes__birdindex__result.int__content)) = Pigeonholes__birdindex__b.b) ) )) }
+   = [@vc:divergent]
+  ( () (* Assume dynamic invariants of inputs of the subprogram pigeonholes.ads:22 *)
+  ;
+   assume {  (Pigeonholes__pigeonhole___axiom.dynamic_invariant Pigeonholes__birdindex__d.d True False True True) };
+   assume {  (Pigeonholes__box___axiom.dynamic_invariant Pigeonholes__birdindex__b.b True False True True) };
+  () (* Declarations introduced by the compiler at the beginning of the subprogram pigeonholes.ads:22 *)
+  ;
+  () (* Check for RTE in the Pre of the subprogram pigeonholes.ads:22 *)
+  ;
+   begin ensures {true} let _ = (let _ = (Pigeonholes__birdexist___axiom.birdexist(Pigeonholes__birdindex__d.d) (Pigeonholes__birdindex__b.b)) in (
+   ()))
+   in () end ;
+  () (* Assume Pre of the subprogram pigeonholes.ads:22 *)
+  ;
+   assume {  ( [@GP_Pretty_Ada:3250] ((epsilon temp___result_215 : bool.
+   ( (temp___result_215 = (Pigeonholes__birdexist.birdexist Pigeonholes__birdindex__d.d Pigeonholes__birdindex__b.b)) /\ (Pigeonholes__birdexist.birdexist__function_guard temp___result_215 Pigeonholes__birdindex__d.d Pigeonholes__birdindex__b.b) )) = True) ) };
+   begin ensures {true} let _ = (let _ = ( ((Pigeonholes__box__rep.to_rep((Array__Int__Pigeonholes__box.get(Pigeonholes__birdindex__d.d) ((1 : int))))) = Pigeonholes__birdindex__b.b) && ( (let j =  (val _f : int
+  in _f) in (
+   (if ((Boolean.andb(((2 : int) <= j)) ((j <= (5 : int))))) then (
+     begin ensures {true} let _ = (let _ = ((Pigeonholes__box__rep.to_rep((Array__Int__Pigeonholes__box.get(Pigeonholes__birdindex__d.d) (j)))) = Pigeonholes__birdindex__b.b) in (
+     ()))
+     in () end ))))
+  ;
+   (val _f : bool
+  ensures { ( (result = True) <-> (exists j  : int.
+   ( ( ((2 : int) <= j) /\ (j <= (5 : int)) ) /\ ((Pigeonholes__box__rep.to_rep (Array__Int__Pigeonholes__box.get Pigeonholes__birdindex__d.d j)) = Pigeonholes__birdindex__b.b) )) )} 
+  in _f) ) ) in (
+   ()))
+   in () end ;
+  (let temp___209 [@mlw:proxy_symbol] [@introduced] =  (val _f : bool
+  ensures { (result = (Boolean.andb (Integer.bool_eq (Pigeonholes__box__rep.to_rep (Array__Int__Pigeonholes__box.get Pigeonholes__birdindex__d.d (1 : int))) Pigeonholes__birdindex__b.b) (if ((exists j  : int.
+   ( ( ((2 : int) <= j) /\ (j <= (5 : int)) ) /\ ((Pigeonholes__box__rep.to_rep (Array__Int__Pigeonholes__box.get Pigeonholes__birdindex__d.d j)) = Pigeonholes__birdindex__b.b) ))) then (
+   True) else (
+   False))))} 
+  in _f) in (
+   (  begin ensures {true} let _ = (let _ = ((Pigeonholes__box__rep.to_rep((Array__Int__Pigeonholes__box.get(Pigeonholes__birdindex__d.d) ((1 : int))))) <> Pigeonholes__birdindex__b.b) in (
+    ()))
+    in () end ;
+   (let temp___210 [@mlw:proxy_symbol] [@introduced] =  (val _f : bool
+   ensures { (result = (Integer.bool_ne (Pigeonholes__box__rep.to_rep (Array__Int__Pigeonholes__box.get Pigeonholes__birdindex__d.d (1 : int))) Pigeonholes__birdindex__b.b))} 
+   in _f) in (
+    (  begin ensures {true} let _ = (let _ = (  check {  ([#"pigeonholes.ads" 25 0 0] ( [@GP_Sloc:pigeonholes.ads:25:6] [@vc:annotation] [@GP_Reason:VC_DISJOINT_CONTRACT_CASES] [@comment:     Contract_Cases =>      ^ pigeonholes.ads:25:6:VC_DISJOINT_CONTRACT_CASES] [@GP_Id:8] ((((0 : int) + (if ((temp___209 = True)) then (
+     (1 : int)) else (
+     (0 : int)))) + (if ((temp___210 = True)) then (
+     (1 : int)) else (
+     (0 : int)))) <= (1 : int)) )) };
+     check {  ([#"pigeonholes.ads" 25 0 0] ( [@GP_Reason:VC_COMPLETE_CONTRACT_CASES] [@comment:     Contract_Cases =>      ^ pigeonholes.ads:25:6:VC_COMPLETE_CONTRACT_CASES] [@GP_Sloc:pigeonholes.ads:25:6] [@vc:annotation] [@GP_Id:9] ((((0 : int) + (if ((temp___209 = True)) then (
+     (1 : int)) else (
+     (0 : int)))) + (if ((temp___210 = True)) then (
+     (1 : int)) else (
+     (0 : int)))) >= (1 : int)) )) } ) in (
+     ()))
+     in () end ;
+     try
+     ( ();
+     ([#"pigeonholes.adb" 36 0 0] ( [#"pigeonholes.adb" 36 0 0] (Pigeonholes__birdindex__pos.pos.int__content <- ( (1 : int) ));
+     [#"pigeonholes.adb" 36 0 0] assume { [#"pigeonholes.adb" 36 0 0] (Pigeonholes__ph_index___axiom.dynamic_invariant Pigeonholes__birdindex__pos.pos.int__content True False True True) } ));
+     ([#"pigeonholes.adb" 38 0 0] ());
+     ();
+     ( [@GP_Sloc:pigeonholes.adb:38:27] ([#"pigeonholes.adb" 38 0 0] ( () (* Translation of an Ada loop from pigeonholes.adb:38 *)
+     ;
+     (if ((Pigeonholes__birdindex__pos.pos.int__content < (5 : int))) then (
+      [#"pigeonholes.adb" 38 0 0] try
+       [#"pigeonholes.adb" 38 0 0] try
+        ( [#"pigeonholes.adb" 38 0 0] begin ensures {true} let _ = (let _ = Pigeonholes__birdindex__pos.pos.int__content in (
+         ()))
+         in () end ;
+        (let temp___212 [@mlw:proxy_symbol] [@introduced] = [#"pigeonholes.adb" 38 0 0] (val _f : int
+        ensures {[#"pigeonholes.adb" 38 0 0] (result = Pigeonholes__birdindex__pos.pos.int__content)} 
+        in _f) in (
+         ( () (* First unroling of the loop statements appearing before the loop invariant of loop pigeonholes.adb:38 *)
+         ;
+         ();
+         ( [@GP_Sloc:pigeonholes.adb:39:15] ([#"pigeonholes.adb" 39 0 0] ()) );
+         ( [@GP_Sloc:pigeonholes.adb:39:10] ([#"pigeonholes.adb" 39 0 0] (if (( ([#"pigeonholes.adb" 39 0 0] [#"pigeonholes.adb" 39 0 0] (([@branch_id=2595] Main.spark__branch).bool__content <- ( ((Pigeonholes__box__rep.to_rep((Array__Int__Pigeonholes__box.get(Pigeonholes__birdindex__d.d) (Pigeonholes__birdindex__pos.pos.int__content)))) = Pigeonholes__birdindex__b.b) )));
+         ( [@branch_id=2595] Main.spark__branch ).bool__content )) then (
+           raise Temp___exception_211) else (
+          ()))) );
+         () (* While loop translating the Ada loop from pigeonholes.adb:38 *)
+         ;
+         (let temp___inv_213 [@mlw:proxy_symbol] [@introduced] = ( (let i =  (val _f : int
+         in _f) in (
+          (if ((Boolean.andb(((1 : int) <= i)) ((i <= Pigeonholes__birdindex__pos.pos.int__content)))) then (
+            begin ensures {true} let _ = (let _ = ((Pigeonholes__box__rep.to_rep((Array__Int__Pigeonholes__box.get(Pigeonholes__birdindex__d.d) ((  assert {  ([#"pigeonholes.adb" 43 0 0] ( [@GP_Id:11] [@comment:           (for all I in d'First..Pos => d(I) /= b);                                            ^ pigeonholes.adb:43:44:VC_INDEX_CHECK] [@vc:annotation] [@GP_Shape:L_3_while__pragargs__forall__cmp__ixdcomp] [@GP_Sloc:pigeonholes.adb:43:44] [@GP_Reason:VC_INDEX_CHECK] ( (Pigeonholes__ph_index.first <= i) /\ (i <= Pigeonholes__ph_index.last) ) )) };
+           i ))))) <> Pigeonholes__birdindex__b.b) in (
+            ()))
+            in () end ))))
+         ;
+          (val _f : bool
+         ensures { ( (result = True) <-> (forall i   [@model_trace:2609] [@name:I]  : int.
+          ( ( ((1 : int) <= i) /\ (i <= Pigeonholes__birdindex__pos.pos.int__content) ) -> ((Pigeonholes__box__rep.to_rep (Array__Int__Pigeonholes__box.get Pigeonholes__birdindex__d.d i)) <> Pigeonholes__birdindex__b.b) )) )} 
+         in _f) ) in (
+           begin ensures {true} let _ = (let _ = () in (
+           ()))
+           in () end ))
+         ;
+          while True do
+          invariant { 
+           ([#"pigeonholes.adb" 43 0 0] ( [@GP_Shape:L_3_while__pragargs__forall] [@GP_Id:12] [@GP_Reason:VC_LOOP_INVARIANT] [@vc:annotation] [@comment:           (for all I in d'First..Pos => d(I) /= b);             ^ pigeonholes.adb:43:13:VC_LOOP_INVARIANT] [@GP_Sloc:pigeonholes.adb:43:13] (forall i [#"pigeonholes.adb" 43 0 0]  [@model_trace:2609] [@name:I]  : int.
+            ( ( ((1 : int) <= i) /\ (i <= Pigeonholes__birdindex__pos.pos.int__content) ) -> ( [@GP_Sloc:pigeonholes.adb:43:42] [@GP_Pretty_Ada:2626] ((Pigeonholes__box__rep.to_rep (Array__Int__Pigeonholes__box.get Pigeonholes__birdindex__d.d i)) <> Pigeonholes__birdindex__b.b) ) )) ))
+           }
+          ( () (* Assume implicit invariants from the loop pigeonholes.adb:38 *)
+          ;
+           assume {  ( ( true /\ (Pigeonholes__ph_index___axiom.dynamic_invariant Pigeonholes__birdindex__pos.pos.int__content True True True True) )/\true ) };
+          () (* Check for absence of RTE in the invariant of loop pigeonholes.adb:38 *)
+          ;
+          () (* Loop statements appearing after the loop invariant of loop pigeonholes.adb:38 *)
+          ;
+          ();
+          ( [@GP_Sloc:pigeonholes.adb:44:10] ([#"pigeonholes.adb" 44 0 0] ()) );
+          ( [@GP_Sloc:pigeonholes.adb:44:17] ([#"pigeonholes.adb" 44 0 0] ()) );
+          ( [@GP_Sloc:pigeonholes.adb:44:14] ([#"pigeonholes.adb" 44 0 0] [#"pigeonholes.adb" 44 0 0] (Pigeonholes__birdindex__pos.pos.int__content <- ( ([#"pigeonholes.adb" 44 0 0] ( [@GP_Id:10] [@vc:annotation] [@comment:         pos := pos + 1;                     ^ pigeonholes.adb:44:21:VC_RANGE_CHECK] [@GP_Sloc:pigeonholes.adb:44:21] [@GP_Reason:VC_RANGE_CHECK] [@GP_Shape:L_3_while__pos_assign__add] (Pigeonholes__ph_index.range_check_((Pigeonholes__birdindex__pos.pos.int__content + (1 : int)))) )) ))) );
+          () (* Check for the exit condition and loop statements appearing before the loop invariant of loop pigeonholes.adb:38 *)
+          ;
+          (if (not ( (Pigeonholes__birdindex__pos.pos.int__content < (5 : int)) )) then (
+            raise Pigeonholes__birdindex__L_3.L_3));
+          ();
+          ( [@GP_Sloc:pigeonholes.adb:39:15] ([#"pigeonholes.adb" 39 0 0] ()) );
+          ( [@GP_Sloc:pigeonholes.adb:39:10] ([#"pigeonholes.adb" 39 0 0] (if (( ([#"pigeonholes.adb" 39 0 0] [#"pigeonholes.adb" 39 0 0] (([@branch_id=2595] Main.spark__branch).bool__content <- ( ((Pigeonholes__box__rep.to_rep((Array__Int__Pigeonholes__box.get(Pigeonholes__birdindex__d.d) (Pigeonholes__birdindex__pos.pos.int__content)))) = Pigeonholes__birdindex__b.b) )));
+          ( [@branch_id=2595] Main.spark__branch ).bool__content )) then (
+            raise Temp___exception_211) else (
+           ()))) );
+          (let temp___inv_213 [@mlw:proxy_symbol] [@introduced] = ( (let i =  (val _f : int
+          in _f) in (
+           (if ((Boolean.andb(((1 : int) <= i)) ((i <= Pigeonholes__birdindex__pos.pos.int__content)))) then (
+             begin ensures {true} let _ = (let _ = ((Pigeonholes__box__rep.to_rep((Array__Int__Pigeonholes__box.get(Pigeonholes__birdindex__d.d) ((  assert {  ([#"pigeonholes.adb" 43 0 0] ( [@GP_Id:11] [@comment:           (for all I in d'First..Pos => d(I) /= b);                                            ^ pigeonholes.adb:43:44:VC_INDEX_CHECK] [@vc:annotation] [@GP_Shape:L_3_while__pragargs__forall__cmp__ixdcomp] [@GP_Sloc:pigeonholes.adb:43:44] [@GP_Reason:VC_INDEX_CHECK] ( (Pigeonholes__ph_index.first <= i) /\ (i <= Pigeonholes__ph_index.last) ) )) };
+            i ))))) <> Pigeonholes__birdindex__b.b) in (
+             ()))
+             in () end ))))
+          ;
+           (val _f : bool
+          ensures { ( (result = True) <-> (forall i   [@model_trace:2609] [@name:I]  : int.
+           ( ( ((1 : int) <= i) /\ (i <= Pigeonholes__birdindex__pos.pos.int__content) ) -> ((Pigeonholes__box__rep.to_rep (Array__Int__Pigeonholes__box.get Pigeonholes__birdindex__d.d i)) <> Pigeonholes__birdindex__b.b) )) )} 
+          in _f) ) in (
+            begin ensures {true} let _ = (let _ = () in (
+            ()))
+            in () end ))
+           )
+         done )))
+         )
+       with
+        Temp___exception_211 -> ( ();
+        ( [@GP_Sloc:pigeonholes.adb:40:20] ([#"pigeonholes.adb" 40 0 0] ()) );
+        ( [@GP_Sloc:pigeonholes.adb:40:13] ([#"pigeonholes.adb" 40 0 0] ( [#"pigeonholes.adb" 40 0 0] (pigeonholes__birdindex__result.int__content <- ( Pigeonholes__birdindex__pos.pos.int__content ));
+        [#"pigeonholes.adb" 40 0 0] raise Return__exc )) ) )
+       end
+      with
+       Pigeonholes__birdindex__L_3.L_3 -> ()
+      end)) )) );
+     ( [@GP_Sloc:pigeonholes.adb:46:14] ([#"pigeonholes.adb" 46 0 0] ()) );
+     ( [@GP_Sloc:pigeonholes.adb:46:7] ([#"pigeonholes.adb" 46 0 0] ( [#"pigeonholes.adb" 46 0 0] (pigeonholes__birdindex__result.int__content <- ( Pigeonholes__birdindex__pos.pos.int__content ));
+     [#"pigeonholes.adb" 46 0 0] raise Return__exc )) );
+      raise Return__exc )
+    with
+     Return__exc -> ()
+    end;
+     begin ensures {true} let _ = (let _ = ((Pigeonholes__box__rep.to_rep((Array__Int__Pigeonholes__box.get(Pigeonholes__birdindex__d.d) (pigeonholes__birdindex__result.int__content)))) = Pigeonholes__birdindex__b.b) in (
+     ()))
+     in () end ;
+     begin ensures {true} let _ = (let _ = (if (temp___209) then (
+     (pigeonholes__birdindex__result.int__content = (1 : int))) else (
+     True)) in (
+     ()))
+     in () end ;
+     assert {  ([#"pigeonholes.ads" 26 0 0] ( [@GP_Id:13] [@comment:       (d(1) = b and then (for some J in 2..d'Last => d(J) = b) => birdIndex'Result = 1,                                                                 ^ pigeonholes.ads:26:65:VC_CONTRACT_CASE] [@GP_Reason:VC_CONTRACT_CASE] [@vc:annotation] [@GP_Sloc:pigeonholes.ads:26:65] [@GP_Shape:pragargs__aggr] (if ((temp___209 = True)) then (
+     (pigeonholes__birdindex__result.int__content = (1 : int))) else true) )) };
+     begin ensures {true} let _ = (let _ = (if (temp___210) then (
+     (pigeonholes__birdindex__result.int__content > (1 : int))) else (
+     True)) in (
+     ()))
+     in () end ;
+     assert {  ([#"pigeonholes.ads" 27 0 0] ( [@GP_Id:14] [@GP_Reason:VC_CONTRACT_CASE] [@vc:annotation] [@comment:       d(1) /= b => birdIndex'Result > 1);                  ^ pigeonholes.ads:27:18:VC_CONTRACT_CASE] [@GP_Sloc:pigeonholes.ads:27:18] [@GP_Shape:pragargs__aggr] (if ((temp___210 = True)) then (
+     (pigeonholes__birdindex__result.int__content > (1 : int))) else true) )) };
+    pigeonholes__birdindex__result.int__content )))
+    )))
    )
 end

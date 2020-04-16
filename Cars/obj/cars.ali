@@ -1,0 +1,35 @@
+V "GNAT Lib v2019"
+A -gnatA
+A -mtune=generic
+A -march=x86-64
+P ZX
+
+RN
+RV NO_IMPLEMENTATION_ASPECT_SPECIFICATIONS
+RV NO_IMPLEMENTATION_PRAGMAS
+RV SPARK_05
+
+U cars%b		cars.adb		fae1f4c6 NE OO PK
+
+U cars%s		cars.ads		51b78a0b EE NE OO PK
+
+D cars.ads		20200416151142 51b78a0b cars%s
+D cars.adb		20200416150800 ab567ecd cars%b
+D system.ads		20190518041258 32a08138 system%s
+G a e
+G c Z s s [carIP cars 6 9 none]
+G c Z s b [startcar cars 13 14 none]
+X 1 cars.ads
+1K9*Cars 19l5 19e9 2|1b14 12l5 12t9
+3E9*Key 3e33 7r16
+3n17*Present{3E9} 11r34 15r32 2|5r29
+3n26*Absent{3E9}
+4E9*Engine 4e28 8r18
+4n20*ON{4E9} 16r35 2|6r32
+4n24*Off{4E9} 11r55
+6R9*Car 9e14 11r16
+7e7*CarKey{3E9} 11m24 15r23 2|5r20
+8e7*Ignition{4E9} 11m43 16r24 2|6m20
+11r4*BatMobile{6R9} 14r26 15r13 16r14 2|5r10 6m10
+13U14*StartCar 2|3b14 9l8 9t16
+

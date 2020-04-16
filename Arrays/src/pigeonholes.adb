@@ -28,8 +28,23 @@ is
    procedure SubstituteBirds(d: in out PigeonHole; n: PH_Index; b: Box)
    is
    begin
-      d(n) := b;`
+      d(n) := b;
    end SubstituteBirds;
+
+   function birdIndex (d : PigeonHole ; b : Box) return PH_Index
+   is
+      pos : PH_Index := d'First;
+   begin
+      while(pos < d'Last) loop
+         if d(pos) = b then
+            return pos;
+         end if;
+         pragma Loop_Invariant
+           (for all I in d'First..Pos => d(I) /= b);
+         pos := pos + 1;
+      end loop;
+      return pos;
+   end birdIndex;
 
 
 
