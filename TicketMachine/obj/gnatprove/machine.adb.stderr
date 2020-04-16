@@ -1,0 +1,3 @@
+machine.ads:14:42: medium: "serving" must be a Proof_In as it is only used in assertions (SPARK RM 6.1.4(17))[#2]
+machine.ads:19:45: medium: "next" must be a Proof_In as it is only used in assertions (SPARK RM 6.1.4(17))[#1]
+machine.ads:24:42: medium: "serving" must be a Proof_In as it is only used in assertions (SPARK RM 6.1.4(17))[#0]

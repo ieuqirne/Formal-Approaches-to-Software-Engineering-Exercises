@@ -1,0 +1,1 @@
+pigeonholes.ads:17:68: medium: postcondition might fail, cannot prove d(I) = d'Old(I) (e.g. when I = 1 and d = (others => Pigeon) and d'Old = (1 => Dove, others => Pigeon))[#0]

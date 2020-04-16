@@ -1,0 +1,38 @@
+V "GNAT Lib v2019"
+A -x
+A ada
+A -gnatA
+A -gnatc
+P GP FX
+
+RN
+RV NO_IMPLEMENTATION_PRAGMAS
+RV NO_ELABORATION_CODE
+
+U sols%b		sols.adb		10dfee03 OO PK
+
+U sols%s		sols.ads		26984832 OO PK
+
+D sols.ads		20200416104208 26984832 sols%s
+D sols.adb		20200416103918 3647a631 sols%b
+D system.ads		20190518041256 32a08138 system%s
+G a Z
+X 1 sols.ads
+1K9*Sols 11l5 11e9 2|1b14 15l5 15t9
+4U14*P1 4=18 4=21 2|4b13 8l7 8t9
+4i18 s{integer} 5r44 6r14 2|4b17 6m6 6r11
+4i21 n{integer} 5r13 5r49 6r19 2|4b20 7m6 7r11
+8U14*P2 8=18 2|10b13 13l7 13t9
+8i18 x{integer} 9r14 10r14 2|10b17 12r9 12m20 12r24 12m34 12r39
+
+QQ SPARKVERSION 2019 (20190517)
+GG EK_DIRECT_CALLS sols__p1 0
+GG EK_GLOBALS sols__p1 local FALSE E_PROCEDURE FALSE ORIGIN_FLOW proper_proof_in 0 proper_input 0 proper_output 0 refined_proof_in 0 refined_input 0 refined_output 0 calls_proof 0 calls 0 calls_conditional 0 FALSE FALSE TRUE ENTRY_CALLS 0 SUSPENDS_ON 0 UNSYNCH_ACCESSES 0 LOCKS 0
+GG EK_DIRECT_CALLS sols__p2 0
+GG EK_GLOBALS sols__p2 local FALSE E_PROCEDURE FALSE ORIGIN_FLOW proper_proof_in 0 proper_input 0 proper_output 0 refined_proof_in 0 refined_input 0 refined_output 0 calls_proof 0 calls 0 calls_conditional 0 FALSE FALSE TRUE ENTRY_CALLS 0 SUSPENDS_ON 0 UNSYNCH_ACCESSES 0 LOCKS 0
+GG EK_DIRECT_CALLS sols 0
+GG EK_GLOBALS sols local FALSE E_PACKAGE TRUE ORIGIN_FLOW proper_proof_in 0 proper_input 0 proper_output 0 refined_proof_in 0 refined_input 0 refined_output 0 initializes 0 calls_proof 0 calls 0 calls_conditional 0 local_var 0 FALSE FALSE FALSE ENTRY_CALLS 0 SUSPENDS_ON 0 UNSYNCH_ACCESSES 0 LOCKS 0
+GG EK_FLOW_SCOPE sols TRUE FALSE FALSE FALSE FALSE __standard
+GG EK_FLOW_SCOPE sols__p2 FALSE FALSE FALSE FALSE TRUE sols VISIBLE_PART
+GG EK_FLOW_SCOPE sols__p1 FALSE FALSE FALSE FALSE TRUE sols VISIBLE_PART
+GG EK_END_MARKER

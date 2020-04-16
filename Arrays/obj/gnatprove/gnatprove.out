@@ -1,0 +1,26 @@
+Summary of SPARK analysis
+=========================
+
+------------------------------------------------------------------------------------------------------
+SPARK Analysis results        Total      Flow   Interval   CodePeer     Provers   Justified   Unproved
+------------------------------------------------------------------------------------------------------
+Data Dependencies                 .         .          .          .           .           .          .
+Flow Dependencies                 .         .          .          .           .           .          .
+Initialization                    .         .          .          .           .           .          .
+Non-Aliasing                      .         .          .          .           .           .          .
+Run-time Checks                   3         .          .          .    3 (CVC4)           .          .
+Assertions                        3         .          .          .    3 (CVC4)           .          .
+Functional Contracts              3         .          .          .    2 (CVC4)           .          1
+LSP Verification                  .         .          .          .           .           .          .
+------------------------------------------------------------------------------------------------------
+Total                             9         .          .          .     8 (89%)           .    1 (11%)
+
+
+max steps used for successful proof: 1
+
+Analyzed 1 unit
+in unit pigeonholes, 4 subprograms and packages out of 4 analyzed
+  PigeonHoles at pigeonholes.ads:1 flow analyzed (0 errors, 0 checks and 0 warnings) and proved (0 checks)
+  PigeonHoles.CountBirds at pigeonholes.ads:12 flow analyzed (0 errors, 0 checks and 0 warnings) and proved (2 checks)
+  PigeonHoles.PigeonBeGone at pigeonholes.ads:9 flow analyzed (0 errors, 0 checks and 0 warnings) and proved (6 checks)
+  PigeonHoles.SubstituteBirds at pigeonholes.ads:16 flow analyzed (0 errors, 0 checks and 0 warnings) and not proved, 0 checks out of 1 proved
