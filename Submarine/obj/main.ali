@@ -1,0 +1,77 @@
+V "GNAT Lib v2019"
+M P W=b
+A -gnatA
+A -mtune=generic
+A -march=x86-64
+P ZX
+
+RN
+RV NO_IO
+RV NO_SECONDARY_STACK
+RV NO_IMPLEMENTATION_PRAGMAS
+RV SPARK_05
+
+U main%b		main.adb		6b427838 NE OO SU
+W ada%s			ada.ads			ada.ali
+Z ada.tags%s		a-tags.adb		a-tags.ali
+W ada.text_io%s		a-textio.adb		a-textio.ali
+W hatch_system%s	hatch_system.adb	hatch_system.ali
+W oxygen_system%s	oxygen_system.adb	oxygen_system.ali
+W submarine%s		submarine.adb		submarine.ali
+Z system.secondary_stack%s  s-secsta.adb	s-secsta.ali
+W torpedo_system%s	torpedo_system.adb	torpedo_system.ali
+
+D ada.ads		20190518041256 76789da1 ada%s
+D a-except.ads		20190518041256 291912d5 ada.exceptions%s
+D a-ioexce.ads		20190518041256 e4a01f64 ada.io_exceptions%s
+D a-stream.ads		20190518041256 119b8fb3 ada.streams%s
+D a-tags.ads		20190518041258 491b781d ada.tags%s
+D a-textio.ads		20190518041258 aef4d56d ada.text_io%s
+D a-unccon.ads		20190518041256 0e9b276f ada.unchecked_conversion%s
+D hatch_system.ads	20200416165002 548471d7 hatch_system%s
+D interfac.ads		20190518041256 5ab55268 interfaces%s
+D i-cstrea.ads		20190518041256 e53d8b8e interfaces.c_streams%s
+D main.adb		20200415095428 e63773f5 main%b
+D oxygen_system.ads	20200415095524 e2e7757a oxygen_system%s
+D reactor_system.ads	20200415095626 d7d831c3 reactor_system%s
+D submarine.ads		20200415095714 9d7af869 submarine%s
+D system.ads		20190518041258 32a08138 system%s
+D s-crtl.ads		20190518041256 0ebbdb71 system.crtl%s
+D s-exctab.ads		20190518041256 54135002 system.exception_table%s
+D s-ficobl.ads		20190518041258 078245e4 system.file_control_block%s
+D s-parame.ads		20190518041258 48ec542b system.parameters%s
+D s-secsta.ads		20190518041258 20bbe636 system.secondary_stack%s
+D s-soflin.ads		20190518041256 a7318a92 system.soft_links%s
+D s-stache.ads		20190518041258 a37c21ec system.stack_checking%s
+D s-stalib.ads		20190518041258 09bd3940 system.standard_library%s
+D s-stoele.ads		20190518041258 2dc34a04 system.storage_elements%s
+D s-stratt.ads		20190518041256 aedef97e system.stream_attributes%s
+D s-traent.ads		20190518041256 005bf670 system.traceback_entries%s
+D s-unstyp.ads		20190518041256 34867c83 system.unsigned_types%s
+D s-wchcon.ads		20190518041256 1b7d22d2 system.wch_con%s
+D torpedo_system.ads	20200415095800 08982264 torpedo_system%s
+G a e
+G c Z b b [main standard 8 11 none]
+G r c none [main standard 8 11 none] [create submarine 12 12 none]
+G r c none [main standard 8 11 none] [get_hatch_system submarine 16 12 none]
+X 1 ada.ads
+16K9*Ada 20e8 11|6r6 6r23
+X 6 a-textio.ads
+57K13*Text_IO 727e16 11|6w10 6r27
+X 8 hatch_system.ads
+1K9*Hatch_System 63e17 11|2w6 2r24 10r14
+13R8*Hatch_System 61e13 11|10r27
+X 11 main.adb
+8U11*Main 8b11 13l5 13t9
+9r3 Sub{14|10R8} 10r43
+10r3 Hatch_Sys{8|13R8}
+X 12 oxygen_system.ads
+1K9*Oxygen_System 11|3w6 3r25 12|42e18
+X 14 submarine.ads
+6K9*Submarine 11|1w6 1r21 9r8 9r31 14|48e14
+10R8*Submarine 11|9r18 14|46e13
+12V12*Create{10R8} 11|9s41
+16V12*Get_Hatch_System{8|13R8} 11|10s47
+X 29 torpedo_system.ads
+1K9*Torpedo_System 11|4w6 4r26 29|40e19
+

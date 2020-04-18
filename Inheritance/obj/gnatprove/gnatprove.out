@@ -1,0 +1,36 @@
+Summary of SPARK analysis
+=========================
+
+-------------------------------------------------------------------------------------------------------
+SPARK Analysis results        Total       Flow   Interval   CodePeer     Provers   Justified   Unproved
+-------------------------------------------------------------------------------------------------------
+Data Dependencies                 .          .          .          .           .           .          .
+Flow Dependencies                 .          .          .          .           .           .          .
+Initialization                    1          1          .          .           .           .          .
+Non-Aliasing                      .          .          .          .           .           .          .
+Run-time Checks                   .          .          .          .           .           .          .
+Assertions                        .          .          .          .           .           .          .
+Functional Contracts              8          .          .          .    8 (CVC4)           .          .
+LSP Verification                  .          .          .          .           .           .          .
+-------------------------------------------------------------------------------------------------------
+Total                             9    1 (11%)          .          .     8 (89%)           .          .
+
+
+max steps used for successful proof: 1
+
+Analyzed 4 units
+in unit batter, 3 subprograms and packages out of 3 analyzed
+  Batter at batter.ads:1 flow analyzed (0 errors, 0 checks and 0 warnings) and proved (0 checks)
+  Batter.EveryDay at batter.ads:11 flow analyzed (0 errors, 0 checks and 0 warnings) and proved (1 checks)
+  Batter.MakeSafe at batter.ads:14 flow analyzed (0 errors, 0 checks and 0 warnings) and proved (1 checks)
+in unit main, 0 subprograms and packages out of 1 analyzed
+  Main at main.adb:1 skipped
+in unit sausages, 4 subprograms and packages out of 4 analyzed
+  Sausages at sausages.ads:1 flow analyzed (0 errors, 0 checks and 0 warnings) and proved (0 checks)
+  Sausages.Contaminate at sausages.ads:11 flow analyzed (0 errors, 0 checks and 0 warnings) and proved (1 checks)
+  Sausages.Kaldere at sausages.ads:18 flow analyzed (0 errors, 0 checks and 0 warnings) and proved (1 checks)
+  Sausages.Varmere at sausages.ads:15 flow analyzed (0 errors, 0 checks and 0 warnings) and proved (1 checks)
+in unit toad, 3 subprograms and packages out of 3 analyzed
+  Toad at toad.ads:3 flow analyzed (0 errors, 0 checks and 0 warnings) and proved (0 checks)
+  Toad.MakeFitForNursingHome at toad.ads:14 flow analyzed (0 errors, 0 checks and 0 warnings) and proved (1 checks)
+  Toad.SellToKebabShop at toad.ads:10 flow analyzed (0 errors, 0 checks and 0 warnings) and proved (2 checks)

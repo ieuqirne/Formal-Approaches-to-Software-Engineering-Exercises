@@ -1,0 +1,24 @@
+[GENERATED OBJECT FILE]
+b__main.o
+[PROJECT FILES]
+C:\Users\enrik\OneDrive\Escritorio\Year_4\SET10112-Formal_Approaches_to_Software_Engineering\Sparks\Submarine\submarine.gpr
+20200416153754
+[BOUND OBJECT FILES]
+C:\Users\enrik\OneDrive\Escritorio\Year_4\SET10112-Formal_Approaches_to_Software_Engineering\Sparks\Submarine\obj\hatch_system.o
+C:\Users\enrik\OneDrive\Escritorio\Year_4\SET10112-Formal_Approaches_to_Software_Engineering\Sparks\Submarine\obj\oxygen_system.o
+C:\Users\enrik\OneDrive\Escritorio\Year_4\SET10112-Formal_Approaches_to_Software_Engineering\Sparks\Submarine\obj\reactor_system.o
+C:\Users\enrik\OneDrive\Escritorio\Year_4\SET10112-Formal_Approaches_to_Software_Engineering\Sparks\Submarine\obj\torpedo_system.o
+C:\Users\enrik\OneDrive\Escritorio\Year_4\SET10112-Formal_Approaches_to_Software_Engineering\Sparks\Submarine\obj\submarine.o
+C:\Users\enrik\OneDrive\Escritorio\Year_4\SET10112-Formal_Approaches_to_Software_Engineering\Sparks\Submarine\obj\main.o
+[GENERATED SOURCE FILES]
+b__main.ads
+b__main.adb
+b__main.ali
+[RESULTING OPTIONS]
+-LC:\Users\enrik\OneDrive\Escritorio\Year_4\SET10112-Formal_Approaches_to_Software_Engineering\Sparks\Submarine\obj\
+-LC:\Users\enrik\OneDrive\Escritorio\Year_4\SET10112-Formal_Approaches_to_Software_Engineering\Sparks\Submarine\obj\
+-LC:/gnat/2019/lib/gcc/x86_64-pc-mingw32/8.3.1/adalib/
+-static
+-static-libgcc
+C:/gnat/2019/lib/gcc/x86_64-pc-mingw32/8.3.1/adalib/libgnat.a
+-Wl,--stack=0x2000000

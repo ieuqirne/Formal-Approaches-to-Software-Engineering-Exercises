@@ -1,0 +1,1380 @@
+{
+  "spark": [
+    {
+      "name": "Hatch_System",
+      "sloc": [
+        {
+          "file": "hatch_system.ads",
+          "line": 1
+        }
+      ],
+      "spark": "all"
+    },
+    {
+      "name": "Hatch_System.Hatch_System",
+      "sloc": [
+        {
+          "file": "hatch_system.ads",
+          "line": 13
+        }
+      ],
+      "spark": "all"
+    },
+    {
+      "name": "Hatch_System.Get_Hatches",
+      "sloc": [
+        {
+          "file": "hatch_system.ads",
+          "line": 15
+        }
+      ],
+      "spark": "all"
+    },
+    {
+      "name": "Hatch_System.Get_Status",
+      "sloc": [
+        {
+          "file": "hatch_system.ads",
+          "line": 17
+        }
+      ],
+      "spark": "all"
+    },
+    {
+      "name": "Hatch_System.At_Least_One_Hatch_Is_Closed",
+      "sloc": [
+        {
+          "file": "hatch_system.ads",
+          "line": 19
+        }
+      ],
+      "spark": "all"
+    },
+    {
+      "name": "Hatch_System.Is_Sealed",
+      "sloc": [
+        {
+          "file": "hatch_system.ads",
+          "line": 24
+        }
+      ],
+      "spark": "all"
+    },
+    {
+      "name": "Hatch_System.More_Than_One_Hatches_Are_Closed",
+      "sloc": [
+        {
+          "file": "hatch_system.ads",
+          "line": 27
+        }
+      ],
+      "spark": "all"
+    },
+    {
+      "name": "Hatch_System.Create",
+      "sloc": [
+        {
+          "file": "hatch_system.ads",
+          "line": 29
+        }
+      ],
+      "spark": "all"
+    },
+    {
+      "name": "Hatch_System.Open_Hatch",
+      "sloc": [
+        {
+          "file": "hatch_system.ads",
+          "line": 31
+        }
+      ],
+      "spark": "all"
+    },
+    {
+      "name": "Hatch_System.Close_Hatch",
+      "sloc": [
+        {
+          "file": "hatch_system.ads",
+          "line": 36
+        }
+      ],
+      "spark": "all"
+    },
+    {
+      "name": "Hatch_System.Lock_Hatch",
+      "sloc": [
+        {
+          "file": "hatch_system.ads",
+          "line": 39
+        }
+      ],
+      "spark": "all"
+    },
+    {
+      "name": "Hatch_System.Unlock_Hatch",
+      "sloc": [
+        {
+          "file": "hatch_system.ads",
+          "line": 43
+        }
+      ],
+      "spark": "all"
+    },
+    {
+      "name": "Hatch_System.Seal",
+      "sloc": [
+        {
+          "file": "hatch_system.ads",
+          "line": 47
+        }
+      ],
+      "spark": "all"
+    },
+    {
+      "name": "Hatch_System.Unseal",
+      "sloc": [
+        {
+          "file": "hatch_system.ads",
+          "line": 52
+        }
+      ],
+      "spark": "all"
+    }
+  ],
+  "flow": [
+    {
+      "file": "hatch_system.adb",
+      "line": 5,
+      "col": 5,
+      "rule": "UNINITIALIZED",
+      "severity": "info",
+      "entity": {
+        "name": "Hatch_System.Create",
+        "sloc": [
+          {
+            "file": "hatch_system.ads",
+            "line": 29
+          }
+        ]
+      },
+      "check_tree": {
+      },
+      "how_proved": "flow"
+    }
+  ],
+  "proof": [
+    {
+      "file": "hatch_system.adb",
+      "line": 23,
+      "col": 24,
+      "rule": "VC_OVERFLOW_CHECK",
+      "severity": "info",
+      "entity": {
+        "name": "Hatch_System.More_Than_One_Hatches_Are_Closed",
+        "sloc": [
+          {
+            "file": "hatch_system.ads",
+            "line": 27
+          }
+        ]
+      },
+      "check_tree": [
+        {
+          "proof_attempts": {
+            "CVC4": {
+              "result": "Valid",
+              "steps": 21,
+              "time": 6.00000000000000E-02
+            }
+          },
+          "transformations": {
+          }
+        },
+        {
+          "proof_attempts": {
+            "CVC4": {
+              "result": "Valid",
+              "steps": 5,
+              "time": 3.00000000000000E-02
+            }
+          },
+          "transformations": {
+          }
+        }
+      ],
+      "check_file": "hatch_system.adb",
+      "check_line": 23,
+      "check_col": 24,
+      "how_proved": "prover",
+      "stats": {
+        "CVC4": {
+          "count": 2,
+          "max_steps": 1,
+          "max_time": 5.99999986588955E-02
+        }
+      }
+    },
+    {
+      "file": "hatch_system.ads",
+      "line": 37,
+      "col": 13,
+      "rule": "VC_POSTCONDITION",
+      "severity": "medium",
+      "entity": {
+        "name": "Hatch_System.Close_Hatch",
+        "sloc": [
+          {
+            "file": "hatch_system.ads",
+            "line": 36
+          }
+        ]
+      },
+      "check_tree": [
+        {
+          "proof_attempts": {
+            "CVC4": {
+              "result": "Unknown (unknown)",
+              "steps": 212,
+              "time": 6.00000000000000E-02
+            },
+            "CVC4_CE": {
+              "result": "Unknown (unknown)",
+              "steps": 238,
+              "time": 9.00000000000000E-02
+            }
+          },
+          "transformations": {
+          }
+        },
+        {
+          "proof_attempts": {
+            "CVC4": {
+              "result": "Valid",
+              "steps": 5,
+              "time": 3.00000000000000E-02
+            }
+          },
+          "transformations": {
+          }
+        }
+      ],
+      "check_file": "hatch_system.ads",
+      "check_line": 37,
+      "check_col": 13,
+      "cntexmp": {
+        "hatch_system.adb": {
+          "55": [
+            {
+              "name": "Self",
+              "value": "(H => (0 => (Closed => True, Locked => False), others => (Closed => False, Locked => False)), S => Sealed)",
+              "kind": "variable"
+            }
+          ]
+        },
+        "hatch_system.ads": {
+          "36": [
+            {
+              "name": "Index",
+              "value": "0",
+              "kind": "variable"
+            },
+            {
+              "name": "Self",
+              "value": "(H => (others => (Closed => False, Locked => False)), S => Sealed)",
+              "kind": "variable"
+            }
+          ],
+          "37": [
+            {
+              "name": "Index",
+              "value": "0",
+              "kind": "variable"
+            },
+            {
+              "name": "Self",
+              "value": "(H => (0 => (Closed => True, Locked => False), others => (Closed => False, Locked => False)), S => Sealed)",
+              "kind": "variable"
+            }
+          ]
+        }
+      },
+      "msg_id": 0,
+      "how_proved": "prover"
+    },
+    {
+      "file": "hatch_system.ads",
+      "line": 41,
+      "col": 13,
+      "rule": "VC_POSTCONDITION",
+      "severity": "medium",
+      "entity": {
+        "name": "Hatch_System.Lock_Hatch",
+        "sloc": [
+          {
+            "file": "hatch_system.ads",
+            "line": 39
+          }
+        ]
+      },
+      "check_tree": [
+        {
+          "proof_attempts": {
+            "CVC4": {
+              "result": "Unknown (unknown)",
+              "steps": 275,
+              "time": 6.00000000000000E-02
+            }
+          },
+          "transformations": {
+          }
+        },
+        {
+          "proof_attempts": {
+            "CVC4": {
+              "result": "Valid",
+              "steps": 5,
+              "time": 3.00000000000000E-02
+            }
+          },
+          "transformations": {
+          }
+        },
+        {
+          "proof_attempts": {
+            "CVC4": {
+              "result": "Unknown (unknown)",
+              "steps": 473,
+              "time": 6.00000000000000E-02
+            },
+            "CVC4_CE": {
+              "result": "Unknown (unknown)",
+              "steps": 917,
+              "time": 1.60000000000000E-01
+            }
+          },
+          "transformations": {
+          }
+        },
+        {
+          "proof_attempts": {
+            "CVC4": {
+              "result": "Valid",
+              "steps": 5,
+              "time": 5.00000000000000E-02
+            }
+          },
+          "transformations": {
+          }
+        }
+      ],
+      "check_file": "hatch_system.ads",
+      "check_line": 41,
+      "check_col": 13,
+      "cntexmp": {
+        "hatch_system.adb": {
+          "64": [
+            {
+              "name": "Self",
+              "value": "(H => (0 => (Closed => True, Locked => True), others => (Closed => False, Locked => True)), S => Sealed)",
+              "kind": "variable"
+            }
+          ]
+        },
+        "hatch_system.ads": {
+          "39": [
+            {
+              "name": "Index",
+              "value": "0",
+              "kind": "variable"
+            },
+            {
+              "name": "Self",
+              "value": "(H => (0 => (Closed => True, Locked => False), others => (Closed => False, Locked => True)), S => Sealed)",
+              "kind": "variable"
+            }
+          ],
+          "41": [
+            {
+              "name": "Index",
+              "value": "0",
+              "kind": "variable"
+            },
+            {
+              "name": "Self",
+              "value": "(H => (0 => (Closed => True, Locked => True), others => (Closed => False, Locked => True)), S => Sealed)",
+              "kind": "variable"
+            }
+          ]
+        }
+      },
+      "msg_id": 1,
+      "how_proved": "prover"
+    },
+    {
+      "file": "hatch_system.ads",
+      "line": 45,
+      "col": 13,
+      "rule": "VC_POSTCONDITION",
+      "severity": "medium",
+      "entity": {
+        "name": "Hatch_System.Unlock_Hatch",
+        "sloc": [
+          {
+            "file": "hatch_system.ads",
+            "line": 43
+          }
+        ]
+      },
+      "check_tree": [
+        {
+          "proof_attempts": {
+            "CVC4": {
+              "result": "Valid",
+              "steps": 5,
+              "time": 3.00000000000000E-02
+            }
+          },
+          "transformations": {
+          }
+        },
+        {
+          "proof_attempts": {
+            "CVC4": {
+              "result": "Unknown (unknown)",
+              "steps": 454,
+              "time": 8.00000000000000E-02
+            },
+            "CVC4_CE": {
+              "result": "Unknown (unknown)",
+              "steps": 457,
+              "time": 1.10000000000000E-01
+            }
+          },
+          "transformations": {
+          }
+        }
+      ],
+      "check_file": "hatch_system.ads",
+      "check_line": 45,
+      "check_col": 13,
+      "cntexmp": {
+        "hatch_system.adb": {
+          "73": [
+            {
+              "name": "Self",
+              "value": "(H => (0 => (Closed => False, Locked => False), others => (Closed => False, Locked => True)), S => Sealed)",
+              "kind": "variable"
+            }
+          ]
+        },
+        "hatch_system.ads": {
+          "43": [
+            {
+              "name": "Index",
+              "value": "0",
+              "kind": "variable"
+            },
+            {
+              "name": "Self",
+              "value": "(H => (0 => (Closed => False, Locked => False), others => (Closed => False, Locked => True)), S => Sealed)",
+              "kind": "variable"
+            }
+          ],
+          "45": [
+            {
+              "name": "Index",
+              "value": "0",
+              "kind": "variable"
+            },
+            {
+              "name": "Self",
+              "value": "(H => (0 => (Closed => False, Locked => False), others => (Closed => False, Locked => True)), S => Sealed)",
+              "kind": "variable"
+            }
+          ]
+        }
+      },
+      "msg_id": 2,
+      "how_proved": "prover"
+    },
+    {
+      "file": "hatch_system.ads",
+      "line": 49,
+      "col": 59,
+      "rule": "VC_POSTCONDITION",
+      "severity": "medium",
+      "entity": {
+        "name": "Hatch_System.Seal",
+        "sloc": [
+          {
+            "file": "hatch_system.ads",
+            "line": 47
+          }
+        ]
+      },
+      "check_tree": [
+        {
+          "proof_attempts": {
+            "CVC4": {
+              "result": "Unknown (unknown)",
+              "steps": 174,
+              "time": 6.00000000000000E-02
+            }
+          },
+          "transformations": {
+          }
+        },
+        {
+          "proof_attempts": {
+            "CVC4": {
+              "result": "Unknown (unknown)",
+              "steps": 290,
+              "time": 6.00000000000000E-02
+            },
+            "CVC4_CE": {
+              "result": "Unknown (unknown)",
+              "steps": 348,
+              "time": 1.30000000000000E-01
+            }
+          },
+          "transformations": {
+          }
+        },
+        {
+          "proof_attempts": {
+            "CVC4": {
+              "result": "Valid",
+              "steps": 5,
+              "time": 3.00000000000000E-02
+            }
+          },
+          "transformations": {
+          }
+        },
+        {
+          "proof_attempts": {
+            "CVC4": {
+              "result": "Unknown (unknown)",
+              "steps": 290,
+              "time": 6.00000000000000E-02
+            }
+          },
+          "transformations": {
+          }
+        },
+        {
+          "proof_attempts": {
+            "CVC4": {
+              "result": "Valid",
+              "steps": 5,
+              "time": 3.00000000000000E-02
+            }
+          },
+          "transformations": {
+          }
+        }
+      ],
+      "check_file": "hatch_system.ads",
+      "check_line": 48,
+      "check_col": 13,
+      "cntexmp": {
+        "hatch_system.adb": {
+          "78": [
+            {
+              "name": "I",
+              "value": "1",
+              "kind": "variable"
+            }
+          ],
+          "79": [
+            {
+              "name": "Self",
+              "value": "(H => (0 => (Closed => True, Locked => True), 1 => (Closed => True, Locked => False), others => (Closed => False, Locked => False)), S => Sealed)",
+              "kind": "variable"
+            }
+          ],
+          "80": [
+            {
+              "name": "Self",
+              "value": "(H => (0 => (Closed => True, Locked => True), 1 => (Closed => True, Locked => True), others => (Closed => False, Locked => False)), S => Sealed)",
+              "kind": "variable"
+            }
+          ],
+          "83": [
+            {
+              "name": "Self",
+              "value": "(H => (0 => (Closed => True, Locked => True), 1 => (Closed => True, Locked => True), others => (Closed => False, Locked => False)), S => Sealed)",
+              "kind": "variable"
+            }
+          ]
+        },
+        "hatch_system.ads": {
+          "47": [
+            {
+              "name": "Self",
+              "value": "(H => (others => (Closed => False, Locked => False)), S => Sealed)",
+              "kind": "variable"
+            }
+          ],
+          "49": [
+            {
+              "name": "I",
+              "value": "0",
+              "kind": "variable"
+            },
+            {
+              "name": "Self",
+              "value": "(H => (0 => (Closed => True, Locked => True), 1 => (Closed => True, Locked => True), others => (Closed => False, Locked => False)), S => Sealed)",
+              "kind": "variable"
+            }
+          ]
+        }
+      },
+      "msg_id": 3,
+      "how_proved": "prover"
+    },
+    {
+      "file": "hatch_system.ads",
+      "line": 54,
+      "col": 16,
+      "rule": "VC_POSTCONDITION",
+      "severity": "medium",
+      "entity": {
+        "name": "Hatch_System.Unseal",
+        "sloc": [
+          {
+            "file": "hatch_system.ads",
+            "line": 52
+          }
+        ]
+      },
+      "check_tree": [
+        {
+          "proof_attempts": {
+            "CVC4": {
+              "result": "Valid",
+              "steps": 5,
+              "time": 5.00000000000000E-02
+            }
+          },
+          "transformations": {
+          }
+        },
+        {
+          "proof_attempts": {
+            "CVC4": {
+              "result": "Unknown (unknown)",
+              "steps": 211,
+              "time": 8.00000000000000E-02
+            }
+          },
+          "transformations": {
+          }
+        },
+        {
+          "proof_attempts": {
+            "CVC4": {
+              "result": "Valid",
+              "steps": 5,
+              "time": 3.00000000000000E-02
+            }
+          },
+          "transformations": {
+          }
+        },
+        {
+          "proof_attempts": {
+            "CVC4": {
+              "result": "Unknown (unknown)",
+              "steps": 461,
+              "time": 9.00000000000000E-02
+            },
+            "CVC4_CE": {
+              "result": "Unknown (unknown)",
+              "steps": 865,
+              "time": 1.40000000000000E-01
+            }
+          },
+          "transformations": {
+          }
+        }
+      ],
+      "check_file": "hatch_system.ads",
+      "check_line": 53,
+      "check_col": 13,
+      "cntexmp": {
+        "hatch_system.adb": {
+          "88": [
+            {
+              "name": "I",
+              "value": "1",
+              "kind": "variable"
+            }
+          ],
+          "89": [
+            {
+              "name": "Self",
+              "value": "(H => (0 => (Closed => False, Locked => False), 1 => (Closed => False, Locked => False), others => (Closed => False, Locked => True)), S => Open)",
+              "kind": "variable"
+            }
+          ],
+          "92": [
+            {
+              "name": "Self",
+              "value": "(H => (0 => (Closed => False, Locked => False), 1 => (Closed => False, Locked => False), others => (Closed => False, Locked => True)), S => Open)",
+              "kind": "variable"
+            }
+          ]
+        },
+        "hatch_system.ads": {
+          "52": [
+            {
+              "name": "Self",
+              "value": "(H => (0 => (Closed => False, Locked => False), 1 => (Closed => False, Locked => False), others => (Closed => False, Locked => True)), S => Open)",
+              "kind": "variable"
+            }
+          ],
+          "54": [
+            {
+              "name": "I",
+              "value": "0",
+              "kind": "variable"
+            },
+            {
+              "name": "Self",
+              "value": "(H => (0 => (Closed => False, Locked => False), 1 => (Closed => False, Locked => False), others => (Closed => False, Locked => True)), S => Open)",
+              "kind": "variable"
+            }
+          ]
+        }
+      },
+      "msg_id": 4,
+      "how_proved": "prover"
+    }
+  ],
+  "assumptions": [
+    {
+      "assumptions": [
+        {
+          "predicate": "CLAIM_EFFECTS",
+          "arg": {
+            "name": "Hatch_System.Get_Status",
+            "sloc": [
+              {
+                "file": "hatch_system.ads",
+                "line": 17
+              }
+            ]
+          }
+        }
+      ],
+      "claim": {
+        "predicate": "CLAIM_EFFECTS",
+        "arg": {
+          "name": "Hatch_System.Is_Sealed",
+          "sloc": [
+            {
+              "file": "hatch_system.ads",
+              "line": 24
+            }
+          ]
+        }
+      }
+    },
+    {
+      "assumptions": [
+        {
+          "predicate": "CLAIM_EFFECTS",
+          "arg": {
+            "name": "Hatch_System.Get_Hatches",
+            "sloc": [
+              {
+                "file": "hatch_system.ads",
+                "line": 15
+              }
+            ]
+          }
+        },
+        {
+          "predicate": "CLAIM_EFFECTS",
+          "arg": {
+            "name": "Hatch_System.Is_Sealed",
+            "sloc": [
+              {
+                "file": "hatch_system.ads",
+                "line": 24
+              }
+            ]
+          }
+        },
+        {
+          "predicate": "CLAIM_EFFECTS",
+          "arg": {
+            "name": "Hatch_System.More_Than_One_Hatches_Are_Closed",
+            "sloc": [
+              {
+                "file": "hatch_system.ads",
+                "line": 27
+              }
+            ]
+          }
+        }
+      ],
+      "claim": {
+        "predicate": "CLAIM_EFFECTS",
+        "arg": {
+          "name": "Hatch_System.Open_Hatch",
+          "sloc": [
+            {
+              "file": "hatch_system.ads",
+              "line": 31
+            }
+          ]
+        }
+      }
+    },
+    {
+      "assumptions": [
+        {
+          "predicate": "CLAIM_EFFECTS",
+          "arg": {
+            "name": "Hatch_System.Get_Status",
+            "sloc": [
+              {
+                "file": "hatch_system.ads",
+                "line": 17
+              }
+            ]
+          }
+        },
+        {
+          "predicate": "CLAIM_AORTE",
+          "arg": {
+            "name": "Hatch_System.Get_Status",
+            "sloc": [
+              {
+                "file": "hatch_system.ads",
+                "line": 17
+              }
+            ]
+          }
+        }
+      ],
+      "claim": {
+        "predicate": "CLAIM_AORTE",
+        "arg": {
+          "name": "Hatch_System.Is_Sealed",
+          "sloc": [
+            {
+              "file": "hatch_system.ads",
+              "line": 24
+            }
+          ]
+        }
+      }
+    },
+    {
+      "assumptions": [
+        {
+          "predicate": "CLAIM_EFFECTS",
+          "arg": {
+            "name": "Hatch_System.Get_Hatches",
+            "sloc": [
+              {
+                "file": "hatch_system.ads",
+                "line": 15
+              }
+            ]
+          }
+        },
+        {
+          "predicate": "CLAIM_EFFECTS",
+          "arg": {
+            "name": "Hatch_System.Is_Sealed",
+            "sloc": [
+              {
+                "file": "hatch_system.ads",
+                "line": 24
+              }
+            ]
+          }
+        },
+        {
+          "predicate": "CLAIM_EFFECTS",
+          "arg": {
+            "name": "Hatch_System.More_Than_One_Hatches_Are_Closed",
+            "sloc": [
+              {
+                "file": "hatch_system.ads",
+                "line": 27
+              }
+            ]
+          }
+        },
+        {
+          "predicate": "CLAIM_AORTE",
+          "arg": {
+            "name": "Hatch_System.Get_Hatches",
+            "sloc": [
+              {
+                "file": "hatch_system.ads",
+                "line": 15
+              }
+            ]
+          }
+        },
+        {
+          "predicate": "CLAIM_AORTE",
+          "arg": {
+            "name": "Hatch_System.Is_Sealed",
+            "sloc": [
+              {
+                "file": "hatch_system.ads",
+                "line": 24
+              }
+            ]
+          }
+        },
+        {
+          "predicate": "CLAIM_AORTE",
+          "arg": {
+            "name": "Hatch_System.More_Than_One_Hatches_Are_Closed",
+            "sloc": [
+              {
+                "file": "hatch_system.ads",
+                "line": 27
+              }
+            ]
+          }
+        }
+      ],
+      "claim": {
+        "predicate": "CLAIM_AORTE",
+        "arg": {
+          "name": "Hatch_System.Open_Hatch",
+          "sloc": [
+            {
+              "file": "hatch_system.ads",
+              "line": 31
+            }
+          ]
+        }
+      }
+    },
+    {
+      "assumptions": [
+      ],
+      "claim": {
+        "predicate": "CLAIM_EFFECTS",
+        "arg": {
+          "name": "Hatch_System.Get_Hatches",
+          "sloc": [
+            {
+              "file": "hatch_system.ads",
+              "line": 15
+            }
+          ]
+        }
+      }
+    },
+    {
+      "assumptions": [
+      ],
+      "claim": {
+        "predicate": "CLAIM_AORTE",
+        "arg": {
+          "name": "Hatch_System.Get_Hatches",
+          "sloc": [
+            {
+              "file": "hatch_system.ads",
+              "line": 15
+            }
+          ]
+        }
+      }
+    },
+    {
+      "assumptions": [
+        {
+          "predicate": "CLAIM_EFFECTS",
+          "arg": {
+            "name": "Hatch_System.Get_Hatches",
+            "sloc": [
+              {
+                "file": "hatch_system.ads",
+                "line": 15
+              }
+            ]
+          }
+        },
+        {
+          "predicate": "CLAIM_EFFECTS",
+          "arg": {
+            "name": "Hatch_System.Is_Sealed",
+            "sloc": [
+              {
+                "file": "hatch_system.ads",
+                "line": 24
+              }
+            ]
+          }
+        }
+      ],
+      "claim": {
+        "predicate": "CLAIM_EFFECTS",
+        "arg": {
+          "name": "Hatch_System.Seal",
+          "sloc": [
+            {
+              "file": "hatch_system.ads",
+              "line": 47
+            }
+          ]
+        }
+      }
+    },
+    {
+      "assumptions": [
+      ],
+      "claim": {
+        "predicate": "CLAIM_EFFECTS",
+        "arg": {
+          "name": "Hatch_System.Create",
+          "sloc": [
+            {
+              "file": "hatch_system.ads",
+              "line": 29
+            }
+          ]
+        }
+      }
+    },
+    {
+      "assumptions": [
+      ],
+      "claim": {
+        "predicate": "CLAIM_AORTE",
+        "arg": {
+          "name": "Hatch_System.Create",
+          "sloc": [
+            {
+              "file": "hatch_system.ads",
+              "line": 29
+            }
+          ]
+        }
+      }
+    },
+    {
+      "assumptions": [
+      ],
+      "claim": {
+        "predicate": "CLAIM_AORTE",
+        "arg": {
+          "name": "Hatch_System.Hatch_System",
+          "sloc": [
+            {
+              "file": "hatch_system.ads",
+              "line": 13
+            }
+          ]
+        }
+      }
+    },
+    {
+      "assumptions": [
+      ],
+      "claim": {
+        "predicate": "CLAIM_EFFECTS",
+        "arg": {
+          "name": "Hatch_System.Get_Status",
+          "sloc": [
+            {
+              "file": "hatch_system.ads",
+              "line": 17
+            }
+          ]
+        }
+      }
+    },
+    {
+      "assumptions": [
+      ],
+      "claim": {
+        "predicate": "CLAIM_AORTE",
+        "arg": {
+          "name": "Hatch_System.Get_Status",
+          "sloc": [
+            {
+              "file": "hatch_system.ads",
+              "line": 17
+            }
+          ]
+        }
+      }
+    },
+    {
+      "assumptions": [
+        {
+          "predicate": "CLAIM_EFFECTS",
+          "arg": {
+            "name": "Hatch_System.Get_Hatches",
+            "sloc": [
+              {
+                "file": "hatch_system.ads",
+                "line": 15
+              }
+            ]
+          }
+        },
+        {
+          "predicate": "CLAIM_EFFECTS",
+          "arg": {
+            "name": "Hatch_System.Is_Sealed",
+            "sloc": [
+              {
+                "file": "hatch_system.ads",
+                "line": 24
+              }
+            ]
+          }
+        }
+      ],
+      "claim": {
+        "predicate": "CLAIM_EFFECTS",
+        "arg": {
+          "name": "Hatch_System.Unlock_Hatch",
+          "sloc": [
+            {
+              "file": "hatch_system.ads",
+              "line": 43
+            }
+          ]
+        }
+      }
+    },
+    {
+      "assumptions": [
+        {
+          "predicate": "CLAIM_EFFECTS",
+          "arg": {
+            "name": "Hatch_System.Get_Hatches",
+            "sloc": [
+              {
+                "file": "hatch_system.ads",
+                "line": 15
+              }
+            ]
+          }
+        },
+        {
+          "predicate": "CLAIM_EFFECTS",
+          "arg": {
+            "name": "Hatch_System.Is_Sealed",
+            "sloc": [
+              {
+                "file": "hatch_system.ads",
+                "line": 24
+              }
+            ]
+          }
+        }
+      ],
+      "claim": {
+        "predicate": "CLAIM_EFFECTS",
+        "arg": {
+          "name": "Hatch_System.Unseal",
+          "sloc": [
+            {
+              "file": "hatch_system.ads",
+              "line": 52
+            }
+          ]
+        }
+      }
+    },
+    {
+      "assumptions": [
+      ],
+      "claim": {
+        "predicate": "CLAIM_AORTE",
+        "arg": {
+          "name": "Hatch_System",
+          "sloc": [
+            {
+              "file": "hatch_system.ads",
+              "line": 1
+            }
+          ]
+        }
+      }
+    },
+    {
+      "assumptions": [
+      ],
+      "claim": {
+        "predicate": "CLAIM_EFFECTS",
+        "arg": {
+          "name": "Hatch_System.More_Than_One_Hatches_Are_Closed",
+          "sloc": [
+            {
+              "file": "hatch_system.ads",
+              "line": 27
+            }
+          ]
+        }
+      }
+    },
+    {
+      "assumptions": [
+      ],
+      "claim": {
+        "predicate": "CLAIM_AORTE",
+        "arg": {
+          "name": "Hatch_System.More_Than_One_Hatches_Are_Closed",
+          "sloc": [
+            {
+              "file": "hatch_system.ads",
+              "line": 27
+            }
+          ]
+        }
+      }
+    },
+    {
+      "assumptions": [
+        {
+          "predicate": "CLAIM_EFFECTS",
+          "arg": {
+            "name": "Hatch_System.Get_Hatches",
+            "sloc": [
+              {
+                "file": "hatch_system.ads",
+                "line": 15
+              }
+            ]
+          }
+        }
+      ],
+      "claim": {
+        "predicate": "CLAIM_EFFECTS",
+        "arg": {
+          "name": "Hatch_System.Close_Hatch",
+          "sloc": [
+            {
+              "file": "hatch_system.ads",
+              "line": 36
+            }
+          ]
+        }
+      }
+    },
+    {
+      "assumptions": [
+        {
+          "predicate": "CLAIM_EFFECTS",
+          "arg": {
+            "name": "Hatch_System.Get_Hatches",
+            "sloc": [
+              {
+                "file": "hatch_system.ads",
+                "line": 15
+              }
+            ]
+          }
+        }
+      ],
+      "claim": {
+        "predicate": "CLAIM_EFFECTS",
+        "arg": {
+          "name": "Hatch_System.Lock_Hatch",
+          "sloc": [
+            {
+              "file": "hatch_system.ads",
+              "line": 39
+            }
+          ]
+        }
+      }
+    },
+    {
+      "assumptions": [
+        {
+          "predicate": "CLAIM_EFFECTS",
+          "arg": {
+            "name": "Hatch_System.Get_Hatches",
+            "sloc": [
+              {
+                "file": "hatch_system.ads",
+                "line": 15
+              }
+            ]
+          }
+        }
+      ],
+      "claim": {
+        "predicate": "CLAIM_EFFECTS",
+        "arg": {
+          "name": "Hatch_System.At_Least_One_Hatch_Is_Closed",
+          "sloc": [
+            {
+              "file": "hatch_system.ads",
+              "line": 19
+            }
+          ]
+        }
+      }
+    },
+    {
+      "assumptions": [
+        {
+          "predicate": "CLAIM_EFFECTS",
+          "arg": {
+            "name": "Hatch_System.Get_Hatches",
+            "sloc": [
+              {
+                "file": "hatch_system.ads",
+                "line": 15
+              }
+            ]
+          }
+        },
+        {
+          "predicate": "CLAIM_AORTE",
+          "arg": {
+            "name": "Hatch_System.Get_Hatches",
+            "sloc": [
+              {
+                "file": "hatch_system.ads",
+                "line": 15
+              }
+            ]
+          }
+        }
+      ],
+      "claim": {
+        "predicate": "CLAIM_AORTE",
+        "arg": {
+          "name": "Hatch_System.At_Least_One_Hatch_Is_Closed",
+          "sloc": [
+            {
+              "file": "hatch_system.ads",
+              "line": 19
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "timings": {
+    "marking": 6.76799973007292E-04,
+    "globals (basic)": 5.22000016644597E-04,
+    "globals/properties (advanced)": 7.98800028860569E-04,
+    "flow analysis": 1.13081000745296E-02,
+    "codepeer results": 7.19999979992281E-06,
+    "init_why_sections": 4.75700013339520E-04,
+    "translation of standard": 3.30849993042648E-03,
+    "translation of compilation unit": 2.40441001951694E-02,
+    "proof": 2.06527328491211E+00
+  }
+}

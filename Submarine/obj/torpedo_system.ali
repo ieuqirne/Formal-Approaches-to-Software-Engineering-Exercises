@@ -1,0 +1,103 @@
+V "GNAT Lib v2019"
+A -gnatA
+A -mtune=generic
+A -march=x86-64
+P ZX
+
+RN
+RV NO_DIRECT_BOOLEAN_OPERATORS
+RV NO_DISPATCHING_CALLS
+RV NO_IMPLICIT_CONDITIONALS
+RV NO_SECONDARY_STACK
+RV NO_STANDARD_STORAGE_POOLS
+RV NO_DEFAULT_INITIALIZATION
+RV NO_IMPLEMENTATION_ASPECT_SPECIFICATIONS
+RV NO_IMPLEMENTATION_PRAGMAS
+RV NO_IMPLICIT_LOOPS
+RV NO_ELABORATION_CODE
+
+U torpedo_system%b	torpedo_system.adb	00e8def1 OO PK
+Z interfaces%s		interfac.ads		interfac.ali
+Z system.secondary_stack%s  s-secsta.adb	s-secsta.ali
+
+U torpedo_system%s	torpedo_system.ads	08982264 EE OO PF PK
+Z ada.exceptions%s	a-except.adb		a-except.ali
+Z ada.streams%s		a-stream.adb		a-stream.ali
+Z ada.tags%s		a-tags.adb		a-tags.ali
+Z system%s		system.ads		system.ali
+Z system.secondary_stack%s  s-secsta.adb	s-secsta.ali
+Z system.storage_elements%s  s-stoele.adb	s-stoele.ali
+Z system.stream_attributes%s  s-stratt.adb	s-stratt.ali
+
+D ada.ads		20190518041256 76789da1 ada%s
+D a-except.ads		20190518041256 291912d5 ada.exceptions%s
+D a-stream.ads		20190518041256 119b8fb3 ada.streams%s
+D a-tags.ads		20190518041258 491b781d ada.tags%s
+D a-unccon.ads		20190518041256 0e9b276f ada.unchecked_conversion%s
+D interfac.ads		20190518041256 5ab55268 interfaces%s
+D system.ads		20190518041258 32a08138 system%s
+D s-exctab.ads		20190518041256 54135002 system.exception_table%s
+D s-parame.ads		20190518041258 48ec542b system.parameters%s
+D s-secsta.ads		20190518041258 20bbe636 system.secondary_stack%s
+D s-soflin.ads		20190518041256 a7318a92 system.soft_links%s
+D s-stache.ads		20190518041258 a37c21ec system.stack_checking%s
+D s-stalib.ads		20190518041258 09bd3940 system.standard_library%s
+D s-stoele.ads		20190518041258 2dc34a04 system.storage_elements%s
+D s-stoele.adb		20190518041256 ed88f8fb system.storage_elements%b
+D s-stratt.ads		20190518041256 aedef97e system.stream_attributes%s
+D s-traent.ads		20190518041256 005bf670 system.traceback_entries%s
+D s-unstyp.ads		20190518041256 34867c83 system.unsigned_types%s
+D torpedo_system.ads	20200415095800 08982264 torpedo_system%s
+D torpedo_system.adb	20200415095738 0870fc95 torpedo_system%b
+G a e
+G c Z s b [create torpedo_system 11 12 none]
+G c Z s b [get_torpedo_count torpedo_system 13 12 none]
+G c Z s b [get_tubes torpedo_system 15 12 none]
+G c Z s b [load torpedo_system 17 13 none]
+G c Z s b [unload torpedo_system 23 13 none]
+G c Z s b [fire torpedo_system 31 13 none]
+G c Z s s [Ttorpedo_tubesBIP torpedo_system 5 3 none]
+G c Z s s [torpedo_systemDA torpedo_system 35 8 none]
+G c Z s s [torpedo_systemDF torpedo_system 35 8 none]
+G c Z s s [torpedo_systemIP torpedo_system 35 8 none]
+X 19 torpedo_system.ads
+1K9*Torpedo_System 35E8 40l5 40e19 20|1b14 54l5 54t19
+3E8*Torpedo_Tube 3e39 5r46
+3n25*Empty{3E8} 18r78 26r32 26r65 29r33 32r37 20|41r77 45r26 51r26
+3n32*Loaded{3E8} 20r32 24r42 28r31 20|10r24 31r78 35r26
+4I8*Tube_Index<short_short_integer> 5r31 17r54 23r56 31r54 20|29r54 39r56
+. 49r54
+5A8*Torpedo_Tubes(3E8)<4I8> 15r51 37r12 20|9r14 23r51
+7I8*Torpedo_Index<short_short_integer> 13r59 27r32 28r72 36r26 20|7r33 17r59
+. 31r35 41r35
+9R8*Torpedo_System 11p12 11r26 13p12 13r36 15p12 15r28 17p13 17r31 23p13
+. 23r33 31p13 31r31 35c8 38e13 20|3r26 5r11 17r36 23r28 29r31 39r33 49r31
+11V12*Create{9R8} 20|3b12 15l7 15t13
+13V12*Get_Torpedo_Count{7I8} 13>30 18s23 20s47 20s76 21s12 27s12 28s52 20|17b12
+. 21l7 21t24
+13r30 Self{9R8} 20|17b30 20r12
+15V12*Get_Tubes{5A8} 15>22 18s59 20s13 21s42 21s70 24s23 26s13 26s46 27s59
+. 27s87 28s12 29s14 32s18 20|23b12 27l7 27t16
+15r22 Self{9R8} 20|23b22 26r12
+17U13*Load 17=18 17>47 20|29t3
+17r18 Self{9R8} 18r18 18r54 20r8 20r42 20r71 21r7 21r37 21r65
+17i47 Index{4I8} 18r69 20r23 21r52 21r80
+23U13*Unload 23=20 23>49 20|39t3
+23r20 Self{9R8} 24r18 26r8 26r41 27r7 27r54 27r82 28r7 28r47 29r9
+23i49 Index{4I8} 24r33 26r23 26r56 27r69 27r97 28r22 29r24
+31U13*Fire 31=18 31>47 20|49b13 52l7 52t11
+31r18 Self{9R8} 32r13 20|49b18 51m5
+31i47 Index{4I8} 32r28 20|49b47 51r16
+36i5*Remaining_Torpedoes{7I8} 20|7m10 11m12 11r40 20r17 31r13 36m10 36r38
+. 41r13 46m10 46r38
+37a5*Tubes{5A8} 20|10m12 26r17 31r63 35m10 41r62 45m10 51m10
+X 20 torpedo_system.adb
+5r5 Self{19|9R8} 7m5 10m7 11m7 11r35 14r12
+9i9 I<short_short_integer> 10r18
+29U13 Load
+29r18 Self{19|9R8}
+29i47 Index{19|4I8}
+39U13 Unload
+39r20 Self{19|9R8}
+39i49 Index{19|4I8}
+

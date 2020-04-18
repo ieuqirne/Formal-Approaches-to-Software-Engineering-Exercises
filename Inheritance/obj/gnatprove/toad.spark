@@ -1,0 +1,641 @@
+{
+  "spark": [
+    {
+      "name": "Toad",
+      "sloc": [
+        {
+          "file": "toad.ads",
+          "line": 3
+        }
+      ],
+      "spark": "all"
+    },
+    {
+      "name": "Toad.SellToKebabShop",
+      "sloc": [
+        {
+          "file": "toad.ads",
+          "line": 10
+        }
+      ],
+      "spark": "all"
+    },
+    {
+      "name": "Toad.MakeFitForNursingHome",
+      "sloc": [
+        {
+          "file": "toad.ads",
+          "line": 14
+        }
+      ],
+      "spark": "all"
+    }
+  ],
+  "flow": [
+  ],
+  "proof": [
+    {
+      "file": "toad.adb",
+      "line": 7,
+      "col": 7,
+      "rule": "VC_PRECONDITION",
+      "severity": "info",
+      "entity": {
+        "name": "Toad.SellToKebabShop",
+        "sloc": [
+          {
+            "file": "toad.ads",
+            "line": 10
+          }
+        ]
+      },
+      "check_tree": [
+        {
+          "proof_attempts": {
+            "CVC4": {
+              "result": "Valid",
+              "steps": 5,
+              "time": 0
+            }
+          },
+          "transformations": {
+          }
+        }
+      ],
+      "check_file": "toad.adb",
+      "check_line": 7,
+      "check_col": 7,
+      "how_proved": "prover",
+      "stats": {
+        "CVC4": {
+          "count": 1,
+          "max_steps": 1,
+          "max_time": 0.00000000000000E+00
+        }
+      }
+    },
+    {
+      "file": "toad.ads",
+      "line": 12,
+      "col": 14,
+      "rule": "VC_POSTCONDITION",
+      "severity": "info",
+      "entity": {
+        "name": "Toad.SellToKebabShop",
+        "sloc": [
+          {
+            "file": "toad.ads",
+            "line": 10
+          }
+        ]
+      },
+      "check_tree": [
+        {
+          "proof_attempts": {
+            "CVC4": {
+              "result": "Valid",
+              "steps": 5,
+              "time": 0
+            }
+          },
+          "transformations": {
+          }
+        },
+        {
+          "proof_attempts": {
+            "CVC4": {
+              "result": "Valid",
+              "steps": 18,
+              "time": 3.00000000000000E-02
+            }
+          },
+          "transformations": {
+          }
+        }
+      ],
+      "check_file": "toad.ads",
+      "check_line": 12,
+      "check_col": 14,
+      "how_proved": "prover",
+      "stats": {
+        "CVC4": {
+          "count": 2,
+          "max_steps": 1,
+          "max_time": 2.99999993294477E-02
+        }
+      }
+    },
+    {
+      "file": "toad.ads",
+      "line": 16,
+      "col": 14,
+      "rule": "VC_POSTCONDITION",
+      "severity": "info",
+      "entity": {
+        "name": "Toad.MakeFitForNursingHome",
+        "sloc": [
+          {
+            "file": "toad.ads",
+            "line": 14
+          }
+        ]
+      },
+      "check_tree": [
+        {
+          "proof_attempts": {
+            "CVC4": {
+              "result": "Valid",
+              "steps": 5,
+              "time": 0
+            }
+          },
+          "transformations": {
+          }
+        },
+        {
+          "proof_attempts": {
+            "CVC4": {
+              "result": "Valid",
+              "steps": 5,
+              "time": 0
+            }
+          },
+          "transformations": {
+          }
+        }
+      ],
+      "check_file": "toad.ads",
+      "check_line": 16,
+      "check_col": 14,
+      "how_proved": "prover",
+      "stats": {
+        "CVC4": {
+          "count": 2,
+          "max_steps": 1,
+          "max_time": 0.00000000000000E+00
+        }
+      }
+    }
+  ],
+  "assumptions": [
+    {
+      "assumptions": [
+        {
+          "predicate": "CLAIM_POST",
+          "arg": {
+            "name": "Batter.MakeSafe",
+            "sloc": [
+              {
+                "file": "batter.ads",
+                "line": 14
+              }
+            ]
+          }
+        },
+        {
+          "predicate": "CLAIM_POST",
+          "arg": {
+            "name": "Sausages.Kaldere",
+            "sloc": [
+              {
+                "file": "sausages.ads",
+                "line": 18
+              }
+            ]
+          }
+        },
+        {
+          "predicate": "CLAIM_EFFECTS",
+          "arg": {
+            "name": "Batter.MakeSafe",
+            "sloc": [
+              {
+                "file": "batter.ads",
+                "line": 14
+              }
+            ]
+          }
+        },
+        {
+          "predicate": "CLAIM_EFFECTS",
+          "arg": {
+            "name": "Sausages.Kaldere",
+            "sloc": [
+              {
+                "file": "sausages.ads",
+                "line": 18
+              }
+            ]
+          }
+        },
+        {
+          "predicate": "CLAIM_AORTE",
+          "arg": {
+            "name": "Batter.MakeSafe",
+            "sloc": [
+              {
+                "file": "batter.ads",
+                "line": 14
+              }
+            ]
+          }
+        },
+        {
+          "predicate": "CLAIM_AORTE",
+          "arg": {
+            "name": "Sausages.Kaldere",
+            "sloc": [
+              {
+                "file": "sausages.ads",
+                "line": 18
+              }
+            ]
+          }
+        }
+      ],
+      "claim": {
+        "predicate": "CLAIM_POST",
+        "arg": {
+          "name": "Toad.MakeFitForNursingHome",
+          "sloc": [
+            {
+              "file": "toad.ads",
+              "line": 14
+            }
+          ]
+        }
+      }
+    },
+    {
+      "assumptions": [
+        {
+          "predicate": "CLAIM_EFFECTS",
+          "arg": {
+            "name": "Batter.MakeSafe",
+            "sloc": [
+              {
+                "file": "batter.ads",
+                "line": 14
+              }
+            ]
+          }
+        },
+        {
+          "predicate": "CLAIM_EFFECTS",
+          "arg": {
+            "name": "Sausages.Kaldere",
+            "sloc": [
+              {
+                "file": "sausages.ads",
+                "line": 18
+              }
+            ]
+          }
+        }
+      ],
+      "claim": {
+        "predicate": "CLAIM_EFFECTS",
+        "arg": {
+          "name": "Toad.MakeFitForNursingHome",
+          "sloc": [
+            {
+              "file": "toad.ads",
+              "line": 14
+            }
+          ]
+        }
+      }
+    },
+    {
+      "assumptions": [
+        {
+          "predicate": "CLAIM_POST",
+          "arg": {
+            "name": "Batter.MakeSafe",
+            "sloc": [
+              {
+                "file": "batter.ads",
+                "line": 14
+              }
+            ]
+          }
+        },
+        {
+          "predicate": "CLAIM_POST",
+          "arg": {
+            "name": "Sausages.Kaldere",
+            "sloc": [
+              {
+                "file": "sausages.ads",
+                "line": 18
+              }
+            ]
+          }
+        },
+        {
+          "predicate": "CLAIM_EFFECTS",
+          "arg": {
+            "name": "Batter.MakeSafe",
+            "sloc": [
+              {
+                "file": "batter.ads",
+                "line": 14
+              }
+            ]
+          }
+        },
+        {
+          "predicate": "CLAIM_EFFECTS",
+          "arg": {
+            "name": "Sausages.Kaldere",
+            "sloc": [
+              {
+                "file": "sausages.ads",
+                "line": 18
+              }
+            ]
+          }
+        },
+        {
+          "predicate": "CLAIM_AORTE",
+          "arg": {
+            "name": "Batter.MakeSafe",
+            "sloc": [
+              {
+                "file": "batter.ads",
+                "line": 14
+              }
+            ]
+          }
+        },
+        {
+          "predicate": "CLAIM_AORTE",
+          "arg": {
+            "name": "Sausages.Kaldere",
+            "sloc": [
+              {
+                "file": "sausages.ads",
+                "line": 18
+              }
+            ]
+          }
+        }
+      ],
+      "claim": {
+        "predicate": "CLAIM_AORTE",
+        "arg": {
+          "name": "Toad.MakeFitForNursingHome",
+          "sloc": [
+            {
+              "file": "toad.ads",
+              "line": 14
+            }
+          ]
+        }
+      }
+    },
+    {
+      "assumptions": [
+      ],
+      "claim": {
+        "predicate": "CLAIM_AORTE",
+        "arg": {
+          "name": "Toad",
+          "sloc": [
+            {
+              "file": "toad.ads",
+              "line": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "assumptions": [
+        {
+          "predicate": "CLAIM_POST",
+          "arg": {
+            "name": "Sausages.Contaminate",
+            "sloc": [
+              {
+                "file": "sausages.ads",
+                "line": 11
+              }
+            ]
+          }
+        },
+        {
+          "predicate": "CLAIM_POST",
+          "arg": {
+            "name": "Sausages.Varmere",
+            "sloc": [
+              {
+                "file": "sausages.ads",
+                "line": 15
+              }
+            ]
+          }
+        },
+        {
+          "predicate": "CLAIM_EFFECTS",
+          "arg": {
+            "name": "Sausages.Contaminate",
+            "sloc": [
+              {
+                "file": "sausages.ads",
+                "line": 11
+              }
+            ]
+          }
+        },
+        {
+          "predicate": "CLAIM_EFFECTS",
+          "arg": {
+            "name": "Sausages.Varmere",
+            "sloc": [
+              {
+                "file": "sausages.ads",
+                "line": 15
+              }
+            ]
+          }
+        },
+        {
+          "predicate": "CLAIM_AORTE",
+          "arg": {
+            "name": "Sausages.Contaminate",
+            "sloc": [
+              {
+                "file": "sausages.ads",
+                "line": 11
+              }
+            ]
+          }
+        },
+        {
+          "predicate": "CLAIM_AORTE",
+          "arg": {
+            "name": "Sausages.Varmere",
+            "sloc": [
+              {
+                "file": "sausages.ads",
+                "line": 15
+              }
+            ]
+          }
+        }
+      ],
+      "claim": {
+        "predicate": "CLAIM_POST",
+        "arg": {
+          "name": "Toad.SellToKebabShop",
+          "sloc": [
+            {
+              "file": "toad.ads",
+              "line": 10
+            }
+          ]
+        }
+      }
+    },
+    {
+      "assumptions": [
+        {
+          "predicate": "CLAIM_EFFECTS",
+          "arg": {
+            "name": "Sausages.Contaminate",
+            "sloc": [
+              {
+                "file": "sausages.ads",
+                "line": 11
+              }
+            ]
+          }
+        },
+        {
+          "predicate": "CLAIM_EFFECTS",
+          "arg": {
+            "name": "Sausages.Varmere",
+            "sloc": [
+              {
+                "file": "sausages.ads",
+                "line": 15
+              }
+            ]
+          }
+        }
+      ],
+      "claim": {
+        "predicate": "CLAIM_EFFECTS",
+        "arg": {
+          "name": "Toad.SellToKebabShop",
+          "sloc": [
+            {
+              "file": "toad.ads",
+              "line": 10
+            }
+          ]
+        }
+      }
+    },
+    {
+      "assumptions": [
+        {
+          "predicate": "CLAIM_POST",
+          "arg": {
+            "name": "Sausages.Contaminate",
+            "sloc": [
+              {
+                "file": "sausages.ads",
+                "line": 11
+              }
+            ]
+          }
+        },
+        {
+          "predicate": "CLAIM_POST",
+          "arg": {
+            "name": "Sausages.Varmere",
+            "sloc": [
+              {
+                "file": "sausages.ads",
+                "line": 15
+              }
+            ]
+          }
+        },
+        {
+          "predicate": "CLAIM_EFFECTS",
+          "arg": {
+            "name": "Sausages.Contaminate",
+            "sloc": [
+              {
+                "file": "sausages.ads",
+                "line": 11
+              }
+            ]
+          }
+        },
+        {
+          "predicate": "CLAIM_EFFECTS",
+          "arg": {
+            "name": "Sausages.Varmere",
+            "sloc": [
+              {
+                "file": "sausages.ads",
+                "line": 15
+              }
+            ]
+          }
+        },
+        {
+          "predicate": "CLAIM_AORTE",
+          "arg": {
+            "name": "Sausages.Contaminate",
+            "sloc": [
+              {
+                "file": "sausages.ads",
+                "line": 11
+              }
+            ]
+          }
+        },
+        {
+          "predicate": "CLAIM_AORTE",
+          "arg": {
+            "name": "Sausages.Varmere",
+            "sloc": [
+              {
+                "file": "sausages.ads",
+                "line": 15
+              }
+            ]
+          }
+        }
+      ],
+      "claim": {
+        "predicate": "CLAIM_AORTE",
+        "arg": {
+          "name": "Toad.SellToKebabShop",
+          "sloc": [
+            {
+              "file": "toad.ads",
+              "line": 10
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "timings": {
+    "marking": 3.41200007824227E-04,
+    "globals (basic)": 8.19800014141947E-04,
+    "globals/properties (advanced)": 1.20689999312162E-03,
+    "flow analysis": 3.52700008079410E-03,
+    "codepeer results": 8.09999983175658E-06,
+    "init_why_sections": 8.47799994517118E-04,
+    "translation of standard": 4.20890003442764E-03,
+    "translation of compilation unit": 4.82900021597743E-03,
+    "proof": 1.23610317707062E+00
+  }
+}

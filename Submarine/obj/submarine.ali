@@ -1,0 +1,183 @@
+V "GNAT Lib v2019"
+A -gnatA
+A -mtune=generic
+A -march=x86-64
+P ZX
+
+RN
+RV NO_DISPATCHING_CALLS
+RV NO_IO
+RV NO_IMPLICIT_CONDITIONALS
+RV NO_SECONDARY_STACK
+RV NO_STANDARD_STORAGE_POOLS
+RV NO_DEFAULT_INITIALIZATION
+RV NO_IMPLEMENTATION_ASPECT_SPECIFICATIONS
+RV NO_IMPLEMENTATION_PRAGMAS
+RV NO_ELABORATION_CODE
+RV SPARK_05
+
+U submarine%b		submarine.adb		1f1eff6d OO PK
+W ada%s			ada.ads			ada.ali
+Z ada.tags%s		a-tags.adb		a-tags.ali
+W ada.text_io%s		a-textio.adb		a-textio.ali
+W hatch_system%s	hatch_system.adb	hatch_system.ali
+W oxygen_system%s	oxygen_system.adb	oxygen_system.ali
+Z system.secondary_stack%s  s-secsta.adb	s-secsta.ali
+W torpedo_system%s	torpedo_system.adb	torpedo_system.ali
+
+U submarine%s		submarine.ads		f459ef63 EE OO PF PK
+Z ada.exceptions%s	a-except.adb		a-except.ali
+Z ada.streams%s		a-stream.adb		a-stream.ali
+Z ada.tags%s		a-tags.adb		a-tags.ali
+W hatch_system%s	hatch_system.adb	hatch_system.ali
+W oxygen_system%s	oxygen_system.adb	oxygen_system.ali
+W reactor_system%s	reactor_system.adb	reactor_system.ali
+Z system%s		system.ads		system.ali
+Z system.secondary_stack%s  s-secsta.adb	s-secsta.ali
+Z system.storage_elements%s  s-stoele.adb	s-stoele.ali
+Z system.stream_attributes%s  s-stratt.adb	s-stratt.ali
+W torpedo_system%s	torpedo_system.adb	torpedo_system.ali
+
+D ada.ads		20190518041256 76789da1 ada%s
+D a-except.ads		20190518041256 291912d5 ada.exceptions%s
+D a-ioexce.ads		20190518041256 e4a01f64 ada.io_exceptions%s
+D a-stream.ads		20190518041256 119b8fb3 ada.streams%s
+D a-tags.ads		20190518041258 491b781d ada.tags%s
+D a-textio.ads		20190518041258 aef4d56d ada.text_io%s
+D a-unccon.ads		20190518041256 0e9b276f ada.unchecked_conversion%s
+D hatch_system.ads	20200416165002 548471d7 hatch_system%s
+D interfac.ads		20190518041256 5ab55268 interfaces%s
+D i-cstrea.ads		20190518041256 e53d8b8e interfaces.c_streams%s
+D oxygen_system.ads	20200415095524 e2e7757a oxygen_system%s
+D reactor_system.ads	20200415095626 d7d831c3 reactor_system%s
+D submarine.ads		20200415095714 9d7af869 submarine%s
+D submarine.adb		20200415095652 926bf4a0 submarine%b
+D system.ads		20190518041258 32a08138 system%s
+D s-crtl.ads		20190518041256 0ebbdb71 system.crtl%s
+D s-exctab.ads		20190518041256 54135002 system.exception_table%s
+D s-ficobl.ads		20190518041258 078245e4 system.file_control_block%s
+D s-parame.ads		20190518041258 48ec542b system.parameters%s
+D s-secsta.ads		20190518041258 20bbe636 system.secondary_stack%s
+D s-soflin.ads		20190518041256 a7318a92 system.soft_links%s
+D s-stache.ads		20190518041258 a37c21ec system.stack_checking%s
+D s-stalib.ads		20190518041258 09bd3940 system.standard_library%s
+D s-stoele.ads		20190518041258 2dc34a04 system.storage_elements%s
+D s-stoele.adb		20190518041256 ed88f8fb system.storage_elements%b
+D s-stratt.ads		20190518041256 aedef97e system.stream_attributes%s
+D s-traent.ads		20190518041256 005bf670 system.traceback_entries%s
+D s-unstyp.ads		20190518041256 34867c83 system.unsigned_types%s
+D s-wchcon.ads		20190518041256 1b7d22d2 system.wch_con%s
+D torpedo_system.ads	20200415095800 08982264 torpedo_system%s
+G a e
+G c Z s b [create submarine 12 12 none]
+G c Z s b [get_current_depth submarine 14 12 none]
+G c Z s b [get_hatch_system submarine 16 12 none]
+G c Z s b [get_oxygen_system submarine 17 12 none]
+G c Z s b [get_torpedo_system submarine 18 12 none]
+G c Z s b [get_reactor_system submarine 19 12 none]
+G c Z s b [commit_changes submarine 21 13 none]
+G c Z s b [commit_changes submarine 22 13 none]
+G c Z s b [can_operate submarine 24 12 none]
+G c Z s b [update submarine 26 13 none]
+G c Z s b [change_depth submarine 31 13 none]
+G c Z s b [emerge submarine 35 13 none]
+G c Z s s [submarineDA submarine 40 8 none]
+G c Z s s [submarineDF submarine 40 8 none]
+G c Z s s [submarineIP submarine 40 8 none]
+G r s hatch_system [create submarine 12 12 none] [hatch_systemIP hatch_system 58 8 none]
+G r s torpedo_system [create submarine 12 12 none] [torpedo_systemIP torpedo_system 35 8 none]
+G r s oxygen_system [create submarine 12 12 none] [oxygen_systemIP oxygen_system 22 8 none]
+G r s reactor_system [create submarine 12 12 none] [reactor_systemIP reactor_system 21 8 none]
+G r c none [create submarine 12 12 none] [create hatch_system 29 12 none]
+G r c none [create submarine 12 12 none] [create oxygen_system 17 12 none]
+G r c none [create submarine 12 12 none] [create torpedo_system 11 12 none]
+G r c none [create submarine 12 12 none] [create reactor_system 12 12 none]
+G r c none [commit_changes submarine 22 13 none] [is_sealed hatch_system 24 12 none]
+G r c none [can_operate submarine 24 12 none] [is_sealed hatch_system 24 12 none]
+G r c none [update submarine 26 13 none] [get_status oxygen_system 15 12 none]
+G r c none [update submarine 26 13 none] [get_status reactor_system 16 12 none]
+G r s hatch_system [submarineIP submarine 40 8 none] [hatch_systemIP hatch_system 58 8 none]
+G r s torpedo_system [submarineIP submarine 40 8 none] [torpedo_systemIP torpedo_system 35 8 none]
+G r s oxygen_system [submarineIP submarine 40 8 none] [oxygen_systemIP oxygen_system 22 8 none]
+G r s reactor_system [submarineIP submarine 40 8 none] [reactor_systemIP reactor_system 21 8 none]
+X 1 ada.ads
+16K9*Ada 20e8 14|4r6 4r23
+X 6 a-textio.ads
+57K13*Text_IO 727e16 14|4w10 4r27
+508U14*Put_Line 14|77s7
+X 8 hatch_system.ads
+1K9*Hatch_System 63e17 13|1w6 1r24 16r53 21r59 41r16 14|1w6 12r23 27r53 51r59
+. 90r7 100r9
+13R8*Hatch_System 61e13 13|16r66 21r72 41r29 14|27r66 51r72
+24V12*Is_Sealed{boolean} 14|24s27
+29V12*Create{13R8} 14|12s36
+47U13*Seal 14|90s20
+52U13*Unseal 14|100s22
+X 11 oxygen_system.ads
+1K9*Oxygen_System 42e18 13|2w6 2r25 17r54 43r17 14|2w6 13r24 33r54 74r20
+7E8*Status 7e45 14|74r34
+7n19*Critical{7E8} 13|28r44 14|78r27
+7n29*Warning{7E8} 14|76r24
+9R8*Oxygen_System 26e13 13|17r68 43r31 14|33r68
+15V12*Get_Status{7E8} 13|28s31 14|74s60
+17V12*Create{9R8} 14|13s38
+X 12 reactor_system.ads
+1K9*Reactor_System 37e19 13|4w6 4r26 19r55 44r18 14|15r25 45r55
+6n24*Critical{6E8} 13|29r44 14|82r38
+8R8*Reactor_System 25e13 13|19r70 44r33 14|45r70
+12V12*Create{8R8} 14|15s40
+16V12*Get_Status{6E8} 13|29s31 14|82s25
+X 13 submarine.ads
+6K9*Submarine 40E8 48l5 48e14 14|6b14 110l5 110t14
+8I8*Dive_Depth<short_integer> 14r54 31r60 45r12 14|54r21 66r54 87r60
+10R8*Submarine 12p12 12r26 14p12 14r36 16p12 16r35 17p12 17r36 18p12 18r37
+. 19p12 19r37 21p13 21r41 22p13 22r41 24p12 24r30 26p13 26r33 31p13 31r39
+. 35p13 35r33 40c8 46e13 14|8r26 10r11 21r30 27r35 33r36 39r37 45r37 51r41
+. 59r41 66r36 72r33 87r39 105r33
+12V12*Create{10R8} 14|8b12 19l7 19t13
+14V12*Get_Current_Depth{8I8} 14>30 28s61 29s61 33s18 33s48 37s18 14|66b12
+. 70l7 70t24
+14r30 Self{10R8} 14|66b30 69r12
+16V12*Get_Hatch_System{8|13R8} 16>29 14|27b12 31l7 31t23
+16r29 Self{10R8} 14|27b29 30r12
+17V12*Get_Oxygen_System{11|9R8} 17>30 28s13 14|33b12 37l7 37t24
+17r30 Self{10R8} 14|33b30 36r12
+18V12*Get_Torpedo_System{30|9R8} 18>31 14|39b12 43l7 43t25
+18r31 Self{10R8} 14|39b31 42r12
+19V12*Get_Reactor_System{12|8R8} 19>31 29s12 14|45b12 49l7 49t25
+19r31 Self{10R8} 14|45b31 48r12
+21U13*Commit_Changes 21=28 21>52 14|51b13 57l7 57t21
+21r28 Self{10R8} 14|51b28 54r8 55m7
+21r52 State{8|13R8} 14|51b52 55r25
+22U13*Commit_Changes 22=28 22>52 14|59b13 64l7 64t21
+22r28 Self{10R8} 14|59b28 61r8 62m7
+22r52 State{30|9R8} 14|59b52 62r27
+24V12*Can_Operate{boolean} 24>24 32s23 36s23 14|21b12 25l7 25t18 61s13 96s8
+24r24 Self{10R8} 14|21b24 24r12
+26U13*Update 26=20 14|72b13 85l7 85t13
+26r20 Self{10R8} 28r8 28r56 29r7 29r56 14|72b20 74r44 79m7 79r7 82r8 83m7
+. 83r7
+31U13*Change_Depth 31=26 31>50 14|87t3 107s5
+31r26 Self{10R8} 32r18 33r13 33r43
+31i50 Distance{8I8}
+35U13*Emerge 35=20 14|79s12 83s12 105t3
+35r20 Self{10R8} 36r18 37r13
+41r5*Hatch_Sys{8|13R8} 14|12m10 24r17 30r17 55m12 90m30 100m34
+42r5*Torpedo_Sys{30|9R8} 14|14m10 42r17 62m12
+43r5*Oxygen_Sys{11|9R8} 14|13m10 36r17 74r49
+44r5*Reactor_Sys{12|8R8} 14|15m10 48r17 82r13
+45i5*Depth{8I8} 14|16m10 54r13 69r17 89r13 91m12 97m12
+X 14 submarine.adb
+10r5 Self{13|10R8} 12m5 13m5 14m5 15m5 16m5 18r12
+74e5 Oxygen_Status{11|7E8} 76r8 78r11
+87U13 Change_Depth
+87r26 Self{13|10R8}
+87i50 Distance{13|8I8}
+105U13 Emerge
+105r20 Self{13|10R8}
+X 30 torpedo_system.ads
+1K9*Torpedo_System 13|3w6 3r26 18r55 22r59 42r18 14|3w6 14r25 39r55 59r59
+. 30|40e19
+9R8*Torpedo_System 13|18r70 22r74 42r33 14|39r70 59r74 30|38e13
+11V12*Create{9R8} 14|14s40
+

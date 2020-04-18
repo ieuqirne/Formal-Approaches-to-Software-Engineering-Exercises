@@ -1,0 +1,138 @@
+V "GNAT Lib v2019"
+A -gnatA
+A -mtune=generic
+A -march=x86-64
+P ZX
+
+RN
+RV NO_DIRECT_BOOLEAN_OPERATORS
+RV NO_DISPATCHING_CALLS
+RV NO_IMPLICIT_CONDITIONALS
+RV NO_SECONDARY_STACK
+RV NO_STANDARD_STORAGE_POOLS
+RV NO_DEFAULT_INITIALIZATION
+RV NO_IMPLEMENTATION_PRAGMAS
+RV NO_IMPLICIT_LOOPS
+RV NO_ELABORATION_CODE
+RV SPARK_05
+
+U hatch_system%b	hatch_system.adb	4669f564 OO PK
+Z ada.tags%s		a-tags.adb		a-tags.ali
+Z interfaces%s		interfac.ads		interfac.ali
+Z system.secondary_stack%s  s-secsta.adb	s-secsta.ali
+
+U hatch_system%s	hatch_system.ads	548471d7 EE OO PF PK
+Z ada.exceptions%s	a-except.adb		a-except.ali
+Z ada.streams%s		a-stream.adb		a-stream.ali
+Z ada.tags%s		a-tags.adb		a-tags.ali
+Z system%s		system.ads		system.ali
+Z system.secondary_stack%s  s-secsta.adb	s-secsta.ali
+Z system.storage_elements%s  s-stoele.adb	s-stoele.ali
+Z system.stream_attributes%s  s-stratt.adb	s-stratt.ali
+
+D ada.ads		20190518041256 76789da1 ada%s
+D a-except.ads		20190518041256 291912d5 ada.exceptions%s
+D a-stream.ads		20190518041256 119b8fb3 ada.streams%s
+D a-tags.ads		20190518041258 491b781d ada.tags%s
+D a-unccon.ads		20190518041256 0e9b276f ada.unchecked_conversion%s
+D hatch_system.ads	20200416165002 548471d7 hatch_system%s
+D hatch_system.adb	20200415095330 12ed84b3 hatch_system%b
+D interfac.ads		20190518041256 5ab55268 interfaces%s
+D system.ads		20190518041258 32a08138 system%s
+D s-exctab.ads		20190518041256 54135002 system.exception_table%s
+D s-parame.ads		20190518041258 48ec542b system.parameters%s
+D s-secsta.ads		20190518041258 20bbe636 system.secondary_stack%s
+D s-soflin.ads		20190518041256 a7318a92 system.soft_links%s
+D s-stache.ads		20190518041258 a37c21ec system.stack_checking%s
+D s-stalib.ads		20190518041258 09bd3940 system.standard_library%s
+D s-stoele.ads		20190518041258 2dc34a04 system.storage_elements%s
+D s-stoele.adb		20190518041256 ed88f8fb system.storage_elements%b
+D s-stratt.ads		20190518041256 aedef97e system.stream_attributes%s
+D s-traent.ads		20190518041256 005bf670 system.traceback_entries%s
+D s-unstyp.ads		20190518041256 34867c83 system.unsigned_types%s
+G a e
+G c Z s b [get_hatches hatch_system 15 12 none]
+G c Z s b [get_status hatch_system 17 12 none]
+G c Z s s [at_least_one_hatch_is_closed hatch_system 19 12 none]
+G c Z s s [is_sealed hatch_system 24 12 none]
+G c Z s b [more_than_one_hatches_are_closed hatch_system 27 12 none]
+G c Z s b [create hatch_system 29 12 none]
+G c Z s b [open_hatch hatch_system 31 13 none]
+G c Z s b [close_hatch hatch_system 36 13 none]
+G c Z s b [lock_hatch hatch_system 39 13 none]
+G c Z s b [unlock_hatch hatch_system 43 13 none]
+G c Z s b [seal hatch_system 47 13 none]
+G c Z s b [unseal hatch_system 52 13 none]
+G c Z s s [hatchIP hatch_system 3 8 none]
+G c Z s s [ThatchesBIP hatch_system 9 3 none]
+G c Z s s [hatch_systemDA hatch_system 58 8 none]
+G c Z s s [hatch_systemDF hatch_system 58 8 none]
+G c Z s s [hatch_systemIP hatch_system 58 8 none]
+X 6 hatch_system.ads
+1K9*Hatch_System 58E8 63l5 63e17 7|1b14 95l5 95t17
+3R8*Hatch 6e13 9r42
+4b5*Closed{boolean} 22r27 37r37 40r42 41r37 49r36 7|7m27 22r20 49m21 55m19
+. 60r22 79m17
+5b5*Locked{boolean} 33r31 41r84 45r37 49r79 54r36 7|7m43 44r41 64m19 73m19
+. 80m17 89m17
+8I8*Hatch_Index<short_short_integer> 9r26 31r58 36r59 39r58 43r60 7|42r58
+. 53r59 58r58 67r60
+9A8*Hatches(3R8)<8I8> 15r51 59r8 7|30r51
+11E8*Status 11e32 17r50 60r8 7|36r50
+11n19*Sealed{11E8} 25r27 7|83r15
+11n27*Open{11E8} 7|8r15 92r15
+13R8*Hatch_System 15p12 15r30 17p12 17r29 19p12 19r47 24p12 24r28 27p12 27r51
+. 29p12 29r26 31p13 31r37 36p13 36r38 39p13 39r37 43p13 43r39 47p13 47r31
+. 52p13 52r33 58c8 61e13 7|3r26 5r11 13r51 30r30 36r29 42r37 53r38 58r37
+. 67r39 76r31 86r33
+15V12*Get_Hatches{9A8} 15>24 21s25 22s12 33s12 37s18 40s23 41s18 41s65 45s18
+. 48s33 49s21 49s64 53s33 54s21 7|30b12 34l7 34t18
+15r24 Self{13R8} 7|30b24 33r12
+17V12*Get_Status{11E8} 17>23 25s14 7|36b12 40l7 40t17
+17r23 Self{13R8} 7|36b23 39r12
+19V12*At_Least_One_Hatch_Is_Closed{boolean} 19>41
+19r41 Self{13R8} 21r20 22r7
+21i15 I<short_short_integer> 22r24
+24V12*Is_Sealed{boolean} 24>22 32s23 44s18 50s27 55s27 7|44s8 69s8
+24r22 Self{13R8} 25r9
+27V12*More_Than_One_Hatches_Are_Closed{boolean} 27>45 34s7 7|13b12 28l7 28t39
+. 48s8
+27r45 Self{13R8} 7|13b45 17r14 22r10
+29V12*Create{13R8} 7|3b12 11l7 11t13
+31U13*Open_Hatch 31=24 31>51 7|42t3
+31r24 Self{13R8} 32r18 33r7 34r40
+31i51 Index{8I8} 33r24
+36U13*Close_Hatch 36=25 36>52 7|53b13 56l7 56t18
+36r25 Self{13R8} 37r13 7|53b25 55m5
+36i52 Index{8I8} 37r30 7|53b52 55r12
+39U13*Lock_Hatch 39=24 39>51 7|58t3
+39r24 Self{13R8} 40r18 41r13 41r60
+39i51 Index{8I8} 40r35 41r30 41r77
+43U13*Unlock_Hatch 43=26 43>53 7|67t3
+43r26 Self{13R8} 44r28 45r13
+43i53 Index{8I8} 45r30
+47U13*Seal 47=18 7|76b13 84l7 84t11
+47r18 Self{13R8} 48r28 49r16 49r59 50r22 7|76b18 78r14 79m7 80m7 83m5
+48i23 I<short_short_integer> 49r33 49r76
+52U13*Unseal 52=20 7|86b13 93l7 93t13
+52r20 Self{13R8} 53r28 54r16 55r22 7|86b20 88r14 89m7 92m5
+53i23 I<short_short_integer> 54r33
+59a5*H{9A8} 7|7m10 17r19 22r15 33r17 44r32 49m12 55m10 60r13 64m10 73m10
+. 78r19 79m12 80m12 88r19 89m12
+60e5*S{11E8} 7|8m10 39r17 83m10 92m10
+X 7 hatch_system.adb
+5r5 Self{6|13R8} 7m5 8m5 10r12
+15i5 Count{integer} 18r10 23m9 23r18 27r12
+17i9 I<short_short_integer> 22r17
+42U13 Open_Hatch
+42r24 Self{6|13R8}
+42i51 Index{6|8I8}
+58U13 Lock_Hatch
+58r24 Self{6|13R8}
+58i51 Index{6|8I8}
+67U13 Unlock_Hatch
+67r26 Self{6|13R8}
+67i53 Index{6|8I8}
+78i9 I<short_short_integer> 79r14 80r14
+88i9 I<short_short_integer> 89r14
+

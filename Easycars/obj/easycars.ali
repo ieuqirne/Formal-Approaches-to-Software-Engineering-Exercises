@@ -1,0 +1,38 @@
+V "GNAT Lib v2019"
+A -gnatA
+A -mtune=generic
+A -march=x86-64
+P ZX
+
+RN
+RV NO_DIRECT_BOOLEAN_OPERATORS
+RV NO_IMPLEMENTATION_ASPECT_SPECIFICATIONS
+RV NO_IMPLEMENTATION_PRAGMAS
+RV SPARK_05
+
+U easycars%b		easycars.adb		c0541996 NE OO PK
+
+U easycars%s		easycars.ads		180c33bf EE NE OO PK
+
+D easycars.ads		20200417133658 180c33bf easycars%s
+D easycars.adb		20200417132732 d8582a29 easycars%b
+D system.ads		20190518041258 32a08138 system%s
+G a e
+G c Z s s [carIP easycars 7 9 none]
+G c Z s b [startcar easycars 14 14 none]
+G c Z s b [keyin easycars 18 14 none]
+X 1 easycars.ads
+1K9*Easycars 24l5 24e13 2|1b14 13l5 13t13
+3E9*Key 3e33 8r16
+3n17*Present{3E9} 16r46 21r33 2|10r27
+3n26*Absent{3E9} 12r34 20r32
+5E9*Engine 5e27 9r18
+5n19*On{5E9} 17r48 2|5r29
+5n23*Off{5E9} 12r54 20r64
+7R9*Car 10e14 12r16
+8e7*CarKey{3E9} 12m24 16r37 20r23 21r24 2|10m17
+9e7*Ignition{5E9} 12m42 17r37 20r53 2|5m17
+12r4*BatMobile{7R9} 15r27 16r27 17r27 19r27 20r13 20r43 21r14 2|5m7 10m7
+14U14*StartCar 2|3b14 6l8 6t16
+18U14*KeyIn 2|8b14 11l8 11t13
+

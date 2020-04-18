@@ -1,0 +1,43 @@
+V "GNAT Lib v2019"
+A -x
+A ada
+A -gnatA
+A -gnatc
+P GP FX
+
+RN
+RV NO_IMPLEMENTATION_ASPECT_SPECIFICATIONS
+RV NO_IMPLEMENTATION_PRAGMAS
+RV NO_ELABORATION_CODE
+RV SPARK_05
+
+U easycars%b		easycars.adb		c0fbbdd6 OO PK
+
+U easycars%s		easycars.ads		8ff9b018 OO PK
+
+D easycars.ads		20200417131038 8ff9b018 easycars%s
+D easycars.adb		20200417131018 4f020dce easycars%b
+D system.ads		20190518041256 32a08138 system%s
+G a Z
+X 1 easycars.ads
+1K9*Easycars 19l5 19e13 2|1b14 8l5 8t13
+3E9*Key 3e33 8r16
+3n17*Present{3E9} 16r46
+3n26*Absent{3E9} 12r34
+5E9*Engine 5e27 9r18
+5n19*On{5E9} 17r48 2|5r29
+5n23*Off{5E9} 12r54
+7R9*Car 10e14 12r16
+8e7*CarKey{3E9} 12m24 16r37
+9e7*Ignition{5E9} 12m42 17r37 2|5m17
+12r4*BatMobile{7R9} 15r27 16r27 17r27 2|5m7
+14U14*StartCar 2|3b14 6l8 6t16
+
+QQ SPARKVERSION 2019 (20190517)
+GG EK_DIRECT_CALLS easycars__startcar 0
+GG EK_GLOBALS easycars__startcar local FALSE E_PROCEDURE FALSE ORIGIN_FLOW proper_proof_in 0 proper_input 1 easycars__batmobile proper_output 1 easycars__batmobile refined_proof_in 0 refined_input 1 easycars__batmobile refined_output 1 easycars__batmobile calls_proof 0 calls 0 calls_conditional 0 FALSE FALSE TRUE ENTRY_CALLS 0 SUSPENDS_ON 0 UNSYNCH_ACCESSES 1 easycars__batmobile LOCKS 0
+GG EK_DIRECT_CALLS easycars 0
+GG EK_GLOBALS easycars local FALSE E_PACKAGE TRUE ORIGIN_FLOW proper_proof_in 0 proper_input 0 proper_output 0 refined_proof_in 0 refined_input 0 refined_output 0 initializes 1 easycars__batmobile calls_proof 0 calls 0 calls_conditional 0 local_var 1 easycars__batmobile FALSE FALSE FALSE ENTRY_CALLS 0 SUSPENDS_ON 0 UNSYNCH_ACCESSES 0 LOCKS 0
+GG EK_FLOW_SCOPE easycars__startcar FALSE FALSE FALSE FALSE TRUE easycars VISIBLE_PART
+GG EK_FLOW_SCOPE easycars TRUE FALSE FALSE FALSE FALSE __standard
+GG EK_END_MARKER

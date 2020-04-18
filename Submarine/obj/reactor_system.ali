@@ -1,0 +1,88 @@
+V "GNAT Lib v2019"
+A -gnatA
+A -mtune=generic
+A -march=x86-64
+P ZX
+
+RN
+RV NO_DISPATCHING_CALLS
+RV NO_IMPLICIT_CONDITIONALS
+RV NO_SECONDARY_STACK
+RV NO_STANDARD_STORAGE_POOLS
+RV NO_DEFAULT_INITIALIZATION
+RV NO_IMPLEMENTATION_ASPECT_SPECIFICATIONS
+RV NO_IMPLEMENTATION_PRAGMAS
+RV NO_ELABORATION_CODE
+
+U reactor_system%b	reactor_system.adb	3aa04e00 OO PK
+Z system.secondary_stack%s  s-secsta.adb	s-secsta.ali
+
+U reactor_system%s	reactor_system.ads	d7d831c3 EE OO PF PK
+Z ada.exceptions%s	a-except.adb		a-except.ali
+Z ada.streams%s		a-stream.adb		a-stream.ali
+Z ada.tags%s		a-tags.adb		a-tags.ali
+Z system%s		system.ads		system.ali
+Z system.secondary_stack%s  s-secsta.adb	s-secsta.ali
+Z system.storage_elements%s  s-stoele.adb	s-stoele.ali
+Z system.stream_attributes%s  s-stratt.adb	s-stratt.ali
+
+D ada.ads		20190518041256 76789da1 ada%s
+D a-except.ads		20190518041256 291912d5 ada.exceptions%s
+D a-stream.ads		20190518041256 119b8fb3 ada.streams%s
+D a-tags.ads		20190518041258 491b781d ada.tags%s
+D a-unccon.ads		20190518041256 0e9b276f ada.unchecked_conversion%s
+D reactor_system.ads	20200415095626 d7d831c3 reactor_system%s
+D reactor_system.adb	20200415095558 ed787fc3 reactor_system%b
+D system.ads		20190518041258 32a08138 system%s
+D s-exctab.ads		20190518041256 54135002 system.exception_table%s
+D s-parame.ads		20190518041258 48ec542b system.parameters%s
+D s-secsta.ads		20190518041258 20bbe636 system.secondary_stack%s
+D s-soflin.ads		20190518041256 a7318a92 system.soft_links%s
+D s-stache.ads		20190518041258 a37c21ec system.stack_checking%s
+D s-stalib.ads		20190518041258 09bd3940 system.standard_library%s
+D s-stoele.ads		20190518041258 2dc34a04 system.storage_elements%s
+D s-stoele.adb		20190518041256 ed88f8fb system.storage_elements%b
+D s-stratt.ads		20190518041256 aedef97e system.stream_attributes%s
+D s-traent.ads		20190518041256 005bf670 system.traceback_entries%s
+D s-unstyp.ads		20190518041256 34867c83 system.unsigned_types%s
+G a e
+G c Z s b [create reactor_system 12 12 none]
+G c Z s b [get_temp_level reactor_system 14 12 none]
+G c Z s b [get_status reactor_system 16 12 none]
+G c Z s b [update reactor_system 18 13 none]
+G c Z s b [update_status reactor_system 31 13 none]
+G c Z s b [read_temp reactor_system 36 12 none]
+G c Z s s [temp_sensorIP reactor_system 27 8 none]
+G c Z s s [reactor_systemDA reactor_system 21 8 none]
+G c Z s s [reactor_systemDF reactor_system 21 8 none]
+G c Z s s [reactor_systemIP reactor_system 21 8 none]
+X 6 reactor_system.ads
+1K9*Reactor_System 21E8 37l5 37e19 7|1b14 50l5 50t19
+3I8*Temp_Percentage<short_integer> 4r27 14r56 22r17 28r12 36r50 7|8r21 10r24
+. 17r56 44r50
+4i3*Temp_Critical{3I8} 33r26 34r26 7|37r26
+6E8*Core_Status 6e41 16r52 23r13 7|23r52
+6n24*Critical{6E8} 34r57 7|40r22
+6n34*Stable{6E8} 33r57 7|9r20 38r22
+8R8*Reactor_System 12p12 12r26 14p12 14r33 16p12 16r29 18p13 18r33 21c8 25e13
+. 31p13 31r40 7|3r26 5r11 17r33 23r29 29r33 35r40
+10R8*Temp_Sensor 24r13 27c8 29e13 36r30 7|6r13 44r30
+12V12*Create{8R8} 7|3b12 15l7 15t13
+14V12*Get_Temp_Level{3I8} 14>27 7|17b12 21l7 21t21
+14r27 Self{8R8} 7|17b27 20r12
+16V12*Get_Status{6E8} 16>23 7|23b12 27l7 27t17
+16r23 Self{8R8} 7|23b23 26r12
+18U13*Update 18=20 7|12s10 29b13 33l7 33t13
+18r20 Self{8R8} 7|29b20 31m5 31r34 32m19
+22i5*Temp_Level{3I8} 33r13 34r12 7|10m10 20r17 31m10 37r13
+23e5*Status{6E8} 33r48 34r48 7|9m10 26r17 38m12 40m12
+24r5*Sensor{10R8} 7|31r39
+28i5*Value{3I8} 7|8m12 47r19
+31U13 Update_Status 31=27 7|32s5 35b13 42l7 42t20
+31r27 Self{8R8} 33r8 33r43 34r7 34r43 7|35b27 37r8 38m7 40m7
+36V12 Read_Temp{3I8} 36>22 7|31s24 44b12 48l7 48t16
+36r22 Sensor{10R8} 7|44b22 47r12
+X 7 reactor_system.adb
+5r5 Self{6|8R8} 9m5 10m5 12m5 12r5 14r12
+6r5 Sensor{6|10R8} 8m5
+

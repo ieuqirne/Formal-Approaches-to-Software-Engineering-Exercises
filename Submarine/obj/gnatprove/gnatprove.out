@@ -1,0 +1,36 @@
+Summary of SPARK analysis
+=========================
+
+-------------------------------------------------------------------------------------------------------
+SPARK Analysis results        Total       Flow   Interval   CodePeer     Provers   Justified   Unproved
+-------------------------------------------------------------------------------------------------------
+Data Dependencies                 .          .          .          .           .           .          .
+Flow Dependencies                 .          .          .          .           .           .          .
+Initialization                    1          1          .          .           .           .          .
+Non-Aliasing                      .          .          .          .           .           .          .
+Run-time Checks                   1          .          .          .    1 (CVC4)           .          .
+Assertions                        .          .          .          .           .           .          .
+Functional Contracts              5          .          .          .           .           .          5
+LSP Verification                  .          .          .          .           .           .          .
+-------------------------------------------------------------------------------------------------------
+Total                             7    1 (14%)          .          .     1 (14%)           .    5 (71%)
+
+
+max steps used for successful proof: 1
+
+Analyzed 1 unit
+in unit hatch_system, 14 subprograms and packages out of 14 analyzed
+  Hatch_System at hatch_system.ads:1 flow analyzed (0 errors, 0 checks and 0 warnings) and proved (0 checks)
+  Hatch_System.At_Least_One_Hatch_Is_Closed at hatch_system.ads:19 flow analyzed (0 errors, 0 checks and 0 warnings) and proved (0 checks)
+  Hatch_System.Close_Hatch at hatch_system.ads:36 flow analyzed (0 errors, 0 checks and 0 warnings) and not proved, 0 checks out of 1 proved
+  Hatch_System.Create at hatch_system.ads:29 flow analyzed (0 errors, 0 checks and 0 warnings) and proved (0 checks)
+  Hatch_System.Get_Hatches at hatch_system.ads:15 flow analyzed (0 errors, 0 checks and 0 warnings) and proved (0 checks)
+  Hatch_System.Get_Status at hatch_system.ads:17 flow analyzed (0 errors, 0 checks and 0 warnings) and proved (0 checks)
+  Hatch_System.Hatch_System at hatch_system.ads:13 flow analyzed (0 errors, 0 checks and 0 warnings) and proved (0 checks)
+  Hatch_System.Is_Sealed at hatch_system.ads:24 flow analyzed (0 errors, 0 checks and 0 warnings) and proved (0 checks)
+  Hatch_System.Lock_Hatch at hatch_system.ads:39 flow analyzed (0 errors, 0 checks and 0 warnings) and not proved, 0 checks out of 1 proved
+  Hatch_System.More_Than_One_Hatches_Are_Closed at hatch_system.ads:27 flow analyzed (0 errors, 0 checks and 0 warnings) and proved (1 checks)
+  Hatch_System.Open_Hatch at hatch_system.ads:31 flow analyzed (0 errors, 0 checks and 0 warnings) and proved (0 checks)
+  Hatch_System.Seal at hatch_system.ads:47 flow analyzed (0 errors, 0 checks and 0 warnings) and not proved, 0 checks out of 1 proved
+  Hatch_System.Unlock_Hatch at hatch_system.ads:43 flow analyzed (0 errors, 0 checks and 0 warnings) and not proved, 0 checks out of 1 proved
+  Hatch_System.Unseal at hatch_system.ads:52 flow analyzed (0 errors, 0 checks and 0 warnings) and not proved, 0 checks out of 1 proved
